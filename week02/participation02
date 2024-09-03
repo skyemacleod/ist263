@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>Participation Week 02</title>
+    </head>
+    <body>
+        <dl>
+            <dt>Marinara</dt>
+            <dd>Tomato, basil</dd>
+            <dt>Pesto</dt>
+            <dd>Basil, nuts</dd>
+            <dt>Cacio pepe</dt>
+            <dd>Pepper, &trade;</dd>
+        </dl>
+    </body>
+</html>
