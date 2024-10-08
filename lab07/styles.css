@@ -1,3 +1,7 @@
-body{background-color: white; font-family: Verdana, sans-serif; color: #a4a4a4}
-h1, h2, h3, h4 {color: #ffb3ff;}
-a:link{color:#ffb3ff;} a:visited{color:black }
+body{background-color: white; font-family: Verdana, sans-serif; color: #838383}
+h1, h2, h3, h4 {color: #ff94ff;}
+a:link{color:#ffa9ff;} a:visited{color:black }
+nav{background-color: white;}
+nav a{color: #ffa9ff;}
+nav a:hover{background-color: #bcbcbc;}
+nav{padding: 10px;} nav{margin-bottom: 30px;}
