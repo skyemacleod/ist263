@@ -1,0 +1,9 @@
+body{background-color: white; font-family: Verdana, sans-serif; color: #000000}
+h1, h2 {color: #000000;}
+h3, h4 {color: black ;}
+a:link{color:#ff8aff;} a:visited{color:rgb(151, 49, 124) }
+nav{background-color: white;}
+nav a{color: #ffa9ff;}
+nav a:hover{background-color: #bcbcbc;}
+nav{padding: 10px;} nav{margin-bottom: 30px;}
+
