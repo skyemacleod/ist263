@@ -2,7 +2,7 @@ body{background-color: white; font-family: 'Titan One'; color: #000000}
 /*h1 {color: #000000;}*/
 a:link{color:#97317c;} a:visited{color:#fdf862 }
 nav{background-color: white;}
-/*nav a{color: #ffa9ff;}*/
+nav a{color: #97317c;}
 nav a:hover{background-color: #bcbcbc;}
 nav{padding: 10px;} nav{margin-bottom: 30px;}
 @media only screen and (max-width: 600px) {nav a {max-width: 100%; display: block; padding: 10px;} span{display: none;}}
