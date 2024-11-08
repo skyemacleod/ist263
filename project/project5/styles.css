@@ -2,7 +2,7 @@ body{background-color: white; font-family: 'SourceSansPro'; color: #000000}
 /*h1 {color: #000000;}*/
 a:link{color:#97317c;} /*a:visited{color:#9d9d9d }*/
 nav{background-color: white;}
-nav a{color: #97317c;}
+nav a{color: #5f1830;}
 nav a:hover{background-color: #bcbcbc;}
 nav{padding: 10px;} nav{margin-bottom: 30px;}
 @media only screen and (max-width: 600px) {nav a {max-width: 100%; display: block; padding: 10px;} span{display: none;}}
