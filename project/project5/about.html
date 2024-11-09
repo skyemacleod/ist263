@@ -5,20 +5,25 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <title>About - Skye MacLeod</title>
         <link rel="stylesheet" href="styles.css">
+        <link href='https://fonts.googleapis.com/css?family=Titan One' rel='stylesheet'>
 
         <style>
-            .me{color: #5f1830; font-family: 'Titan One';}
             img{width:500px; height: auto;}
+            .navbar{display: flex; justify-content: space-between; align-items: center; padding: 20px; border: 2px solid #000000}
+            .navleft{font-family: 'Titan One'; color: #5f1830; font-size: 1.5rem;}
+            .navright{display: flex; gap: 20px;}
         </style>
     </head>
 
     <body>
-        <nav>
-            <h3 class="me" >Skye MacLeod</h3>
-            <a href="home.html">Home</a> 
-            <a href="about.html">About</a> 
-            <a href="progress.html">Progress</a> 
-            <a href="contact.html">Contact</a>
+        <nav class="navbar">
+            <div class="navleft">Skye MacLeod</div>
+            <div class="navright">
+                <a href="home.html">Home</a> 
+                <a href="about.html">About</a> 
+                <a href="progress.html">Progress</a> 
+                <a href="contact.html">Contact</a>
+            </div>
         </nav>
         <h1>About</h1>
         <img src="../media/evelyn.JPG" alt="Evelyn biting her lip"></header>
