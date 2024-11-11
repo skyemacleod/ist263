@@ -7,4 +7,5 @@ nav a:hover{text-decoration: underline; /*background-color: #bcbcbc;*/}
 /*@media only screen and (max-width: 600px) {nav a {max-width: 100%; display: block; padding: 10px;}}*/
 footer{background-color: #5f1830; color: #fff; width: 100%; margin: 0; padding: 40px; text-align: center; }
 
-@media screen and (max-width: 768px) {.navbar{flex-direction: column; align-items: flex-start; gap: 10px;} .navright{flex-direction: column; gap: 10px;} .flex1{flex-direction: column; align-items: center;} .headshot{width: 100%; padding: 0;} .text{padding-left: 10px; padding-right: 10px; text-align: center;} .flex2{flex-direction: column; gap: 20px; padding: 10px;} .exp, .edu, .ski, .inv{width: 100%;} }
+@media screen and (max-width: 768px) {.navbar{flex-direction: column; align-items: flex-start; gap: 10px;} .navright{flex-direction: column; gap: 10px;} .flex1{flex-direction: column; align-items: center;} .headshot{flex: 0 1 auto; max-width: 100%; display: block; margin: 0 auto; padding-right: 20px;} .text{padding-left: 10px; padding-right: 10px;} .flex2{flex-direction: column; gap: 20px; padding: 10px;} .exp, .edu, .ski, .inv{width: 100%;} }
+
