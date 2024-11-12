@@ -7,5 +7,5 @@ nav a:hover{text-decoration: underline; /*background-color: #bcbcbc;*/}
 /*@media only screen and (max-width: 600px) {nav a {max-width: 100%; display: block; padding: 10px;}}*/
 footer{background-color: #5f1830; color: #fff; width: 100%; margin: 0; padding: 40px; text-align: center; }
 
-@media screen and (max-width: 768px) {.navbar{flex-direction: column; align-items: flex-start; gap: 10px;} .flex1{flex-direction: column; align-items: center;} .flex2{flex-direction: column; gap: 20px;} .exp, .edu, .ski, .inv{width: 100%;} }
+@media screen and (max-width: 768px) {.navbar{flex-direction: column; align-items: flex-start; gap: 10px;} .flex1{flex-direction: column; } .flex2{flex-direction: column; gap: 20px;} .exp, .edu, .ski, .inv{width: 100%;} }
 
