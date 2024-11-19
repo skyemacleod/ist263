@@ -13,7 +13,7 @@
             .navleft{font-family: 'Titan One'; color: #5f1830; font-size: 1.6rem;}
             .navright{display: flex; gap: 20px;}
             footer a{font-family: 'Bebas Neue'; color: #fff; text-decoration: none; font-size: 1.7rem;}
-            .contact{font-size: 4.5rem; margin-top: 10px; margin-bottom: 10px; font-family: 'Bebas Neue'; font-weight: bold;}
+            .contact{font-size: 5rem; margin-top: 10px; margin-bottom: 10px; font-family: 'Bebas Neue'; font-weight: bold;}
             .dropdown:hover {transform: scale(1.05);}
             .dropdown:hover .dropcontent{display: block;}
             .dropcontent{display: none; position: absolute; padding: 10px; font-size: 0.9rem; background-color: aqua;}
@@ -49,11 +49,9 @@
                 <p class="contact">Contact</p>
                 <div class="form">
                     <form action="https://formspree.io/f/xqazvkdd" method="POST">
-                        <label for="fname">First name:</label><br>
+                    <h3>Your Name:</h3>
                         <input type="text" id="fname" name="fname" value=""><br>
-                        <label for="lname">Last name:</label><br>
-                        <input type="text" id="lname" name="lname" value=""><br>
-                    <h4>Choose your favorite form of communication:</h4>
+                    <h3>Choose your form of communication:</h3>
                         <input type="radio" id="email" name="fav_communication" value="email">
                         <label for="email">Email</label><br>
                         <input type="radio" id="linkedin" name="fav_communication" value="linkedin">
@@ -62,11 +60,9 @@
                         <label for="smedia">Social Media</label><br>
                     <h4>Email/LinkedIn/Social Media:</h4>
                     <textarea id="contactpurpose" name="contactpurpose" rows="1" cols="40"></textarea>
-                    <label for="contactpurpose">Contact link or handle</label><br>
                     <br>
-                    <h4>Why you want to contact me:</h4>
+                    <h4>Message:</h4>
                     <textarea id="contact_purpose" name="contactpurpose" rows="4" cols="40"></textarea>
-                    <label for="contact_purpose">Contact Purpose</label><br>
                     <br><br>
                     <input type="submit" value="Submit">
                     </form>
