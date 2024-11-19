@@ -1,7 +1,7 @@
 body{background-color: white; font-family: Verdana, sans-serif; color: #000000}
 h1 {color: #000000;}
 nav{background-color: white;}
-nav a{color: #ffa9ff;}
+nav a{color: #a645a6;}
 nav a:hover{background-color: #bcbcbc;}
 nav{padding: 10px;} nav{margin-bottom: 30px;}
 @media only screen and (max-width: 600px) {nav a {max-width: 100%; display: block; padding: 10px;} span{display: none;}}
