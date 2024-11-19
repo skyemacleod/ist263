@@ -9,12 +9,15 @@
         <link href='https://fonts.googleapis.com/css?family=Bebas Neue' rel='stylesheet'>
 
         <style>
-            .navbar{display: flex; justify-content: space-between; align-items: center; padding: 30px;}
+            .navbar{display: flex; justify-content: space-between; align-items: center; padding: 30px; font-weight: bold;}
             .navleft{font-family: 'Titan One'; color: #5f1830; font-size: 1.6rem;}
             .navright{display: flex; gap: 20px;}
             footer a{font-family: 'Bebas Neue'; color: #fff; text-decoration: none; font-size: 1.7rem;}
             .contact{font-size: 4.5rem; margin-top: 10px; margin-bottom: 10px; font-family: 'Bebas Neue'; font-weight: bold;}
-
+            .dropdown:hover {transform: scale(1.05);}
+            .dropdown:hover .dropcontent{display: block;}
+            .dropcontent{display: none; position: absolute; padding: 10px; font-size: 0.9rem; background-color: aqua;}
+            .flex1{padding-left: 20px; padding-right: 20px;}
         </style>
     </head>
 
@@ -24,13 +27,53 @@
             <div class="navright">
                 <a href="home.html">Home</a> 
                 <a href="about.html">About</a> 
-                <a href="progress.html">Progress</a> 
+                <div class="dropdown">
+                    <a href="progress.html" class="dropbtn">Progress</a>
+                    <div class="dropcontent">
+                        <a href="../../lab02/macleod-bio.html" >Project 1</a>
+                        <a href="../../lab03/contact.html" target="_blank">Project 2</a>
+                        <a href="../../lab04/skills.html" target="_blank">Project 3</a>
+                        <a href="../../lab05/contact.html" target="_blank">Project 4</a>
+                        <a href="../../lab06/macleod-bio.html" target="_blank">Project 5</a>
+                        <a href="../../lab07/index.html" target="_blank">Project 6</a>
+                        <a href="../../lab08/index.html" target="_blank">Project 7</a>
+                        <a href="../../lab09/skills.html" target="_blank">Project 8</a>
+                        <a href="../../lab13/index.html" target="_blank">Project 9</a>
+                    </div>
+                </div>
                 <a href="contact.html">Contact</a>
             </div>
         </nav>
         <body>
-            <p class="contact">Contact</p>
-
+            <div class="flex1">
+                <p class="contact">Contact</p>
+                <div class="form">
+                    <h3>Contact Form</h3>
+                    <form action="https://formspree.io/f/xqazvkdd" method="POST">
+                        <label for="fname">First name:</label><br>
+                        <input type="text" id="fname" name="fname" value=""><br>
+                        <label for="lname">Last name:</label><br>
+                        <input type="text" id="lname" name="lname" value=""><br>
+                    <h4>Choose your favorite form of communication:</h4>
+                        <input type="radio" id="email" name="fav_communication" value="email">
+                        <label for="email">Email</label><br>
+                        <input type="radio" id="linkedin" name="fav_communication" value="linkedin">
+                        <label for="linkedin">LinkedIn</label><br>
+                        <input type="radio" id="smedia" name="fav_communication" value="smedia">
+                        <label for="smedia">Social Media</label><br>
+                    <h4>Email/LinkedIn/Social Media:</h4>
+                    <textarea id="contactpurpose" name="contactpurpose" rows="1" cols="40"></textarea>
+                    <label for="contactpurpose">Contact link or handle</label><br>
+                    <br>
+                    <h4>Why you want to contact me:</h4>
+                    <textarea id="contact_purpose" name="contactpurpose" rows="4" cols="40"></textarea>
+                    <label for="contact_purpose">Contact Purpose</label><br>
+                    <br><br>
+                    <input type="submit" value="Submit">
+                    </form>
+                    <p>Click the "Submit" button to finish the form.</p>
+                </div>
+            </div>
         </body>
         <footer>
             <a href="../media/resume.pdf" target="_blank">Click to download my Resume</a>

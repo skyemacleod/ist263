@@ -9,7 +9,7 @@
         <link href='https://fonts.googleapis.com/css?family=Bebas Neue' rel='stylesheet'>
 
         <style>
-            .navbar{display: flex; justify-content: space-between; align-items: center; padding: 30px; padding-bottom: 10px;}
+            .navbar{display: flex; justify-content: space-between; align-items: center; padding: 30px; font-weight: bold;}
             .navleft{font-family: 'Titan One'; color: #5f1830; font-size: 1.6rem;}
             .navright{display: flex; gap: 20px;}
             .picture{width: 350px; height: auto;}
@@ -22,6 +22,9 @@
             .title{font-weight: bold; font-size: 2rem; text-align: center; color: #5f1830; font-family: Arial, Helvetica, sans-serif;}
             .sub{font-weight: bold;}
             footer a{font-family: 'Bebas Neue'; color: #fff; text-decoration: none; font-size: 1.7rem;}
+            .dropdown:hover {transform: scale(1.05);}
+            .dropdown:hover .dropcontent{display: block;}
+            .dropcontent{display: none; position: absolute; padding: 10px; font-size: 0.9rem; background-color: aqua;}
         </style>
     </head>
 
@@ -31,7 +34,20 @@
             <div class="navright">
                 <a href="home.html">Home</a> 
                 <a href="about.html">About</a> 
-                <a href="progress.html">Progress</a> 
+                <div class="dropdown">
+                    <a href="progress.html" class="dropbtn">Progress</a>
+                    <div class="dropcontent">
+                        <a href="../../lab02/macleod-bio.html" >Project 1</a>
+                        <a href="../../lab03/contact.html" target="_blank">Project 2</a>
+                        <a href="../../lab04/skills.html" target="_blank">Project 3</a>
+                        <a href="../../lab05/contact.html" target="_blank">Project 4</a>
+                        <a href="../../lab06/macleod-bio.html" target="_blank">Project 5</a>
+                        <a href="../../lab07/index.html" target="_blank">Project 6</a>
+                        <a href="../../lab08/index.html" target="_blank">Project 7</a>
+                        <a href="../../lab09/skills.html" target="_blank">Project 8</a>
+                        <a href="../../lab13/index.html" target="_blank">Project 9</a>
+                    </div>
+                </div>
                 <a href="contact.html">Contact</a>
             </div>
         </nav>
