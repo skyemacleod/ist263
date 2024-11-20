@@ -10,16 +10,18 @@
         <style>
             body{height:100%; display: flex; flex-direction: column; justify-content: center; align-items: center;}
             .whole{text-align: center; width: 100%;}
-            .name{margin-top: 18%; font-size: 70px; font-family: 'Erica One'; color: #5f1830; font-weight: lighter;}
-            nav{display: flex; justify-content: space-evenly; width: 100%;}
+            .name{margin-top: 18%; font-size: 70px; font-family: 'Erica One'; color: #5f1830; font-weight: lighter; opacity: 0; transition: opacity 3s ease-in-out;}
+            nav{display: flex; justify-content: space-evenly; width: 100%; opacity: 0; transition: opacity 5s ease-in-out;}
             nav a{font-family: 'Erica One'; font-weight: lighter; font-size: 20px;}
-            .name{opacity: 0; transition: opacity 3s ease-in-out;}
             .fade-in{opacity: 1;}
         </style>
         <script>
             function myName() {
                 const nameElement = document.getElementById('name');
+                const navElement = document.getElementById('nav');
+
                 nameElement.classList.add('fade-in');
+                navElement.classList.add('fade-in');
             }
             window.onload = myName;
         </script>
@@ -29,7 +31,7 @@
     <body>
         <div class="whole">
             <h1 id="name" class="name">Skye MacLeod's Portfolio</h1>
-            <nav>
+            <nav id="nav">
                 <a href="home.html">Home</a>
                 <a href="about.html">About</a> 
                 <a href="progress.html">Progress</a> 
