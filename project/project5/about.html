@@ -16,26 +16,26 @@
             html, body{height: 100%; margin: 0; padding: 0; width: 100%;}
             .flex1{display: flex; padding: 20px; margin: 30px; justify-content: space-between;}
             .headshot{padding-right: 20px;}
-            .picture{width: 100%; max-width: 350px; height: auto;}
+            .picture{width: 350px; height: auto;}
             .text{padding-left: 20px; padding-right: 20px; font-family: 'Times New Roman', Times, serif; font-size: 1.1rem;}
             .welcome{font-size: 5rem; margin-top: 10px; margin-bottom: 10px; font-family: 'Bebas Neue'; font-weight: bold;}
             .underwelcome{font-size: 1.75rem; }
             .para{line-height: 1.6;}
-            .title{font-weight: bold; font-size: 2rem; text-align: center; color: #5f1830; font-family: Arial, Helvetica, sans-serif;}
+            .title{font-weight: bold; font-size: 2rem;  color: #5f1830; font-family: Arial, Helvetica, sans-serif;}
             .sub{font-weight: bold;}
             footer{width: 100%;}
             footer a{font-family: 'Bebas Neue'; color: #fff; text-decoration: none; font-size: 1.7rem;}
-            .flex2{display: flex; padding: 20px; margin: 30px; justify-content: space-between;}
+            .flex2{display: grid; grid-template-columns: repeat(4, auto); margin: 30px;}
+            .exp, .edu, .ski, .inv{padding: 20px;}
 
             @media screen and (max-width: 768px) {
-                .flex1 {flex-direction: column; }
+                .flex1 {flex-direction: column; align-items: flex-start; margin: 10px;}
                 .flex2{flex-direction: column; gap: 20px;} 
             }
+            
 
         </style>
-    
     </head>
-
     <body>
         <nav class="navbar">
             <div class="navleft">Skye MacLeod</div>
@@ -70,6 +70,7 @@
                 </p>
             </div>
         </div>
+
         <div class="flex2">
             <div class="exp">
                 <p class="title">EXPERIENCES</p>
