@@ -14,7 +14,7 @@ footer{background-color: #5f1830; color: #fff; width: 100%; margin: 0; padding: 
     .flex1{flex-direction: column; max-width: 100%;} 
     .flex2{flex-direction: column; gap: 20px;} 
     .exp, .edu, .ski, .inv{width: 100%;}
-    .grid{grid-template-columns:1fr; gap: 10px;}
+    .grid{grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 10px;}
     .lab{width: 100%;}}
 
 
