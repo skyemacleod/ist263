@@ -7,16 +7,16 @@ nav a:hover{text-decoration:underline; transform: scale(1.1);/*background-color:
 /*@media only screen and (max-width: 600px) {nav a {max-width: 100%; display: block; padding: 10px;}}*/
 footer{background-color: #5f1830; color: #fff; width: 100%; margin: 0; padding: 40px; text-align: center; }
 
-/*@media screen and (max-width: 768px) {
+@media screen and (max-width: 768px) {
     .navbar{flex-direction: column; align-items: flex-start; gap: 10px;} 
     body{overflow-x: hidden;}
     .headshot{margin: 0; padding: 0; border: solid #5f1830; width: 100%;}
     .flex1{flex-direction: column; max-width: 100%;} 
     .flex2{flex-direction: column; gap: 20px;} 
     .exp, .edu, .ski, .inv{width: 100%;}
-    .grid{display: flex; flex-direction: column; grid-template-columns:1fr; gap: 10px; background-color: aqua;}
-    .lab{width: 100%;}
-}*/
+    .grid{grid-template-columns:1fr; gap: 10px;}
+    .lab{width: 100%;}}
+
 
 
 
