@@ -9,3 +9,26 @@ footer{background-color: #5f1830; color: #fff; width: 100%; margin: 0; padding: 
 
 @media screen and (max-width: 768px) {.navbar{flex-direction: column; align-items: flex-start; gap: 10px;} .flex1{flex-direction: column; margin: 5px; padding: 5px;} .flex2{flex-direction: column; gap: 20px;} .exp, .edu, .ski, .inv{width: 100%;}}
 
+
+
+/*
+<style>
+    .dropdown:hover {transform: scale(1.05);}
+    .dropdown:hover .dropcontent{display: block;}
+    .dropcontent{display: none; position: absolute; padding: 10px; font-size: 0.9rem; background-color: aqua;}
+</style>
+
+<div class="dropdown">
+    <a href="progress.html" class="dropbtn">Progress</a>
+        <div class="dropcontent">
+            <a href="../../lab02/macleod-bio.html" >Project 1</a>
+            <a href="../../lab03/contact.html" target="_blank">Project 2</a>
+            <a href="../../lab04/skills.html" target="_blank">Project 3</a>
+            <a href="../../lab05/contact.html" target="_blank">Project 4</a>
+            <a href="../../lab06/macleod-bio.html" target="_blank">Project 5</a>
+            <a href="../../lab07/index.html" target="_blank">Project 6</a>
+            <a href="../../lab08/index.html" target="_blank">Project 7</a>
+            <a href="../../lab09/skills.html" target="_blank">Project 8</a>
+            <a href="../../lab13/index.html" target="_blank">Project 9</a>
+        </div>
+</div>*/                                                 
