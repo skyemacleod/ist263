@@ -4,15 +4,21 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Welcome</title>
-    <link href='https://fonts.googleapis.com/css?family=Bebas Neue' rel='stylesheet'>
+    <link href='https://fonts.googleapis.com/css?family=Rubik' rel='stylesheet'>
 
     <style>
         html, body{height: 100%;}
         body{display:flex; justify-content: center; align-items: center;}
-        .btn{width: 10em; height: 3em; border-radius: 30rem; font-size: 18px; border: none; position: relative; cursor: pointer; z-index: 1; box-shadow: 6px 6px 12px #5f1830;}
+        .btn{width: 10em; height: 3em; font-family: 'Rubik'; font-size: 18px; font-weight: bold; background-color: white; border: solid #5f1830 4px; color: #5f1830; position: relative; cursor: pointer; z-index: 1; }
+        .btn:hover{background-color: #5f1830; border: solid #5f1830 4px; color: white;}
     </style>
+    <script>
+        function loadHome() {
+           var div = document.getElementById("myDiv") 
+            window.location.href = "home.html"; }
+    </script>
 </head>
 <body>
-    <button class="btn">Welcome</button>
+    <button class="btn" onclick="loadHome()" >Welcome</button>
 </body>
 </html>
