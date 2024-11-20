@@ -17,12 +17,17 @@
             .progress{font-size: 5rem; margin-top: 10px; margin-bottom: 10px; font-family: 'Bebas Neue'; font-weight: bold;}
             .flex1{padding-left: 20px; padding-right: 20px; font-family: 'Times New Roman', Times, serif; font-size: 1.1rem;}
             .para{line-height: 1.6;}
-            .flex2{display: flex; justify-content: center; width: 100%; padding: 20px;}
-            .grid{display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 20px;}
-            .lab{border: solid #5f1830; border-width: 3px; font-family: 'Bebas Neue'; font-size: 1.8rem; border-radius: 5px; padding: 60px; padding-left: 100px; padding-right: 100px;}
+            .flex2{display: grid; grid-template-columns: repeat(3, 1fr); gap: 20px; margin: 50px; margin-left: 150px; margin-right: 150px;}
+            .lab{border: solid #5f1830; border-width: 3.5px; font-family: 'Bebas Neue'; font-size: 2rem; border-radius: 5px; padding: 60px; text-align: center;}
             .lab:hover{transform: scale(1.05);}
-            a {color: #5f1830; text-decoration: none;}
+            .lab a {color: #5f1830; text-decoration: none;}
             
+            @media screen and (max-width: 768px) {
+                .flex2{grid-template-columns: 1fr;} 
+                .title{text-align: center;}
+            }
+
+
         </style>
     </head>
 
@@ -41,7 +46,6 @@
             <p class="para">Over the course of the semester in IST263 we have worked on building a website and all it's different components. Each week we have learned a new factor of HTML, CSS or JavaScript to implement into our website, building it up each week, increasing its complexity and structure. Coincidentally the website we were building was a portfolio. If you click through some of the boxes below you can look at the progress I made throughout the semester.</p>
         </div>
         <div class="flex2">
-            <div class="grid">
                 <div class="lab">
                     <a href="../../lab02/macleod-bio.html" target="_blank">Project 1</a>
                 </div> 
@@ -69,7 +73,6 @@
                 <div class="lab">
                     <a href="../../lab13/index.html" target="_blank">Project 9</a>
                 </div>
-            </div>
         </div>
 
         <footer>
