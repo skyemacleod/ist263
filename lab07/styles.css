@@ -1,7 +1,7 @@
 body{background-color: white; font-family: Verdana, sans-serif; color: #838383}
 h1, h2 {color: #ff94ff;}
 h3, h4 {color: black ;}
-a:link{color:#ff8aff;} a:visited{color:rgb(151, 49, 124) }
+a:link{color:#ff8aff;} /*a:visited{color:rgb(151, 49, 124) }*/
 nav{background-color: white;}
 nav a{color: #ffa9ff;}
 nav a:hover{background-color: #bcbcbc;}
