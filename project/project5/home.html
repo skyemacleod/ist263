@@ -13,13 +13,22 @@
             .name{margin-top: 18%; font-size: 70px; font-family: 'Erica One'; color: #5f1830; font-weight: lighter;}
             nav{display: flex; justify-content: space-evenly; width: 100%;}
             nav a{font-family: 'Erica One'; font-weight: lighter; font-size: 20px;}
+            .name{opacity: 0; transition: opacity 3s ease-in-out;}
+            .fade-in{opacity: 1;}
         </style>
+        <script>
+            function myName() {
+                const nameElement = document.getElementById('name');
+                nameElement.classList.add('fade-in');
+            }
+            window.onload = myName;
+        </script>
 
     </head>
 
     <body>
         <div class="whole">
-            <h1 class="name">Skye MacLeod's Portfolio</h1>
+            <h1 id="name" class="name">Skye MacLeod's Portfolio</h1>
             <nav>
                 <a href="home.html">Home</a>
                 <a href="about.html">About</a> 
