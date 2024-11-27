@@ -14,8 +14,13 @@
             .navleft{font-family: 'Druk Wide Bold'; color: #5f1830; font-size: 2rem; font-weight: lighter;}
             .navright{display: flex; gap: 20px; font-family: 'Druk Wide Bold';}
             footer a{font-family: 'Bebas Neue'; color: #fff; text-decoration: none; font-size: 1.7rem;}
-            .contact{font-size: 4rem; margin-top: 10px; margin-bottom: 10px; font-family: 'Druk Wide Bold'; font-weight: bold;}
-            .flex1{padding-left: 20px; padding-right: 20px;}
+            .contact{font-size: 3rem; margin-top: 10px; margin-bottom: 10px; font-family: 'Druk Wide Bold'; font-weight: bold;}
+            .flex1{width: 500px; justify-content: center; padding: 20px; border: solid #5f1830 3.5px; border-radius: 5px; margin: 50px auto; margin-top: 2px;}
+            textarea{width: 100%; padding: 10px; box-sizing: border-box;}
+            .btn{background-color: #5f1830; color: #fff; padding: 10px; border: solid 3px #5f1830; width: 100%; border-radius: 5px; cursor: pointer;}
+            h3, p{font-family: 'Druk Wide Bold';}
+            .flex2{display: flex; justify-content: center; gap: 15px; margin: 20px; margin-bottom: 40px;}
+            .link img{width: 30px; height: auto; }
         </style>
     </head>
 
@@ -34,24 +39,22 @@
                 <div class="form">
                     <form action="https://formspree.io/f/xqazvkdd" method="POST">
                     <h3>Your Name:</h3>
-                        <input type="text" id="fname" name="fname" value=""><br>
-                    <h3>Choose your form of communication:</h3>
-                        <input type="radio" id="email" name="fav_communication" value="email">
-                        <label for="email">Email</label><br>
-                        <input type="radio" id="linkedin" name="fav_communication" value="linkedin">
-                        <label for="linkedin">LinkedIn</label><br>
-                        <input type="radio" id="smedia" name="fav_communication" value="smedia">
-                        <label for="smedia">Social Media</label><br>
-                    <h3>Email/LinkedIn/Social Media:</h3>
+                    <textarea id="fname" name="fname" rows="1" cols="40"></textarea>
+                    <br>
+                    <h3>Email:</h3>
                     <textarea id="contactpurpose" name="contactpurpose" rows="1" cols="40"></textarea>
                     <br>
                     <h3>Message:</h3>
                     <textarea id="contact_purpose" name="contactpurpose" rows="4" cols="40"></textarea>
                     <br><br>
-                    <input type="submit" value="Submit">
+                    <input class="btn" type="submit" value="Submit">
                     </form>
                     <p>Click the "Submit" button to finish the form.</p>
                 </div>
+            </div>
+            <div class="flex2">
+                <a class="link" href="https://www.linkedin.com/in/skyemacleod/"><img src="../media/linkedin.svg" alt="LinkedIn Icon"></a>
+                <a class="link" href="mailto:asmacleo@syr.edu"><img src="../media/mail.svg" alt="Email Icon"></a>
             </div>
         </body>
         <footer>
