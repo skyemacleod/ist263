@@ -10,12 +10,15 @@
         <link href='https://fonts.googleapis.com/css?family=Erica One' rel='stylesheet'>
 
         <style>
+            html, body{margin: 0; padding: 0; width: 100%; overflow-x: hidden; box-sizing: border-box;}
+            * {box-sizing: border-box;}
             .navbar{position: sticky; display: flex; top: 0; justify-content: space-between; align-items: center; padding: 30px; font-weight: bold;}
             .navleft{font-family: 'Druk Wide Bold'; color: #5f1830; font-size: 1.8rem; font-weight: lighter;}
             .navright{display: flex; gap: 20px; font-family: 'Druk Wide Bold';}
             footer a{font-family: 'Bebas Neue'; color: #fff; text-decoration: none; font-size: 1.7rem;}
+            footer{width: 100%;}
             .contact{font-size: 3rem; margin-top: 10px; margin-bottom: 10px; font-family: 'Druk Wide Bold'; font-weight: bold;}
-            .flex1{width: 500px; justify-content: center; padding: 20px; border: solid #5f1830 3.5px; border-radius: 5px; margin: 50px auto; margin-top: 2px;}
+            .flex1{width: 90%; max-width: 500px; margin: 20px auto; padding: 20px; border: solid #5f1830 3.5px; border-radius: 5px; margin: 50px auto; margin-top: 2px;}
             textarea{width: 100%; padding: 10px; box-sizing: border-box;}
             .btn{background-color: #5f1830; color: #fff; padding: 10px; border: solid 3px #5f1830; width: 100%; border-radius: 5px; cursor: pointer;}
             h3, p{font-family: 'Druk Wide Bold';}
@@ -23,7 +26,8 @@
             .link img{width: 30px; height: auto; }
 
             @media screen and (max-width: 768px) {
-                .flex1 {width: 90%; margin: 20px auto; padding: 15px;}
+                .flex1 {width: 90%; padding: 15px;}
+                footer{padding: 15px;}
             }
         </style>
     </head>
