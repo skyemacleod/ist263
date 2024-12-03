@@ -21,9 +21,10 @@
             .flex1{width: 90%; max-width: 500px; margin: 20px auto; padding: 20px; border: solid #5f1830 3.5px; border-radius: 5px; margin: 50px auto; margin-top: 2px;}
             textarea{width: 100%; padding: 10px; box-sizing: border-box;}
             .btn{background-color: #5f1830; color: #fff; padding: 10px; border: solid 3px #5f1830; width: 100%; border-radius: 5px; cursor: pointer;}
-            h3, p{font-family: 'Druk Wide Bold';}
+            label, p{font-family: 'Druk Wide Bold';}
             .flex2{display: flex; justify-content: center; gap: 15px; margin: 20px; margin-bottom: 40px;}
             .link img{width: 30px; height: auto; }
+            label{font-size: 1.2rem; line-height: 3;}
 
             @media screen and (max-width: 768px) {
                 .flex1 {width: 90%; padding: 15px;}
@@ -44,13 +45,13 @@
                 <p class="contact">Contact</p>
                 <div class="form">
                     <form action="https://formspree.io/f/xqazvkdd" method="POST">
-                    <label for="fname"><h3>Your Name:</h3></label>
+                    <label for="fname">Your Name:</label>
                     <textarea id="fname" name="fname" rows="1" cols="40"></textarea>
                     <br>
-                    <label for="email"><h3>Email:</h3></label>
+                    <label for="email">Email:</label>
                     <textarea id="email" name="email" rows="1" cols="40"></textarea>
                     <br>
-                    <label for="message"><h3>Message:</h3></label>
+                    <label for="message">Message:</label>
                     <textarea id="message" name="message" rows="4" cols="40"></textarea>
                     <br><br>
                     <input class="btn" type="submit" value="Submit">
@@ -63,8 +64,6 @@
                 <a class="link" href="mailto:asmacleo@syr.edu"><img src="../media/mail.svg" alt="Email Icon"></a>
             </div>
         </body>
-        <footer></footer>
-            <a href="../media/resume.pdf" target="_blank">Click to download my Resume</a>
-        </footer>
+        <footer><a href="../media/resume.pdf" target="_blank">Click to download my Resume</a></footer>
     </body>
 </html>
