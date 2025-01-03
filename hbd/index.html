@@ -23,7 +23,7 @@
         passwordForm.addEventListener('submit', function (e) {
             e.preventDefault();
             const enteredPassword = passwordInput.value;
-            
+            console.log(enteredPassword);
             if (enteredPassword === correctPassword) {
                 window.location.href = "home.html";
             } else {
