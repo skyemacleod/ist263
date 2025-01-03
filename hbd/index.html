@@ -15,21 +15,22 @@
         .flex1{display: flex; flex-direction: column; gap: 10px; align-items: center;}
     </style>
     <script>
+        
         const correctPassword = 'yourpassword';  // Set your password here
-        const passwordInput = document.getElementById('password');
-    
-        passwordForm.addEventListener('keydown', function (e) {
-            if (e.key === 'Enter') {
-                e.preventDefault();
+        const passwordInput = document.getElementById('password'); // Get the password input
 
-                const enteredPassword = passwordInput.value;
-                
-                if (enteredPassword === correctPassword) {
-                    window.location.href = "home.html";
-                } else {
-                    alert('Incorrect password');
-                }
+        passwordInput.addEventListener('keydown', function (e) {
+            if (e.key === 'Enter') {  // If Enter key is pressed
+                e.preventDefault();  // Prevent the form from submitting by default
+
+            const enteredPassword = passwordInput.value;  // Get the entered password
+
+            if (enteredPassword === correctPassword) {
+                window.location.href = "home.html";  // Redirect to home.html if password is correct
+            } else {
+                alert('Incorrect password');  // Show alert if password is incorrect
             }
+        }
         });
     </script>
 </head>
