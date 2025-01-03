@@ -16,12 +16,12 @@
     </style>
     <script>
         const correctPassword = 'yourpassword';  // Set your password here
-        const passwordForm = document.getElementById('passwordForm');
         const passwordInput = document.getElementById('password');
     
         passwordForm.addEventListener('keydown', function (e) {
             if (e.key === 'Enter') {
                 e.preventDefault();
+
                 const enteredPassword = passwordInput.value;
                 
                 if (enteredPassword === correctPassword) {
