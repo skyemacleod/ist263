@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Password Protected Page</title>
+        <link rel='stylesheet' href='https://fonts.googleapis.com/css?family=Noto Sans'>
+        <link rel='stylesheet' href='https://fonts.googleapis.com/css?family=Schoolbell'>
+
+    <style>
+        html, body{height: 100%;}
+        .navbar{display: flex; top: 0; justify-content: center; padding: 20px; font-weight: bold; margin-bottom: 20px; font-family: 'Schoolbell'; font-size: 20px;}
+        form{display:flex; justify-content: center; align-items: center; margin-top: 15%;}
+        #passwordForm {display: flex; flex-direction: column;} 
+        .input{padding: 8px; margin-bottom: 10px; border: solid #9e6bf0 2px; background-color: #ffa0ea; border-radius: 5px; font-family: 'Noto Sans'; color: #8c1071;}
+        .btn{padding: 8px 30px; cursor: pointer; border: solid #f06bd3 2px; background-color: #ffa0ea; border-radius: 5px; font-family: 'Noto Sans'; color: #8c1071;}
+    </style>
+</head>
+<body>
+    <nav class="navbar">
+        <div class="navmiddle">for evelyn love, skye</div>
+    </nav>
+    <form id="passwordForm">
+        <input class='input' type="password" id="password" placeholder="Enter Password" required>
+        <button class="btn" type="submit">Submit</button>
+    </form>
+
+    <script>
+        const correctPassword = 'yourpassword';  // Set your password here
+        const passwordForm = document.getElementById('passwordForm');
+        const passwordInput = document.getElementById('password');
+
+        passwordForm.addEventListener('submit', function (e) {
+            e.preventDefault();
+            const enteredPassword = passwordInput.value;
+            
+            if (enteredPassword === correctPassword) {
+                window.location.href = "yeah.html";
+            } else {
+                alert('Incorrect password');
+            }
+        });
+    </script>
+</body>
+</html>
