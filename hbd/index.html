@@ -17,21 +17,20 @@
     </style>
     <script>
         const correctPassword = 'yourpassword';  // Set your password here
-        const passwordInput = document.getElementById('password'); // Get the password input
+        const passwordForm = document.getElementById('passwordForm');
+        const passwordInput = document.getElementById('password');
 
-        passwordInput.addEventListener('keydown', function (e) {
-            if (e.key === 'Enter') {  // If Enter key is pressed
-                e.preventDefault();  // Prevent the form from submitting by default
-
-            const enteredPassword = passwordInput.value;  // Get the entered password
-
+        passwordForm.addEventListener('submit', function (e) {
+            e.preventDefault();
+            const enteredPassword = passwordInput.value;
+            
             if (enteredPassword === correctPassword) {
-                window.location.href = "home.html";  // Redirect to home.html if password is correct
+                window.location.href = "home.html";
             } else {
-                alert('Incorrect password');  // Show alert if password is incorrect
+                alert('Incorrect password');
             }
-        }
         });
+        
     </script>
 </head>
 <body>
@@ -40,6 +39,7 @@
         <button class="btn" >Evelyn Polly</button>
         <form id="passwordForm">
             <input class='input' type="password" id="password" placeholder="Enter Password" required>
+            <button class="but" type="submit">Submit</button>
         </form>
     </div>
 </body>
