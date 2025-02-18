@@ -41,7 +41,6 @@
       display: inline-block;
       white-space: nowrap;
       font-size: 24px;
-      animation: moveText 10s linear infinite;
       text-decoration: none;
       font-family: 'Druk Wide Bold';
       color: #0055ff;
@@ -52,7 +51,6 @@
       display: inline-block;
       white-space: nowrap;
       font-size: px;
-      animation: moveText 10s linear infinite;
       font-family: 'Druk Wide Bold';
     }
 
@@ -60,7 +58,6 @@
       display: inline-block;
       white-space: nowrap;
       font-size: 40px;
-      animation: moveText 14s linear infinite;
       font-family: 'Druk Wide Bold';
     }
 
@@ -68,7 +65,6 @@
       display: inline-block;
       white-space: nowrap;
       font-size: 40px;
-      animation: moveText 10s linear infinite;
       font-family: 'Druk Wide Bold';
     }
 
@@ -76,7 +72,6 @@
       display: inline-block;
       white-space: nowrap;
       font-size: 40px;
-      animation: moveText 8s linear infinite;
       font-family: 'Druk Wide Bold';
       color: #fd1f1f;
     }
@@ -84,27 +79,13 @@
     .moving-text6 {
       display: inline-flex;
       font-size: 40px;
-      animation: moveText 7s linear infinite;
       font-family: 'Druk Wide Bold';
     }
 
     .moving-text7 {
       display: inline-flex;
       font-size: 40px;
-      animation: moveText 7s linear infinite;
     }
-
-    /* Keyframe animation to move the text */
-    @keyframes moveText {
-      0% {
-        transform: translateX(100%); /* Start from the right side */
-      }
-      100% {
-        transform: translateX(-100%); /* Move to the left side */
-      }
-    }
-    
-    .moving-text6 span {display: inline-block; padding-right: 20px;}
 
   </style>
 </head>
