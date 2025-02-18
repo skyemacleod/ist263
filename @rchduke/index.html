@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <link rel="icon" type="image/x-icon" href="favicon.ico" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>About - Skye MacLeod</title>
+        <link rel="stylesheet" href="styles.css">
+        <link rel='stylesheet' href='https://fonts.googleapis.com/css?family=Titan One'>
+        <link rel='stylesheet' href='https://fonts.googleapis.com/css?family=Bebas Neue'>
+        <link rel='stylesheet' href='https://fonts.googleapis.com/css?family=Erica One'>
+
+        <style>
+            html, body{margin: 0; padding: 0; width: 100%; box-sizing: border-box;}
+            * {box-sizing: border-box;}
+            .navbar{position: sticky; display: flex; top: 0; justify-content: space-between; align-items: center; padding: 30px; font-weight: bold; z-index: 1; margin-bottom: 20px;}
+            .navleft{font-family: 'Druk Wide Bold'; color: #0055ff; font-size: 1.8rem;}
+            .navright{display: flex; gap: 20px; font-family: 'Druk Wide Bold';}
+            .flex1{width: 100%; display: flex; padding: 20px; justify-content: space-between;}
+            .headshot{padding-right: 20px;}
+            .picture{width: 350px; height: auto;}
+            .text{padding-left: 20px; padding-right: 20px; font-family: 'Times New Roman', Times, serif; font-size: 1.2rem;}
+            .welcome{font-size: 4rem; margin-top: 10px; margin-bottom: 10px; font-family: 'Druk Wide Bold'; font-weight: bold;}
+            .underwelcome{font-size: 1.75rem; }
+            .para{line-height: 1.6;}
+            .title{font-weight: bold; font-size: 1.8rem;  color: #5f1830; font-family: 'Druk Wide Bold';}
+            .sub{font-weight: bold;}
+            footer{width: 100%;}
+            footer a{font-family: 'Bebas Neue'; color: #fff; text-decoration: none; font-size: 1.7rem;}
+            .flex2{display: grid; grid-template-columns: repeat(4, auto); margin: 30px;}
+            .exp, .edu, .ski, .inv{padding: 20px;}
+
+            @media screen and (max-width: 768px) {
+                .flex1 {flex-direction: column; width: 100%; padding-left: 10px; padding-right: 10px;}
+                .flex2{grid-template-columns: 1fr; margin: 15px 0;} 
+                .title{text-align: center;}
+                .welcome {font-size: 3rem; }
+
+            }
+
+            
+        </style>
+    </head>
+    <body>
+        <nav class="navbar">
+            <div class="navleft"><a href="home.html">Skye MacLeod</a></div>
+            <div class="navright">
+                <a href="about.html">About</a> 
+                <a href="progress.html">Progress</a>
+                <a href="contact.html">Contact</a>
+            </div>
+        </nav>
+        <div class="flex1">
+            <div class="headshot">
+                <img class="picture" src="../media/skye.JPG" alt="My Headshot">
+            </div>
+            <div class="text">
+                <p class="welcome">Welcome</p>
+                <p class="underwelcome">Hi I'm Skye — </p>
+                <p class="para">
+                    I'm a Junior at Syracuse University studying Information Management & Technology in the iSchool with a double minor in Marketing and Public Communications. For one of my classes this semester, Intro to Front-End Web Development (IST263), we were assigned a final project, creating a website of our choice. Welcome to my final project. 
+                    <br>
+                    <br>
+                    From a young age I've loved creating content, initially beginning with YouTube videos. As I've grown up, especially through college taking courses like IST263,  my creations have evolved to more technically sophisticated projects, like websites, platforms that not only tell stories but also collect, organize, and analyze data. 
+                    <br>
+                    <br>
+                    With my background in Technology, Marketing, and Communications, I'm interested in the way data can shape how we connect with consumers, particularly in the retail, fashion, and entertainment industries.  I’m fascinated by how data insights can shape user experiences, optimize marketing strategies, and inspire design decisions—bringing together creativity and analytics. 
+                    <br>
+                    <br>
+                    This website is a reflection of that intersection: a project blending the art of design with the power of data, all while continuing to fuel my passion for creating engaging digital experiences.
+                    <br>
+                    <br>
+                    If you want to check out my progress that lead me to make this portfolio <a href="progress.html">click here</a>. 
+                </p>
+            </div>
+        </div>
+
+        <div class="flex2">
+            <div class="exp">
+                <p class="title">EXPERIENCES</p>
+                <p class="sub">Greek House</p>
+                <p>Campus Rep</p>
+                <p>Sales & Marketing Intern</p>
+                <p class="sub">Fizz</p>
+                <p>Online Marketing Moderator</p>
+                <p class="sub">Wentworth Hotel</p>
+                <p>Server</p>
+            </div>
+            <div class="edu">
+                <p class="title">EDUCATION</p>
+                <p class="sub">Syracuse Univeristy</p>
+                <p class="sub">School of Information Studies</p>
+                <p>Information Management & Technology Major</p>
+                <p class="sub">Martin J. Whitman School of Management</p>
+                <p>Marketing Minor</p>
+                <p class="sub">S.I. Newhouse School of Public Communications</p>
+                <p>Public Communication Studies Minor</p>
+            </div>
+            <div class="ski">
+                <p class="title">SKILLS</p
+                <p>HTML</p>
+                <p>CSS</p>
+                <p>SQL</p>
+                <p>VSCode</p>
+                <p>Python</p>
+                <p>JavaScript</p>
+                <p>Canva</p>
+                <p>Figma</p>
+                <p>Microsoft Office Suite</p>
+                <p>Google Suite</p>
+                <p>Vertabelo</p>
+                <p>iMovie</p>
+                <p>TikTok</p>
+
+            </div>
+            <div class="inv">
+                <p class="title">INVOLVEMENT</p>
+                <p>Tri Delta Sorority</p>
+                <p>TNH Advertising Agency</p>
+                <p>NEXIS Tech Lab</p>
+                <p>Boys & Girls Club of Syracuse</p>
+            </div>
+        </div>
+        <footer>
+            <a href="../media/resume.pdf" target="_blank">Click to download my Resume</a>
+        </footer>
+    </body>
+</html>
