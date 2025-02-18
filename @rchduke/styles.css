@@ -1,6 +1,5 @@
 body{background-color: #ff812d; font-family:'Times New Roman', Times, serif ; color: #000; margin: 0;}
 /*a:link{color: #5f1830;} a:visited{color:#9d9d9d }*/
-nav{background-color: white; }
 nav a{color: #05f; text-decoration: none;}
 nav a:hover{ transform: scale(1.1);/*background-color: #bcbcbc;*/}
 /*nav{padding: 10px; margin-bottom: 30px;}*/
