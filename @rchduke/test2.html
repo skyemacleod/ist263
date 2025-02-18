@@ -79,6 +79,20 @@
       align-self: flex-start;
     }
 
+    .img {
+        display: inline-flex;
+        animation: moveText 7s linear infinite;
+    }
+
+    /* Keyframe animation to move the text */
+    @keyframes moveText {
+      0% {
+        transform: translateX(100%); /* Start from the right side */
+      }
+      100% {
+        transform: translateX(-100%); /* Move to the left side */
+      }
+    }
 
   </style>
 </head>
