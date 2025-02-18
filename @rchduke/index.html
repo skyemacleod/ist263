@@ -15,6 +15,7 @@
             * {box-sizing: border-box;}
             .navbar{position: sticky; display: flex; top: 0; justify-content: space-between; align-items: center; padding: 30px; font-weight: bold; z-index: 1; margin-bottom: 20px; color: #0055ff;}
             .navleft{font-family: 'Druk Wide Bold'; color: #0055ff; font-size: 1.8rem;}
+            .navleft .offcenter {position: relative; left: 10px;}
             .navright{display: flex; gap: 20px; font-family: 'Druk Wide Bold';}
             .flex1{width: 100%; display: flex; padding: 20px; justify-content: space-between;}
             .headshot{padding-right: 20px;}
@@ -44,7 +45,8 @@
     </head>
     <body>
         <nav class="navbar">
-            <div class="navleft"><a href="home.html">@rchdook <br>     @rchdook</a></div>
+            <div class="navleft"><a href="home.html">@rchdook <br>
+                <span class="offcenter"></span> @rchdook</a></div>
             <div class="navright">
                 <a href="about.html">About</a> 
                 <a href="progress.html">Progress</a>
