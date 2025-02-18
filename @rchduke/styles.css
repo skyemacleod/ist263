@@ -1,0 +1,62 @@
+body{background-color: #ffffff; font-family:'Times New Roman', Times, serif ; color: #000; margin: 0;}
+/*a:link{color: #5f1830;} a:visited{color:#9d9d9d }*/
+nav{background-color: white; }
+nav a{color: #5f1830; text-decoration: none;}
+nav a:hover{ transform: scale(1.1);/*background-color: #bcbcbc;*/}
+/*nav{padding: 10px; margin-bottom: 30px;}*/
+/*@media only screen and (max-width: 600px) {nav a {max-width: 100%; display: block; padding: 10px;}}*/
+footer{background-color: #5f1830; color: #fff; width: 100%; margin: 0; padding: 40px; text-align: center; }
+
+@media screen and (max-width: 768px) {
+    .navbar{flex-direction: column; align-items: flex-start; gap: 10px;} 
+}
+@media screen and (min-width: 768px) and (max-width: 1199px) {
+    .flex2{grid-template-columns: repeat(2, 1fr);} 
+}
+
+@font-face {
+    font-family: 'Druk Wide Bold';
+    src: url('../media/DrukWideBold.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+
+/*body{overflow-x: hidden;}
+    .headshot{margin: 0; padding: 0; border: solid #5f1830; width: 100%;}
+    .flex1{flex-direction: column; max-width: 100%;} 
+    .flex2{flex-direction: column; gap: 20px;} 
+    .exp, .edu, .ski, .inv{width: 100%;}
+    .grid{grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 10px;}
+    .lab{width: 100%;}
+
+/*
+<style>
+    .dropdown:hover {transform: scale(1.05);}
+    .dropdown:hover .dropcontent{display: block;}
+    .dropcontent{display: none; position: absolute; padding: 10px; font-size: 0.9rem; background-color: aqua;}
+</style>
+
+<div class="dropdown">
+    <a href="progress.html" class="dropbtn">Progress</a>
+        <div class="dropcontent">
+            <a href="../../lab02/macleod-bio.html" >Project 1</a>
+            <a href="../../lab03/contact.html" target="_blank">Project 2</a>
+            <a href="../../lab04/skills.html" target="_blank">Project 3</a>
+            <a href="../../lab05/contact.html" target="_blank">Project 4</a>
+            <a href="../../lab06/macleod-bio.html" target="_blank">Project 5</a>
+            <a href="../../lab07/index.html" target="_blank">Project 6</a>
+            <a href="../../lab08/index.html" target="_blank">Project 7</a>
+            <a href="../../lab09/skills.html" target="_blank">Project 8</a>
+            <a href="../../lab13/index.html" target="_blank">Project 9</a>
+        </div>
+</div>*/                                                 
+
+/*<h3>Choose your form of communication:</h3>
+                        <input type="radio" id="email" name="fav_communication" value="email">
+                        <label for="email">Email</label><br>
+                        <input type="radio" id="linkedin" name="fav_communication" value="linkedin">
+                        <label for="linkedin">LinkedIn</label><br>
+                        <input type="radio" id="smedia" name="fav_communication" value="smedia">
+                        <label for="smedia">Social Media</label><br>
+*/
