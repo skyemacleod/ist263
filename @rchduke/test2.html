@@ -19,6 +19,38 @@
       align-items: center;
     }
 
+    .top {
+        display: flex;
+      justify-content: center;
+      align-items: center;
+      width: 100%;
+      padding-top: 20px;
+    }
+
+    .front {
+        display: flex;
+        flex-direction: column; /* Stack elements vertically */
+        align-items: center; /* Center all elements horizontally */
+        justify-content: center;
+        height: 100vh; /* Full viewport height */
+    }
+
+    .ad1 {
+        text-align: left;  /* Align text to the left */
+        margin-left: -20px; /* Adjust the position slightly to the left */
+    }
+
+    .ad2 {
+        text-align: left;  /* Align text to the left */
+        margin-left: -10px; /* Slightly off-center to the left */
+    }
+
+    .ad3 {
+        text-align: center; /* Center the text */
+        margin-left: 0; /* Center the element */
+    }
+
+
     /* Style for the top and bottom lines */
     .line {
       width: 100%;
@@ -45,14 +77,6 @@
         height: 170px;
         width: auto;
         object-fit: cover;
-    }
-
-    .top {
-        display: flex;
-      justify-content: center;
-      align-items: center;
-      width: 100%;
-      padding-top: 20px;
     }
 
     /* Container for the moving text */
@@ -104,9 +128,15 @@
 </head>
 <body>
 
-
   <div class="top">
     <a href="index.html" class="ad">@rchdook</a>
+  </div>
+
+  <div class="front">
+    <h1 class="ad1">@rchduke</h1>
+    <h1 class="ad2">@rchduke</h1>
+    <h1 class="ad3">@rchduke</h1>
+
   </div>
 
   <div class="line"></div>
