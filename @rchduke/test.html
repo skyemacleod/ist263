@@ -70,6 +70,13 @@
       font-family: 'Druk Wide Bold';
     }
 
+    .moving-text6 {
+      display: inline-block;
+      white-space: nowrap;
+      font-size: 40px;
+      animation: moveText 7s linear infinite;
+      font-family: 'Druk Wide Bold';
+    }
     /* Keyframe animation to move the text */
     @keyframes moveText {
       0% {
@@ -79,6 +86,9 @@
         transform: translateX(-100%); /* Move to the left side */
       }
     }
+    
+    .moving-text6 span {display: inline-block; padding-right: 20px;}
+
   </style>
 </head>
 <body>
@@ -111,6 +121,18 @@
 
   <div class="text-container">
     <div class="moving-text5">GAMES</div>
+  </div>
+
+  <div class="line"></div>
+
+  <div class="text-container">
+    <div class="moving-text6">
+        <span>GAMES</span>
+        <span>GAMES</span>
+        <span>GAMES</span>
+        <span>GAMES</span>
+        <span>GAMES</span>
+    </div>
   </div>
 
   <div class="line"></div>
