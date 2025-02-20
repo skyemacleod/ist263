@@ -1,120 +1,198 @@
 <!DOCTYPE html>
 <html lang="en">
-    <head>
-        <meta charset="UTF-8">
-        <link rel="icon" type="image/x-icon" href="media/favicon.ico" />
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>@rchdook</title>
-        <link rel="stylesheet" href="styles.css">
-        <link rel='stylesheet' href='https://fonts.googleapis.com/css?family=Titan One'>
-        <link rel='stylesheet' href='https://fonts.googleapis.com/css?family=Bebas Neue'>
-        <link rel='stylesheet' href='https://fonts.googleapis.com/css?family=Erica One'>
+<head>
+  <meta charset="UTF-8">
+  <link rel="icon" type="image/x-icon" href="media/favicon.ico" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>@rchdook files</title>
+  <link rel="stylesheet" href="styles.css">
 
-        <style>
-            html, body{margin: 0; padding: 0; width: 100%; box-sizing: border-box; height: 100%; width: 100%;}
-            * {box-sizing: border-box;}
-            .navbar{position: sticky; display: flex; top: 0; justify-content: space-between; align-items: center; padding: 30px; font-weight: bold; z-index: 1; margin-bottom: 20px; color: #0055ff;}
-            .navleft{font-family: 'Druk Wide Bold'; color: #0055ff; font-size: 1.8rem;}
-            .navright{display: flex; gap: 20px; font-family: 'Druk Wide Bold';}
-            .flex1{width: 100%; display: flex; padding: 20px; justify-content: space-between;}
-            .headshot{padding-right: 20px;}
-            .picture{width: 350px; height: auto;}
-            .text{padding-left: 20px; padding-right: 20px; font-family: 'Times New Roman', Times, serif; font-size: 1.2rem;}
-            .welcome{font-size: 4rem; margin-top: 10px; margin-bottom: 10px; font-family: 'Druk Wide Bold'; font-weight: bold;}
-            .underwelcome{font-size: 1.75rem; }
-            .para{line-height: 1.6;}
-            .title{font-weight: bold; font-size: 1.8rem;  color: #0055ff; font-family: 'Druk Wide Bold';}
-            .sub{font-weight: bold;}
-            footer{width: 100%;}
-            footer a{font-family: 'Bebas Neue'; color: #fff; text-decoration: none; font-size: 1.7rem;}
-            .flex2{display: grid; grid-template-columns: repeat(4, auto); margin: 30px;}
-            .exp, .edu, .ski, .inv{padding: 20px;}
-            p{color: #0055ff;}
+  <style>
+    body {font-family: Arial, sans-serif; margin: 0; padding: 0; background-color: #f0f0f0; display: flex; flex-direction: column; /* Stack content vertically */ justify-content: flex-start; align-items: center;}
 
-            @media screen and (max-width: 768px) {
-                .flex1 {flex-direction: column; width: 100%; padding-left: 10px; padding-right: 10px;}
-                .flex2{grid-template-columns: 1fr; margin: 15px 0;} 
-                .title{text-align: center;}
-                .welcome {font-size: 3rem; }
+    .top {
+      display: flex;
+      justify-content: space-evenly;
+      align-items: center;
+      width: 100%;
+      padding-top: 15px;
+      padding-bottom: 10px;
+    }
 
-            }
+    .ap {
+      display: inline-block;
+      white-space: nowrap;
+      text-align: center;
+      font-size: 14px;
+      text-decoration: none;
+      font-family: 'Druk Wide Bold';
+      color: #b6b6b6;
+    }
 
-        </style>
-    </head>
-    <body>
-        <nav class="navbar">
-            <div class="navleft"><a href="fylz.html">@rchdook</a></div>
-            <div class="navright">
-                <a href="fylz.html">fylz</a> 
-                <a href="test1.html">test1</a>
-                <a href="projex.html">test2</a>
-            </div>
-        </nav>
-        <div class="flex1">
-            <div class="headshot">
-                <img class="picture" src="media/playdo.png" alt="lalala">
-            </div>
-            <div class="text">
-                <p class="welcome">Welcome</p>
-                <p class="underwelcome">bellowwww </p>
-                <p class="para">
-                    i am excited to be finally working on this big project of mine combining everything I've ever wanted to produce. 
-                    <br>
-                    <br>
-                    i hope it works out 
-                    <br>
-                </p>
-            </div>
-        </div>
+    .main {
+        display: flex;
+        flex-direction: column; /* Stack elements vertically */
+        align-items: stretch; /* Center all elements horizontally */
+        justify-content: center;
+        height: 100vh; /* Full viewport height */
+    }
+    .ad1 {
+        font-size: 50px;
+        text-align: left;  /* Align text to the left */
+        margin-left: -270px; /* Adjust the position slightly to the left */
+    }
+    .ad2 {
+        font-size: 50px;
+        text-align: left;  /* Align text to the left */
+        margin-left: -10px; /* Slightly off-center to the left */
+    }
+    .ad3 {
+        font-size: 50px;
+        text-align: left; /* Center the text */
+        margin-left: -150px; /* Center the element */
+    }
+    h1 {font-family: 'Druk Wide Bold'; color: #0055ff; margin: 10px;}
 
-        <div class="flex2">
-            <div class="exp">
-                <p class="title">EXPERIENCES</p>
-                <p class="sub">Greek House</p>
-                <p>Campus Rep</p>
-                <p>Sales & Marketing Intern</p>
-                <p class="sub">Fizz</p>
-                <p>Online Marketing Moderator</p>
-                <p class="sub">Wentworth Hotel</p>
-                <p>Server</p>
-            </div>
-            <div class="edu">
-                <p class="title">EDUCATION</p>
-                <p class="sub">Syracuse Univeristy</p>
-                <p class="sub">School of Information Studies</p>
-                <p>Information Management & Technology Major</p>
-                <p class="sub">Martin J. Whitman School of Management</p>
-                <p>Marketing Minor</p>
-                <p class="sub">S.I. Newhouse School of Public Communications</p>
-                <p>Public Communication Studies Minor</p>
-            </div>
-            <div class="ski">
-                <p class="title">SKILLS</p>
-                <p>HTML</p>
-                <p>CSS</p>
-                <p>SQL</p>
-                <p>VSCode</p>
-                <p>Python</p>
-                <p>JavaScript</p>
-                <p>Canva</p>
-                <p>Figma</p>
-                <p>Microsoft Office Suite</p>
-                <p>Google Suite</p>
-                <p>Vertabelo</p>
-                <p>iMovie</p>
-                <p>TikTok</p>
+    .char {
+        justify-content: flex-end;
+        font-size: 30px;
+        font-family: 'Druk Wide Bold';
+        color: #0a090a;
+    }
 
-            </div>
-            <div class="inv">
-                <p class="title">INVOLVEMENT</p>
-                <p>Tri Delta Sorority</p>
-                <p>TNH Advertising Agency</p>
-                <p>NEXIS Tech Lab</p>
-                <p>Boys & Girls Club of Syracuse</p>
-            </div>
-        </div>
-        <footer>
-            <a href="media/resume.pdf" target="_blank">Click to download my Resume</a>
-        </footer>
-    </body>
+    .line {
+      width: 100%;
+      height: 2px;
+      background-color: black;
+      margin: 20px 0;
+    }
+
+    .line2 {
+      width: 100%;
+      height: 2px;
+      background-color: black;
+      margin: 20px 0;
+    }
+
+    .img-container{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 20px;
+    }
+
+    .img-container img {
+        height: 170px;
+        width: auto;
+        object-fit: cover;
+    }
+
+    /* Container for the moving text */
+    .text-container {
+      display: flex;
+      justify-content: flex-start;
+      align-items: flex-start;
+      width: 100%;
+      overflow: hidden;
+    }
+
+    /* The moving text itself */
+    .text {
+      display: inline-block;
+      white-space: nowrap;
+      text-align: left;
+      padding-left: 20px;
+      font-size: 40px;
+      font-family: 'Druk Wide Bold';
+      align-self: flex-start;
+    }
+
+    .img {
+        display: inline-flex;
+        animation: moveText 10s linear infinite;
+    }
+
+    /* Keyframe animation to move the text */
+    @keyframes moveText {
+      0% {
+        transform: translateX(100%); /* Start from the right side */
+      }
+      100% {
+        transform: translateX(-100%); /* Move to the left side */
+      }
+    }
+
+  </style>
+</head>
+
+<body>
+
+  <div class="top">
+    <a href="index.html" class="ap">@rchdook productions</a>
+    <a href="index.html" class="ap">@rchdook productions</a>
+    <a href="index.html" class="ap">@rchdook productions</a>
+    <a href="index.html" class="ap">@rchdook productions</a>
+    <a href="index.html" class="ap">@rchdook productions</a>
+  </div>
+
+  <div class="main">
+    <div class="m1">
+      <h1 class="ad1">@rchdook</h1>
+    </div>
+    <div>
+      <h1 class="ad2">@rchdook</h1>
+    </div>
+    <div>
+      <h1 class="ad3">@rchdook</h1>
+    </div>
+  </div>
+
+<div class="line"></div>
+
+  <div class="text-container">
+    <div class="text">PORTFOLIO</div>
+  </div>
+
+  <div class="line"></div>
+
+  <div class="text-container">
+    <div class="text">PROJECTS</div>
+  </div>
+
+  <div class="line"></div>
+
+  <div class="text-container">
+    <div class="text">ABROAD</div>
+  </div>
+
+  <div class="line"></div>
+
+  <div class="text-container">
+    <div class="text">DESIGN</div>
+  </div>
+
+  <div class="line2"></div>
+
+  <div class="text-container">
+    <div class="text">
+        <span>GAMES</span>
+        <span>GAMES</span>
+    </div>
+  </div>
+
+  <div class="line2"></div>
+
+  <div class="img-container">
+    <img class="img" src="media/playdo.png">
+    <img class="img" src="media/playdomoped.png">
+    <img class="img" src="media/playdoheart.png">
+    <img class="img" src="media/playdotall.png">
+    <img class="img" src="media/playdopink.png">
+    <img class="img" src="media/playdostilt.png">
+    <img class="img" src="media/playdohug.png">
+  </div>
+
+  <div class="line"></div>
+
+</body>
 </html>
