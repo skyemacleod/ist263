@@ -59,6 +59,69 @@
         font-family: 'Druk Wide Bold';
         color: #0a090a;
     }
+
+    .line {
+      width: 100%;
+      height: 2px;
+      background-color: black;
+      margin: 20px 0;
+    }
+
+    .line2 {
+      width: 100%;
+      height: 2px;
+      background-color: black;
+      margin: 20px 0;
+    }
+
+    .img-container{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 20px;
+    }
+
+    .img-container img {
+        height: 170px;
+        width: auto;
+        object-fit: cover;
+    }
+
+    /* Container for the moving text */
+    .text-container {
+      display: flex;
+      justify-content: flex-start;
+      align-items: flex-start;
+      width: 100%;
+      overflow: hidden;
+    }
+
+    /* The moving text itself */
+    .text {
+      display: inline-block;
+      white-space: nowrap;
+      text-align: left;
+      padding-left: 20px;
+      font-size: 40px;
+      font-family: 'Druk Wide Bold';
+      align-self: flex-start;
+    }
+
+    .img {
+        display: inline-flex;
+        animation: moveText 10s linear infinite;
+    }
+
+    /* Keyframe animation to move the text */
+    @keyframes moveText {
+      0% {
+        transform: translateX(100%); /* Start from the right side */
+      }
+      100% {
+        transform: translateX(-100%); /* Move to the left side */
+      }
+    }
+
   </style>
 </head>
 
@@ -81,8 +144,54 @@
   <div>
     <h1 class="ad3">@rchdook</h1>
   </div>
-  
 </div>
+
+<div class="line"></div>
+
+  <div class="text-container">
+    <div class="text">PORTFOLIO</div>
+  </div>
+
+  <div class="line"></div>
+
+  <div class="text-container">
+    <div class="text">PROJECTS</div>
+  </div>
+
+  <div class="line"></div>
+
+  <div class="text-container">
+    <div class="text">ABROAD</div>
+  </div>
+
+  <div class="line"></div>
+
+  <div class="text-container">
+    <div class="text">DESIGN</div>
+  </div>
+
+  <div class="line2"></div>
+
+  <div class="text-container">
+    <div class="text">
+        <span>GAMES</span>
+        <span>GAMES</span>
+    </div>
+  </div>
+
+  <div class="line2"></div>
+
+  <div class="img-container">
+    <img class="img" src="media/playdo.png">
+    <img class="img" src="media/playdomoped.png">
+    <img class="img" src="media/playdoheart.png">
+    <img class="img" src="media/playdotall.png">
+    <img class="img" src="media/playdopink.png">
+    <img class="img" src="media/playdostilt.png">
+    <img class="img" src="media/playdohug.png">
+  </div>
+
+  <div class="line"></div>
 
 </body>
 </html>
