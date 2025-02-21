@@ -15,11 +15,21 @@
       width: 100%;
       overflow: hidden;
     }
-    
+
     .img {
         display: inline-flex;
         animation: moveText 10s linear infinite;
     }
+
+    @keyframes moveText {
+      0% {
+        transform: translateX(100%); /* Start from the right side */
+      }
+      100% {
+        transform: translateX(-100%); /* Move to the left side */
+      }
+    }
+    
   </style>
   
   <body>
