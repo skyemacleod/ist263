@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfolio Page</title>
+    <link rel="stylesheet" href="styles.css">
+    <!-- Importing Google Fonts for similar typography -->
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+
+    <style>
+        * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: #000; /* Black background for the border effect */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    font-family: 'Roboto', sans-serif;
+}
+
+.container {
+    background-color: #fff; /* White background for the main content */
+    width: 90%;
+    max-width: 1200px;
+    height: 80vh;
+    padding: 20px;
+    position: relative;
+    border: 10px solid #000; /* Black border around the container */
+}
+
+/* Top-left corner text */
+.top-left {
+    position: absolute;
+    top: 20px;
+    left: 20px;
+    font-size: 14px;
+    text-transform: uppercase;
+    line-height: 1.5;
+}
+
+/* Main headline */
+.headline {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+}
+
+.name {
+    font-family: 'Playfair Display', serif;
+    font-size: 80px;
+    font-weight: 700;
+    line-height: 1;
+}
+
+.description {
+    font-family: 'Roboto', sans-serif;
+    font-size: 60px;
+    font-weight: 700;
+    line-height: 1;
+}
+
+/* Beat text */
+.beat {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    font-size: 14px;
+}
+
+/* Images */
+.image-left {
+    position: absolute;
+    bottom: 20px;
+    left: 20px;
+    width: 200px;
+    height: 300px;
+}
+
+.image-right {
+    position: absolute;
+    top: 100px;
+    left: 250px;
+    width: 150px;
+    height: 200px;
+}
+
+.image-left img, .image-right img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+/* Subheading text */
+.subheading {
+    position: absolute;
+    bottom: 20px;
+    left: 250px;
+    width: 50%;
+    font-size: 18px;
+    line-height: 1.5;
+}
+    </style>
+</head>
+<body>
+    <div class="container">
+        <!-- Top-left corner text -->
+        <div class="top-left">
+            <p>BY INTERVIEW</p>
+            <p>JUNE 29, 2022</p>
+        </div>
+
+        <!-- Main headline -->
+        <h1 class="headline">
+            <span class="name">Isabella Lovestory</span><br>
+            <span class="description">Obnoxious, Trendy, Sexy</span>
+        </h1>
+
+        <!-- Beat text -->
+        <p class="beat">(beat)</p>
+
+        <!-- Images -->
+        <div class="image-left">
+            <img src="image1.jpg" alt="Left Image">
+        </div>
+        <div class="image-right">
+            <img src="image2.jpg" alt="Right Image">
+        </div>
+
+        <!-- Subheading text -->
+        <p class="subheading">
+            Pop princess Isabella Lovestory is a firework dipped in plastic. Here, the cute and chaotic starlet gives us a taste of her fantasy world, and tells us why she’s ready to explode.
+        </p>
+    </div>
+</body>
+</html>
