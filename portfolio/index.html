@@ -8,6 +8,7 @@
     <!-- Importing Google Fonts for similar typography -->
     <link rel='stylesheet' href='https://fonts.googleapis.com/css?family=Bebas Neue'>
     <link rel='stylesheet' href='https://fonts.googleapis.com/css?family=League Spartan'>
+    <link rel='stylesheet' href='https://fonts.googleapis.com/css?family=Roboto'>
 
     <style>
         body{
@@ -28,11 +29,12 @@
             padding: 5px;
             border: 4px dotted black;
             background-color: greenyellow;
-            font-family: 'League Spartan';
+            font-family: 'Roboto';
+            text-transform: uppercase;
         }
         .navleft{
             border: 2px solid blue;
-            font-size: 1.2rem;
+            font-size: 1rem;
             display: flex;
             gap: 10px;
         }
@@ -55,13 +57,14 @@
             width: 100%;
             display: flex;
             justify-content: center;
-            
+            overflow-wrap: break-word;
+            word-wrap: break-word;
         }
         .port{
             font-size: 60px;
         }
         .desc{
-            font-family: Verdana, Geneva, Tahoma, sans-serif;
+            font-family: 'League Spartan';
             width: min(30%, 100%);
         }
         .more{
