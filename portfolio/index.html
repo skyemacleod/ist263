@@ -3,135 +3,121 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Portfolio Page</title>
+    <title>Website</title>
     <link rel="stylesheet" href="styles.css">
     <!-- Importing Google Fonts for similar typography -->
-    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+    <link rel='stylesheet' href='https://fonts.googleapis.com/css?family=Bebas Neue'>
+    <link rel='stylesheet' href='https://fonts.googleapis.com/css?family=League Spartan'>
 
     <style>
-        * {
-    margin: 0;
-    padding: 0;
-}
-
-body {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 100vh;
-    font-family: 'Roboto', sans-serif;
-}
-
-.container {
-    background-color: #fff; /* White background for the main content */
-    width: 90%;
-    max-width: 1200px;
-    height: 80vh;
-    position: relative;
-}
-
-/* Top-left corner text */
-.top-left {
-    position: absolute;
-    left: 20px;
-    font-size: 14px;
-    text-transform: uppercase;
-    line-height: 1.5;
-}
-
-/* Main headline */
-.headline {
-    position: absolute;
-    text-align: right;
-    top: 60px;
-    right: 20px;
-}
-
-.name {
-    font-family: 'Playfair Display', serif;
-    font-size: 80px;
-    font-weight: 700;
-    line-height: 1;
-}
-
-.description {
-    font-family: 'Roboto', sans-serif;
-    font-size: 60px;
-    font-weight: 700;
-    line-height: 1;
-}
-
-/* Beat text */
-.beat {
-    position: absolute;
-    top: 20px;
-    right: 20px;
-    font-size: 14px;
-}
-
-/* Images */
-.image-left {
-    position: absolute;
-    bottom: 20px;
-    left: 20px;
-    width: 300px;
-    height: auto;
-}
-
-.image-right {
-    position: absolute;
-    top: 100px;
-    left: 250px;
-    width: 150px;
-    height: 200px;
-}
-
-.image-left img, .image-right img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-}
-
-/* Subheading text */
-.subheading {
-    position: absolute;
-    bottom: 20px;
-    left: 250px;
-    width: 50%;
-    font-size: 18px;
-    line-height: 1.5;
-}
+        body{
+            display: flex; 
+            justify-content: space-around; 
+            border: 4px solid black;
+            flex-direction: column;
+            padding: 10px;
+            margin: 10px;
+            background-color: #fefefe;
+            gap: 10px;
+        }
+        nav{
+            position: sticky;
+            display: flex; 
+            justify-content: space-between;
+            align-items: center;
+            padding: 5px;
+            border: 4px dotted black;
+            background-color: greenyellow;
+            font-family: 'League Spartan';
+        }
+        .navleft{
+            border: 2px solid blue;
+            font-size: 1.2rem;
+            display: flex;
+            gap: 10px;
+        }
+        .navleft a{color: black;}
+        .navright{
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+        .skye{
+            border: 4px solid #ee19aa; 
+            font-size: 60px;
+            text-align: center;
+            font-family: 'Druk Wide Bold';
+            padding-top: 30px;
+            padding-bottom: 30px;
+        }
+        .sm{
+            font-size: 9vw;
+            width: 100%;
+            display: flex;
+            justify-content: center;
+            
+        }
+        .port{
+            font-size: 60px;
+        }
+        .desc{
+            font-family: Verdana, Geneva, Tahoma, sans-serif;
+            width: min(30%, 100%);
+        }
+        .more{
+            font-size: 100px;
+            font-family: 'League Spartan';
+        }
+        .first{
+            border: 4px solid purple;
+            gap: 10px;
+        }
+        .second{border: 4px solid gold}
+        .box{
+            background-color: pink; 
+            font-size: 20px;
+        }
+        .icons{
+            border: 4px solid white;
+            justify-content: space-between;
+        }
+        .link img{width: 30px; height: auto; }
     </style>
 </head>
 <body>
-    <div class="container">
-        <!-- Top-left corner text -->
-        <div class="top-left">
-            <p>BY INTERVIEW</p>
-            <p>JUNE 29, 2022</p>
+    <nav class="nav">
+        <div class="navleft">
+            <a href="about.html">Skye MacLeod</a> 
+            <a href="progress.html">Progress</a>
+            <a href="contact.html">Contact</a>
         </div>
-
-        <!-- Main headline -->
-        <h1 class="headline">
-            <span class="name">Skye MacLeod's</span><br>
-            <span class="description">Hot, Funny, Busty</span>
-        </h1>
-
-        <!-- Beat text -->
-        <p class="beat">(beat)</p>
-
-        <!-- Images -->
-        <div class="image-left">
-            <img src="media/image1.jpeg" alt="Left Image">
+        <div class="navright">
+            <a class="link" href="https://www.linkedin.com/in/skyemacleod/"><img src="media/linkedin.svg" alt="LinkedIn Icon"></a>
+        <a class="link" href="mailto:asmacleo@syr.edu"><img src="media/mail.svg" alt="Email Icon"></a>
         </div>
-        <div class="image-right">
-            <img src="media/image2.jpeg" alt="Right Image">
-        </div>
-
-        <!-- Subheading text -->
-        <p class="subheading">
-            Pop princess Skye MacLeod is a firework dipped in plastic. Here, the cute and chaotic starlet gives us a taste of her fantasy world, and tells us why she’s ready to explode.
-        </p>
+    </nav>
+    <div class="skye">
+        <div class="sm">Skye MacLeod</div>
+        <div class="port">Portfolio</div>
+    </div>
+    <div class="desc">
+        hi i'm skye — a student studying IMT and Marketing at Syracuse University — i like to play around blending the art of design with the power of data
+    </div>
+    <div class="more">
+        i'm a model, graphic designer, founder, and artist
+    </div>
+    <div class="first">
+        <div class="box">1</div>
+        <div class="box">2</div>
+        <div class="box">bitchhhh</div>
+    </div>
+    <div class="second">
+        <div class="box">1</div>
+        <div class="box">2</div>
+        <div class="box">bitchhhh</div>
+    </div>
+    <div class="icons">
+        <a class="link" href="https://www.linkedin.com/in/skyemacleod/"><img src="media/linkedin.svg" alt="LinkedIn Icon"></a>
+        <a class="link" href="mailto:asmacleo@syr.edu"><img src="media/mail.svg" alt="Email Icon"></a>
     </div>
 </body>
-</html>

@@ -1,0 +1,8 @@
+
+@font-face {
+    font-family: 'Druk Wide Bold';
+    src: url('media/DrukWideBold.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+nav a{text-decoration: none;}
