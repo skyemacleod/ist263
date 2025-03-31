@@ -15,19 +15,18 @@
         .slideshow-container {
             max-width: 1000px;
             margin: 50px auto;
-            padding: 20px;
+            padding: 50px;
             white-space: nowrap;
             text-align: center;
             border: 4px solid black;
         }
-
         .slide {
             display: inline-block;
             margin: 0 10px;
             transition: transform 0.3s ease, filter 0.3s ease;
             filter: blur(2px); /* Blur effect on non-hovered images */
+            position: relative;
         }
-
         .slide img {
             width: 150px;
             height: auto;
@@ -35,28 +34,31 @@
             border-radius: 10px;
             vertical-align: middle;
         }
-
         .slide:hover {
             transform: scale(1.5); /* Enlarge the image on hover */
             filter: blur(0); /* Remove blur on hover */
-            z-index: 1;
+            z-index: 10;
+        }
+        .slide-text {
+            position: absolute;
+            text-align: left;
+            top: -30px; /* Position the text above the image */
+            left: 50%;
+            transform: translateX(-50%);
+            color: #333;
+            padding: 5px 10px;
+            font-size: 12px;
+            opacity: 0; /* Initially hide the text */
+            visibility: hidden;
+            transition: opacity 0.3s ease, visibility 0s 0.3s; /* Smooth fade-in */
         }
 
-        /* Scrollbar styling */
-        .slideshow-container::-webkit-scrollbar {
-            height: 10px;
+        /* Show the text when hovering over the slide */
+        .slide:hover .slide-text {
+            opacity: 1;
+            visibility: visible;
+            transition: opacity 0.3s ease;
         }
-
-        .slideshow-container::-webkit-scrollbar-thumb {
-            background: #888;
-            border-radius: 4px;
-        }
-
-        .slideshow-container::-webkit-scrollbar-thumb:hover {
-            background: #555;
-        }
-
-        /* Optional: Add a header like in the image */
         .header {
             text-align: left;
             max-width: 1000px;
@@ -74,18 +76,52 @@
     <div class="slideshow-container">
         <div class="slide">
             <img src="media/image1.jpeg" alt="Photo 1">
+            <div class="slide-text">ABROAD ARCHIVE</div>
         </div>
         <div class="slide">
             <img src="media/image2.jpeg" alt="Photo 2">
+            <div class="slide-text">ABROAD ARCHIVE</div>
         </div>
         <div class="slide">
             <img src="https://via.placeholder.com/150x200" alt="Photo 3">
+            <div class="slide-text">ABROAD ARCHIVE</div>
         </div>
         <div class="slide">
-            <img src="https://via.placeholder.com/150x200" alt="Photo 4">
+            <img src="media/image4.jpeg" alt="Photo 4">
+            <div class="slide-text">ABROAD ARCHIVE</div>
         </div>
         <div class="slide">
             <img src="https://via.placeholder.com/150x200" alt="Photo 5">
+            <div class="slide-text">ABROAD ARCHIVE</div>
+        </div>
+        <div class="slide">
+            <img src="https://via.placeholder.com/150x200" alt="Photo 6">
+            <div class="slide-text">ABROAD ARCHIVE</div>
+        </div>
+        <div class="slide">
+            <img src="https://via.placeholder.com/150x200" alt="Photo 7">
+            <div class="slide-text">ABROAD ARCHIVE</div>
+        </div>
+    </div>
+    <div class="slideshow-container">
+        <div class="slide">
+            <img src="media/par1.jpeg" alt="Photo 1">
+            <div class="slide-text">ABROAD ARCHIVE</div>
+        </div>
+        <div class="slide">
+            <img src="media/par2.JPeG" alt="Photo 2">
+            <div class="slide-text">ABROAD ARCHIVE</div>
+        </div>
+        <div class="slide">
+            <img src="media/par3.jpeg" alt="Photo 3">
+            <div class="slide-text">derriere</div>
+        </div>
+        <div class="slide">
+            <img src="media/par4.jpeg" alt="Photo 4">
+            <div class="slide-text">ABROAD ARCHIVE</div>
+        </div>
+        <div class="slide">
+            <img src="media/par5.jpeg" alt="Photo 5">
         </div>
         <div class="slide">
             <img src="https://via.placeholder.com/150x200" alt="Photo 6">
