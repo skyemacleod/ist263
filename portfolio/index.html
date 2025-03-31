@@ -14,12 +14,12 @@
         body{
             display: flex; 
             justify-content: space-around; 
-            border: 4px solid black;
             flex-direction: column;
             padding: 10px;
-            margin: 10px;
-            background-color: #fefefe;
+            margin: 0px;
+            background-color: #f5f5f5;
             gap: 10px;
+            
         }
         nav{
             position: sticky;
@@ -38,12 +38,22 @@
             display: flex;
             gap: 10px;
         }
-        .navleft a{color: black;}
+        .nav a{color: black;}
+        .navcenter{
+            justify-content: center; 
+            display: flex;
+            gap: 10px;
+        }
         .navright{
             display: flex;
             align-items: center;
-            gap: 10px;
+            
         }
+        .navright img{
+            height: 24px;
+            width: auto;
+            padding: 5px;
+        }  
         .skye{
             border: 4px solid #ee19aa; 
             font-size: 60px;
@@ -59,6 +69,8 @@
             justify-content: center;
             overflow-wrap: break-word;
             word-wrap: break-word;
+            padding-bottom: 80px;
+            padding-top: 30px;
         }
         .port{
             font-size: 60px;
@@ -71,6 +83,34 @@
             font-size: 100px;
             font-family: 'League Spartan';
         }
+        .slideshow-container {
+            background-color: #f5f5f5;
+            margin: 50px auto;
+            padding: 20px;
+            text-align: center;
+            display: flex;
+            height: auto;
+        }
+        .slide {
+            display: inline-block;
+            margin: 0 10px;
+            transition: transform 0.3s ease, filter 0.3s ease;
+            filter: blur(2px); /* Blur effect on non-hovered images */
+            position: relative;
+        }
+        .slide img {
+            width: 150px;
+            height: auto;
+            object-fit: cover;
+            border-radius: 10px;
+            vertical-align: middle;
+        }
+        .slide:hover {
+            transform: scale(1.5); /* Enlarge the image on hover */
+            filter: blur(0); /* Remove blur on hover */
+            z-index: 10;
+        }
+
         .first{
             border: 4px solid purple;
             gap: 10px;
@@ -84,30 +124,58 @@
             border: 4px solid white;
             justify-content: space-between;
         }
-        .link img{width: 30px; height: auto; }
+        
     </style>
 </head>
 <body>
     <nav class="nav">
         <div class="navleft">
             <a href="about.html">Skye MacLeod</a> 
+        </div>
+        <div class="navcenter"> 
             <a href="progress.html">Progress</a>
-            <a href="contact.html">Contact</a>
+            <a href="studio.html">Studio</a>
         </div>
         <div class="navright">
             <a class="link" href="https://www.linkedin.com/in/skyemacleod/"><img src="media/linkedin.svg" alt="LinkedIn Icon"></a>
-        <a class="link" href="mailto:asmacleo@syr.edu"><img src="media/mail.svg" alt="Email Icon"></a>
+            <a class="link" href="mailto:asmacleo@syr.edu"><img src="media/mail.svg" alt="Email Icon"></a>
         </div>
     </nav>
     <div class="skye">
         <div class="sm">Skye MacLeod</div>
-        <div class="port">Portfolio</div>
+        
     </div>
     <div class="desc">
         hi i'm skye — a student studying IMT and Marketing at Syracuse University — i like to play around blending the art of design with the power of data
     </div>
     <div class="more">
-        i'm a model, graphic designer, founder, and artist
+        i'm a model, graphic designer, founder, & artist
+    </div>
+    <div class="header">
+        <p>(03) PFR<br>EXPLORE THE ABROAD ARCHIVE, 2025 LONDON</p>
+    </div>
+    <div class="slideshow-container">
+        <div class="slide">
+            <img src="media/image1.jpeg" alt="Photo 1">
+        </div>
+        <div class="slide">
+            <img src="media/image2.jpeg" alt="Photo 2">
+        </div>
+        <div class="slide">
+            <img src="media/image3.jpg" alt="Photo 3">
+        </div>
+        <div class="slide">
+            <img src="https://via.placeholder.com/150x200" alt="Photo 4">
+        </div>
+        <div class="slide">
+            <img src="https://via.placeholder.com/150x200" alt="Photo 5">
+        </div>
+        <div class="slide">
+            <img src="https://via.placeholder.com/150x200" alt="Photo 6">
+        </div>
+        <div class="slide">
+            <img src="https://via.placeholder.com/150x200" alt="Photo 7">
+        </div>
     </div>
     <div class="first">
         <div class="box">1</div>
