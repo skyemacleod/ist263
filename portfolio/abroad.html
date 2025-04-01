@@ -4,16 +4,40 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>SM — Abroad</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel='stylesheet' href='https://fonts.googleapis.com/css?family=Bebas Neue'>
+    <link rel='stylesheet' href='https://fonts.googleapis.com/css?family=League Spartan'>
+    <link rel='stylesheet' href='https://fonts.googleapis.com/css?family=Roboto'>
     <style>
         body {
             background-color: #f5f5f5;
             font-family: Arial, sans-serif;
             margin: 0;
-            padding: 0;
+            padding: 10px;
             display: flex;
             flex-direction: column;
-            border: 4px solid green;
+
             height: 100vh;
+        }
+        nav{
+            position: sticky;
+            display: flex; 
+            justify-content: space-between;
+            align-items: center;
+            padding: 10px;
+            font-family: 'Roboto';
+            text-transform: uppercase;
+        }
+        .navleft{
+            font-size: 1rem;
+            display: flex;
+            gap: 10px;
+        }
+        .nav a{color: black;}
+        .navright{
+            justify-content: center; 
+            display: flex;
+            gap: 10px;
         }
         .header {
             border: 2px solid palevioletred;
@@ -72,6 +96,15 @@
     </style>
 </head>
 <body>
+    <nav class="nav">
+        <div class="navleft">
+            <a href="index.html">Skye MacLeod</a> 
+        </div>
+        <div class="navright"> 
+            <a href="progress.html">Progress</a>
+            <a href="studio.html">Studio</a>
+        </div>
+    </nav>
     <div class="header">
         <p>[01] PFR<br>EXPLORE THE ABROAD ARCHIVE, 2025 LONDON</p>
     </div>
