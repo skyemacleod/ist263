@@ -17,14 +17,48 @@
             flex-direction: column;
             height: 100vh;
             margin: 0;
+            position: relative;
         }
         .topbar{
             background-color: #c3c3c3;
             padding: 5px;
+            display: flex;
+            justify-content: space-between; /* Space out the content (apple icon and date/time) */
+            align-items: center;
         }
         .apple{
             width: 15px;
             height: auto;
+        }
+        #date-time {
+            font-family: 'Roboto', sans-serif;
+            font-size: 14px;
+            color: #ffffff;
+            margin-right: 10px; /* Optional: add some margin to space from the edge */
+        }
+        .folders {
+            position: absolute; /* Use absolute positioning to place it on the left */
+            left: 10px; /* 10px from the left of the screen */
+            top: 50%; /* Start in the middle of the screen */
+            transform: translateY(-50%); /* Center the folders vertically */
+            display: flex;
+            flex-direction: column; /* Stack the folders vertically */
+            gap: 15px; /* Space between folder icons */
+        }
+
+        .folders {
+            position: absolute; /* Absolute positioning to place it on the left side */
+            display: flex;
+            flex-direction: column; /* Stack the folders vertically */
+            gap: 15px; /* Space between folder icons */
+            overflow-y: auto; /* Allows scrolling if there are too many folders */
+            padding-left: 20px;
+        }
+
+        .folder {
+            width: 50px; /* Set the width of the folder icon */
+            height: auto; /* Let the height adjust automatically */
+            cursor: pointer; /* Optional: add a cursor pointer for interactivity */
         }
         .menu{
             background-color: #ececece9;
@@ -36,22 +70,32 @@
             position: absolute;
             bottom: 0;
             gap: 10px;
-
+            left: 50%; /* This moves the menu horizontally to the middle of the page */
+            transform: translateX(-50%);
         }
         .app{
-            width: 30px;
-            
+            width: 40px;
+            cursor: pointer;
         }
         .app3{
-            width: 30px;
+            width: 40px;
             height: auto;
             border-radius: 6px;
+            cursor: pointer;
         }
     </style>
 </head>
 <body>
     <div class="topbar">
         <img class="apple" src="media/icons/apple.svg.png">
+        <div id="date-time" class="date-time"></div>
+    </div>
+    <div class="folders">
+        <img class="folder" src="media/icons/folder.png" alt="Folder 1">
+        <img class="folder" src="media/icons/folder.png" alt="Folder 2">
+        <img class="folder" src="media/icons/folder.png" alt="Folder 3">
+        <img class="folder" src="media/icons/folder.png" alt="Folder 4">
+        <img class="folder" src="media/icons/folder.png" alt="Folder 5">
     </div>
     <div class="menu">
         <img class="app" src="media/icons/finder.png">
@@ -76,5 +120,20 @@
 
         <img class="app" src="media/icons/trash.ico">
     </div>
+
+    <script>
+        function updateDateTime() {
+            const now = new Date();
+            const options = { weekday: 'short', month: 'short', day: 'numeric', hour: '2-digit', minute: '2-digit' };
+            const dateTimeString = now.toLocaleString('en-US', options);
+            document.getElementById("date-time").textContent = dateTimeString;
+        }
+    
+        // Update date and time every minute
+        setInterval(updateDateTime, 60000);
+    
+        // Initial update on page load
+        updateDateTime();
+    </script>
 </body>
 </html>
