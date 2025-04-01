@@ -25,7 +25,7 @@
             display: flex; 
             justify-content: space-between;
             align-items: center;
-            padding: 5px;
+            padding: 10px;
             border: 4px dotted black;
             font-family: 'Roboto';
             text-transform: uppercase;
@@ -36,20 +36,11 @@
             gap: 10px;
         }
         .nav a{color: black;}
-        .navcenter{
+        .navright{
             justify-content: center; 
             display: flex;
             gap: 10px;
         }
-        .navright{
-            display: flex;
-            align-items: center;
-        }
-        .navright img{
-            height: 24px;
-            width: auto;
-            padding: 5px;
-        }  
         .skye{
             border: 2px solid rgb(226, 59, 114); 
             font-size: 60px;
@@ -118,7 +109,18 @@
             background-color: pink; 
             font-size: 20px;
         }
-        
+        footer img{
+            height: 24px;
+            width: auto;
+            padding: 5px;
+        }  
+        footer{
+            width: 100%;
+            height: 60px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
     </style>
 </head>
 <body>
@@ -126,13 +128,9 @@
         <div class="navleft">
             <a href="index.html">Skye MacLeod</a> 
         </div>
-        <div class="navcenter"> 
+        <div class="navright"> 
             <a href="progress.html">Progress</a>
             <a href="studio.html">Studio</a>
-        </div>
-        <div class="navright">
-            <a class="link" href="https://www.linkedin.com/in/skyemacleod/"><img src="media/linkedin.svg" alt="LinkedIn Icon"></a>
-            <a class="link" href="mailto:asmacleo@syr.edu"><img src="media/mail.svg" alt="Email Icon"></a>
         </div>
     </nav>
     <div class="skye">
@@ -178,5 +176,8 @@
         <div class="box">2</div>
         <div class="box">bitchhhh</div>
     </div>
-    
+    <footer>
+        <a class="link" href="https://www.linkedin.com/in/skyemacleod/"><img src="media/linkedin.svg" alt="LinkedIn Icon"></a>
+        <a class="link" href="mailto:asmacleo@syr.edu"><img src="media/mail.svg" alt="Email Icon"></a>
+    </footer>
 </body>
