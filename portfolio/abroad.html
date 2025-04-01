@@ -10,21 +10,31 @@
             font-family: Arial, sans-serif;
             margin: 0;
             padding: 0;
+            display: flex;
+            flex-direction: column;
+            border: 4px solid green;
+            height: 100vh;
         }
-
+        .header {
+            border: 2px solid palevioletred;
+            text-align: start;
+            margin: 20px auto;
+            font-size: 16px;
+            color: #333;
+        }
         .slideshow-container {
-            max-width: 1000px;
-            margin: 50px auto;
+            border: 4px solid black;
+            justify-content: center;
             padding: 50px;
             white-space: nowrap;
             text-align: center;
-            border: 4px solid black;
+            margin-top: 60px;
         }
         .slide {
             display: inline-block;
             margin: 0 10px;
             transition: transform 0.3s ease, filter 0.3s ease;
-            filter: blur(2px); /* Blur effect on non-hovered images */
+            filter: blur(1.5px); /* Blur effect on non-hovered images */
             position: relative;
         }
         .slide img {
@@ -41,7 +51,6 @@
         }
         .slide-text {
             position: absolute;
-            text-align: left;
             top: -30px; /* Position the text above the image */
             left: 50%;
             transform: translateX(-50%);
@@ -59,14 +68,7 @@
             visibility: visible;
             transition: opacity 0.3s ease;
         }
-        .header {
-            text-align: left;
-            max-width: 1000px;
-            margin: 20px auto;
-            padding-left: 20px;
-            font-size: 14px;
-            color: #333;
-        }
+        
     </style>
 </head>
 <body>
@@ -75,59 +77,36 @@
     </div>
     <div class="slideshow-container">
         <div class="slide">
-            <img src="media/image1.jpeg" alt="Photo 1">
-            <div class="slide-text">ABROAD ARCHIVE</div>
+            <img src="media/london.jpeg" alt="Photo 1">
+            <div class="slide-text">London</div>
         </div>
         <div class="slide">
-            <img src="media/image2.jpeg" alt="Photo 2">
-            <div class="slide-text">ABROAD ARCHIVE</div>
+            <img src="media/madrid.jpeg" alt="Photo 2">
+            <div class="slide-text">Madrid</div>
         </div>
         <div class="slide">
-            <img src="https://via.placeholder.com/150x200" alt="Photo 3">
-            <div class="slide-text">ABROAD ARCHIVE</div>
+            <img src="media/cope.jpeg" alt="Photo 3">
+            <div class="slide-text">Copenhagen</div>
         </div>
         <div class="slide">
-            <img src="media/image4.jpeg" alt="Photo 4">
-            <div class="slide-text">ABROAD ARCHIVE</div>
+            <img src="media/pari.jpeg" alt="Photo 4">
+            <div class="slide-text">Paris</div>
         </div>
         <div class="slide">
-            <img src="https://via.placeholder.com/150x200" alt="Photo 5">
-            <div class="slide-text">ABROAD ARCHIVE</div>
+            <img src="media/" alt="Photo 5">
+            <div class="slide-text">Amsterdam</div>
         </div>
         <div class="slide">
-            <img src="https://via.placeholder.com/150x200" alt="Photo 6">
-            <div class="slide-text">ABROAD ARCHIVE</div>
+            <img src="media/floo.jpeg" alt="Photo 6">
+            <div class="slide-text">Florence</div>
         </div>
         <div class="slide">
-            <img src="https://via.placeholder.com/150x200" alt="Photo 7">
-            <div class="slide-text">ABROAD ARCHIVE</div>
-        </div>
-    </div>
-    <div class="slideshow-container">
-        <div class="slide">
-            <img src="media/par1.jpeg" alt="Photo 1">
-            <div class="slide-text">ABROAD ARCHIVE</div>
+            <img src="media/dublin.jpeg" alt="Photo 7">
+            <div class="slide-text">Dublin</div>
         </div>
         <div class="slide">
-            <img src="media/par2.JPeG" alt="Photo 2">
-            <div class="slide-text">ABROAD ARCHIVE</div>
-        </div>
-        <div class="slide">
-            <img src="media/par3.jpeg" alt="Photo 3">
-            <div class="slide-text">derriere</div>
-        </div>
-        <div class="slide">
-            <img src="media/par4.jpeg" alt="Photo 4">
-            <div class="slide-text">ABROAD ARCHIVE</div>
-        </div>
-        <div class="slide">
-            <img src="media/par5.jpeg" alt="Photo 5">
-        </div>
-        <div class="slide">
-            <img src="https://via.placeholder.com/150x200" alt="Photo 6">
-        </div>
-        <div class="slide">
-            <img src="https://via.placeholder.com/150x200" alt="Photo 7">
+            <img src="media/malta.jpeg" alt="Photo 8">
+            <div class="slide-text">Malta</div>
         </div>
     </div>
 </body>
