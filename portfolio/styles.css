@@ -7,3 +7,35 @@
 }
 nav a{text-decoration: none;}
 a{text-decoration: none;}
+nav a:hover{ transform: scale(1.1);/*background-color: #bcbcbc;*/}
+
+/*
+<div class="slideshow-container">
+        <div class="slide">
+            <img src="media/par1.jpeg" alt="Photo 1">
+            <div class="slide-text">ABROAD ARCHIVE</div>
+        </div>
+        <div class="slide">
+            <img src="media/par2.jpeg" alt="Photo 2">
+            <div class="slide-text">ABROAD ARCHIVE</div>
+        </div>
+        <div class="slide">
+            <img src="media/par3.jpeg" alt="Photo 3">
+            <div class="slide-text">derriere</div>
+        </div>
+        <div class="slide">
+            <img src="media/par4.jpeg" alt="Photo 4">
+            <div class="slide-text">ABROAD ARCHIVE</div>
+        </div>
+        <div class="slide">
+            <img src="media/par5.jpeg" alt="Photo 5">
+        </div>
+        <div class="slide">
+            <img src="https://via.placeholder.com/150x200" alt="Photo 6">
+        </div>
+        <div class="slide">
+            <img src="https://via.placeholder.com/150x200" alt="Photo 7">
+        </div>
+    </div>
+
+*/ 

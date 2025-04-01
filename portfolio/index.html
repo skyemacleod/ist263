@@ -26,7 +26,6 @@
             justify-content: space-between;
             align-items: center;
             padding: 10px;
-            border: 4px dotted black;
             font-family: 'Roboto';
             text-transform: uppercase;
         }
@@ -42,7 +41,6 @@
             gap: 10px;
         }
         .skye{
-            border: 2px solid rgb(226, 59, 114); 
             font-size: 60px;
             text-align: center;
             font-family: 'Druk Wide Bold';
@@ -61,15 +59,11 @@
             padding-top: 30px;
             
         }
-        .desc{
-            font-family: 'League Spartan';
-            width: min(30%, 100%);
-        }
         .more{
             font-size: 60px;
             font-family: 'League Spartan';
             width: min(75%, 100%);
-            margin-top: 120px;
+            margin-top: 140px;
             margin-bottom: 60px;
             padding-left: 15px;
         }
@@ -121,9 +115,46 @@
             justify-content: center;
             align-items: center;
         }
+        #popup-blocker {
+            display: none;
+            position: fixed;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            background-color: rgba(0, 0, 0, 0.7);
+            color: white;
+            padding: 20px;
+            border-radius: 10px;
+            font-size: 16px;
+            text-align: center;
+            z-index: 9999;
+        }
     </style>
 </head>
+<script>
+    // Check if the screen width is smaller than a tablet (768px)
+    function checkDeviceSize() {
+        const width = window.innerWidth;
+
+        // If the device width is smaller than 768px, show the pop-up blocker
+        if (width < 768) {
+            document.getElementById('popup-blocker').style.display = 'block';
+        } else {
+            // Hide the pop-up if the device is larger than or equal to tablet size
+            document.getElementById('popup-blocker').style.display = 'none';
+        }
+    }
+
+    // Run the check when the page loads
+    window.onload = checkDeviceSize;
+
+    // Run the check whenever the window is resized
+    window.onresize = checkDeviceSize;
+</script>
 <body>
+    <div id="popup-blocker">
+        This website is not optimized for devices smaller than a tablet. Please visit on a larger device for the best experience.
+    </div>
     <nav class="nav">
         <div class="navleft">
             <a href="index.html">Skye MacLeod</a> 
