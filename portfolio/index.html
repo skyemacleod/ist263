@@ -48,7 +48,7 @@
             padding-bottom: 30px;
         }
         .sm{
-            font-size: 9vw;
+            font-size: 9.2vw;
             width: 100%;
             display: flex;
             justify-content: center;
@@ -121,29 +121,29 @@
             top: 50%;
             left: 50%;
             transform: translate(-50%, -50%);
-            background-color: rgba(0, 0, 0, 0.7);
-            color: white;
-            padding: 20px;
+            background-color: #f30000;
+            color: #fff423;
+            font-weight: bolder;
+            padding: 15px;
             border-radius: 10px;
-            font-size: 16px;
+            font-size: 18px;
             text-align: center;
             z-index: 9999;
         }
     </style>
 </head>
 <script>
-    // Check if the screen width is smaller than a tablet (768px)
     function checkDeviceSize() {
         const width = window.innerWidth;
-
-        // If the device width is smaller than 768px, show the pop-up blocker
         if (width < 768) {
-            document.getElementById('popup-blocker').style.display = 'block';
-        } else {
-            // Hide the pop-up if the device is larger than or equal to tablet size
-            document.getElementById('popup-blocker').style.display = 'none';
+                document.getElementById('popup-blocker').style.display = 'block';
+                document.body.style.overflow = 'hidden'; // Disable scrolling
+            } else {
+                // Hide the pop-up and enable scrolling
+                document.getElementById('popup-blocker').style.display = 'none';
+                document.body.style.overflow = 'auto'; // Enable scrolling
+            }
         }
-    }
 
     // Run the check when the page loads
     window.onload = checkDeviceSize;
@@ -153,7 +153,7 @@
 </script>
 <body>
     <div id="popup-blocker">
-        This website is not optimized for devices smaller than a tablet. Please visit on a larger device for the best experience.
+        This website is in maintenance and is not optimized for devices smaller than a tablet at the moment. Please visit on a larger device for the best experience.
     </div>
     <nav class="nav">
         <div class="navleft">
