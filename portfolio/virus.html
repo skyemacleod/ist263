@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Skye MacLeod</title>
+    <link rel="stylesheet" href="styles.css">
+    <!-- Importing Google Fonts for similar typography -->
+    <link rel='stylesheet' href='https://fonts.googleapis.com/css?family=Druk Wide Bold'>
+    <link rel='stylesheet' href='https://fonts.googleapis.com/css?family=League Spartan'>
+    <link rel='stylesheet' href='https://fonts.googleapis.com/css?family=Roboto'>
+
+    <style>
+        body{
+            background-color: #ff0c0c;
+            color: white;
+            font-family: 'Druk Wide Bold';
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+            height: 100vh;
+            font-size: 180px;
+            line-height: 0px;
+            transition: background-color 0.5s, color 0.5s;
+        }
+    </style>
+</head>
+<script>
+    // Function to swap background and text colors
+    function toggleColors() {
+            if (document.body.style.backgroundColor === 'rgb(255, 12, 12)') {
+                // If the background is red, change to white and text to red
+                document.body.style.backgroundColor = 'white';
+                document.body.style.color = '#ff0c0c';
+            } else {
+                // If the background is white, change to red and text to white
+                document.body.style.backgroundColor = '#ff0c0c';
+                document.body.style.color = 'white';
+            }
+        }
+
+        // Call the toggleColors function every 2 seconds (2000 ms)
+        setInterval(toggleColors, 300);
+</script>
+<body>
+    <p class="p">Pervert!</p>
+    <p class="p">Pervert!</p>
+    <p class="p">Pervert!</p>
+</body>
+</html>
