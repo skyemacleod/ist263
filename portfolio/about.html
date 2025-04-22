@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link rel="icon" type="image/x-icon" href="media/icons/favicon.ico" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Skye MacLeod</title>
+    <link rel="stylesheet" href="styles.css">
+    <!-- Importing Google Fonts for similar typography -->
+    <link rel='stylesheet' href='https://fonts.googleapis.com/css?family=Bebas Neue'>
+    <link rel='stylesheet' href='https://fonts.googleapis.com/css?family=League Spartan'>
+    <link rel='stylesheet' href='https://fonts.googleapis.com/css?family=Roboto'>
+
+    <style>
+        body{
+            display: flex; 
+            justify-content: space-around; 
+            flex-direction: column;
+            padding: 10px;
+            margin: 0px;
+            background-color: #f5f5f5;
+            gap: 10px;
+        }
+        nav{
+            position: sticky;
+            display: flex; 
+            justify-content: space-between;
+            align-items: center;
+            padding: 10px;
+            font-family: 'Roboto';
+            text-transform: uppercase;
+            font-size: 1.1rem;
+        }
+        .navleft{
+            display: flex;
+            gap: 10px;
+        }
+        .nav a{color: black;}
+        .navright{
+            justify-content: center; 
+            display: flex;
+            gap: 10px;
+        }
+        .skye{
+            font-size: 60px;
+            text-align: center;
+            font-family: 'Druk Wide Bold';
+            padding-top: 30px;
+            padding-bottom: 30px;
+        }
+        footer img{
+            height: 24px;
+            width: auto;
+            padding: 5px;
+        }  
+        footer{
+            width: 100%;
+            height: 60px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        #popup-blocker {
+            display: none;
+            position: fixed;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            background-color: #f30000;
+            color: #fff423;
+            font-weight: bolder;
+            padding: 15px;
+            border-radius: 10px;
+            font-size: 18px;
+            text-align: center;
+            z-index: 9999;
+        }
+        
+    </style>
+</head>
+<script>
+    function checkDeviceSize() {
+        const width = window.innerWidth;
+        if (width < 768) {
+                document.getElementById('popup-blocker').style.display = 'block';
+                document.body.style.overflow = 'hidden'; // Disable scrolling
+            } else {
+                // Hide the pop-up and enable scrolling
+                document.getElementById('popup-blocker').style.display = 'none';
+                document.body.style.overflow = 'auto'; // Enable scrolling
+            }
+        }
+
+    // Run the check when the page loads
+    window.onload = checkDeviceSize;
+
+    // Run the check whenever the window is resized
+    window.onresize = checkDeviceSize;
+</script>
+<body>
+    <div id="popup-blocker">
+        This website is in maintenance and is not optimized for devices smaller than a tablet at the moment. Please visit on a larger device for the best experience.
+    </div>
+    <nav class="nav">
+        <div class="navleft">
+            <a href="index.html">Skye MacLeod</a> 
+        </div>
+        <div class="navright"> 
+            <a href="about.html">About</a>
+            <a href="studio.html">Studio</a>
+            <a href="desktop.html">Desktop</a>
+        </div>
+    </nav>
+    <div class="skye">
+        <div class="sm">Skye MacLeod</div>
+    </div>
+    <div class="more">
+        blending the power of data — with the art of design
+    </div>
+    <div class="header">
+        <p>(00) PFP<br>WORK IN PROGRESS, FOR OLD PORTFOLIO GO TO STUDIO</p>
+    </div>
+    
+    <footer>
+        <a class="link" href="https://www.linkedin.com/in/skyemacleod/"><img src="media/linkedin.svg" alt="LinkedIn Icon"></a>
+        <a class="link" href="mailto:asmacleo@syr.edu"><img src="media/mail.svg" alt="Email Icon"></a>
+    </footer>
+</body>
