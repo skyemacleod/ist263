@@ -15,9 +15,8 @@
 
         .navright{display: flex; gap: 20px; font-family: 'Druk Wide Bold'; border: 3px solid #2234d6;}
 
-        .main{border: 4px solid #ddff00; margin: 10px;}
-
-        h1{border: 4px solid #ff00d0; background-color: #9bfff5; text-align: center; color: #2a2c35;}
+        .grid-container{display: grid; grid-template-columns: repeat(auto-fill, minmax(250px, 1fr)); gap: 10px; margin: 10px; padding: 10px; border: 4px solid #264bf1;}
+        .grid-item{border: 3px solid #d62222; padding: 20px; align-items: center; justify-content: center;}
 
         footer{display: flex; justify-content: center; align-items: center; background-color: #2a2c35; color: white; padding: 10px;}
         footer a{text-decoration: none; color: white; font-weight: bold;}
@@ -28,14 +27,19 @@
         <div class="navleft"><a href="index.html">DCSU</a></div>
         <div class="navright"> 
             <a href="about.html">About</a> 
-            <a href="team.html">Exec</a>
+            <a href="progress.html">Exec</a>
             <a href="join.html">Join</a>
         </div>
     </nav>
-    <section class="main">
-        <h1>Debate Club at Syracuse University</h1>
-        <img class="logo" src="media/logo.png" alt="DCSU Logo">
-    </section>
+    <div class="grid-container">
+        <div class="grid-item">1</div>
+        <div class="grid-item">1</div>
+        <div class="grid-item">1</div>
+        <div class="grid-item">1</div>
+        <div class="grid-item">1</div>
+        <div class="grid-item">1</div>
+        <div class="grid-item">1</div>
+    </div>
     
     <footer>
         <div>
