@@ -19,18 +19,7 @@
             margin: 0;
             position: relative;
         }
-        body::after {
-            content: "";
-            position: absolute;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            background-image: url(media/grain.jpg); /* Use your grainy image */
-            background-size: cover;
-            opacity: 0.25; /* Adjust this value for the desired effect */
-            pointer-events: none; /* Ensures the grainy overlay doesn’t block clicks or interactions */
-        }
+        
         .topbar{
             background-color: #c3c3c3;
             padding: 5px;
@@ -51,11 +40,21 @@
         .folders {
             position: absolute; /* Use absolute positioning to place it on the left */
             left: 10px; /* 10px from the left of the screen */
-            top: 50%; /* Start in the middle of the screen */
+            top: 30%; /* Start in the middle of the screen */
             transform: translateY(-50%); /* Center the folders vertically */
             display: flex;
             flex-direction: column; /* Stack the folders vertically */
             gap: 15px; /* Space between folder icons */
+        }
+
+        .sticky{
+            position: absolute;
+            left: 140px;
+            top: 60px;
+            width: 180px;
+            height: 180px;
+            background-color: #f3d31e;
+            border-radius: 5px;
         }
 
         .folders {
@@ -108,6 +107,9 @@
         <img class="folder" src="media/icons/folder.png" alt="Folder 3">
         <img class="folder" src="media/icons/folder.png" alt="Folder 4">
         <img class="folder" src="media/icons/folder.png" alt="Folder 5">
+    </div>
+    <div class="sticky">
+
     </div>
     <div class="menu">
         <img class="app" src="media/icons/finder.png">

@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <link rel="icon" type="image/x-icon" href="favicon.ico" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Contact - Skye MacLeod</title>
+        <link rel="stylesheet" href="styles.css">
+        <link rel='stylesheet'
+            href='https://fonts.googleapis.com/css?family=Titan One'>
+        <link rel='stylesheet'
+            href='https://fonts.googleapis.com/css?family=Bebas Neue'>
+        <link rel='stylesheet'
+            href='https://fonts.googleapis.com/css?family=Erica One'>
+
+        <style>
+            html, body{margin: 0; padding: 0; width: 100%; box-sizing: border-box;}
+            * {box-sizing: border-box;}
+            .navbar{position: sticky; display: flex; top: 0; justify-content: space-between; align-items: center; padding: 30px; font-weight: bold; z-index: 1; margin-bottom: 20px;} 
+            .navleft{font-family: 'Druk Wide Bold'; color: #5f1830; font-size: 1.8rem; font-weight: lighter;}
+            .navright{display: flex; gap: 20px; font-family: 'Druk Wide Bold';}
+            footer a{font-family: 'Bebas Neue'; color: #fff; text-decoration: none; font-size: 1.7rem;}
+            footer{width: 100%;}
+            .contact{font-size: 3rem; margin-top: 10px; margin-bottom: 10px; font-family: 'Druk Wide Bold'; font-weight: bold;}
+            .flex1{width: 90%; max-width: 500px; margin: 20px auto; padding: 20px; border: solid #5f1830 3.5px; border-radius: 5px; margin: 50px auto; margin-top: 2px;}
+            textarea{width: 100%; padding: 10px; box-sizing: border-box;}
+            .btn{background-color: #5f1830; color: #fff; padding: 10px; border: solid 3px #5f1830; width: 100%; border-radius: 5px; cursor: pointer;}
+            label, p{font-family: 'Druk Wide Bold';}
+            .flex2{display: flex; justify-content: center; gap: 15px; margin: 20px; margin-bottom: 40px;}
+            .link img{width: 30px; height: auto; }
+            label{font-size: 1.2rem; line-height: 3;}
+
+            @media screen and (max-width: 768px) {
+                .flex1 {width: 90%; padding: 15px;}
+            }
+        </style>
+    </head>
+
+    <body>
+        <nav class="navbar">
+            <div class="navleft"><a href="home.html">Skye MacLeod</a></div>
+            <div class="navright"> 
+                <a href="about.html">About</a> 
+                <a href="progress.html">Progress</a>
+                <a href="contact.html">Contact</a>
+            </div>
+        </nav>
+        <main>
+            <div class="flex1">
+                <p class="contact">Contact</p>
+                <div class="form">
+                    <form action="https://formspree.io/f/xqazvkdd" method="POST">
+                    <label for="fname">Your Name:</label>
+                    <textarea id="fname" name="fname" rows="1" cols="40"></textarea>
+                    <br>
+                    <label for="email">Email:</label>
+                    <textarea id="email" name="email" rows="1" cols="40"></textarea>
+                    <br>
+                    <label for="message">Message:</label>
+                    <textarea id="message" name="message" rows="4" cols="40"></textarea>
+                    <br><br>
+                    <input class="btn" type="submit" value="Submit">
+                    </form>
+                    <p>Click the "Submit" button to finish the form.</p>
+                </div>
+            </div>
+            <div class="flex2">
+                <a class="link" href="https://www.linkedin.com/in/skyemacleod/"><img src="../media/linkedin.svg" alt="LinkedIn Icon"></a>
+                <a class="link" href="mailto:asmacleo@syr.edu"><img src="../media/mail.svg" alt="Email Icon"></a>
+            </div>
+        </main>
+        </body>
+        <footer><a href="../media/resume.pdf" target="_blank">Click to download my Resume</a></footer>
+    </body>
+</html>
