@@ -35,7 +35,7 @@
             display: flex;
             gap: 10px;
         }
-        .nav a{color: black;}
+        .nav a{color: var(--accent-color);}
         .navright{
             justify-content: center; 
             display: flex;
@@ -117,6 +117,48 @@
             text-align: center;
             z-index: 9999;
         }
+
+        :root {
+        --bg-color: white;
+        --text-color: #000000;
+        --accent-color: #000000;
+        }
+
+        body {
+        background-color: var(--bg-color);
+        color: var(--text-color);
+        }
+
+        a {
+        color: var(--accent-color);
+        }
+
+        .theme-original {
+            --bg-color: #f5f5f5;
+            --text-color: #000000;
+            --accent-color: #000000;
+            }
+
+        .theme-blue-white {
+            --bg-color: #e6f0ff;
+            --text-color: #003366;
+            --accent-color: #003366;
+            }
+        .theme-purple-green {
+            --bg-color: #d767d2;
+            --text-color: #4adf74;
+            --accent-color: #4adf74;
+            }
+        .theme-orange-blue {
+            --bg-color: #ff9035;
+            --text-color: #0055ff;
+            --accent-color: #0055ff;
+            }
+        .theme-red-blue {
+            --bg-color: #0055ff;
+            --text-color: #f21d1d;
+            --accent-color: #f21d1d;
+            }
         
     </style>
 </head>
@@ -138,6 +180,20 @@
 
     // Run the check whenever the window is resized
     window.onresize = checkDeviceSize;
+
+    function setTheme(themeName) {
+        document.body.className = themeName;
+        // Optionally save the user's choice
+        localStorage.setItem('theme', themeName);
+        }
+
+        // Optional: load saved theme on page load
+        window.onload = () => {
+            const savedTheme = localStorage.getItem('theme');
+            if (savedTheme) {
+            document.body.className = savedTheme;
+            }
+        };
 </script>
 <body>
     <div id="popup-blocker">
@@ -162,6 +218,13 @@
     <div class="header">
         <p>(00) PFP<br>WORK IN PROGRESS, FOR OLD PORTFOLIO GO TO STUDIO</p>
     </div>
+    <div class="theme-buttons">
+        <button onclick="setTheme('theme-original')">Original</button>
+        <button onclick="setTheme('theme-blue-white')">Blue & White</button>
+        <button onclick="setTheme('theme-purple-green')">Purple & Green</button>
+        <button onclick="setTheme('theme-orange-blue')">Orange & Blue</button>
+        <button onclick="setTheme('theme-red-blue')">Red & Blue</button>
+      </div>
     <div  class="scroll-container">
         <img src="media/me1.JPG" alt="photo">
         <img src="media/me5.jpeg" alt="photo">
