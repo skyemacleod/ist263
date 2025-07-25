@@ -4,14 +4,9 @@
         <meta charset="UTF-8">
         <link rel="icon" type="image/png" href="media/logo.png"/>        
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel='stylesheet' href='https://fonts.googleapis.com/css?family=League Spartan'>
         <title>Join DCSU</title>
         <link rel="stylesheet" href="styles.css">
-        <link rel='stylesheet'
-            href='https://fonts.googleapis.com/css?family=Titan One'>
-        <link rel='stylesheet'
-            href='https://fonts.googleapis.com/css?family=Bebas Neue'>
-        <link rel='stylesheet'
-            href='https://fonts.googleapis.com/css?family=Erica One'>
 
         <style>
             html, body{margin: 0; padding: 0; width: 100%; box-sizing: border-box;}
@@ -22,17 +17,30 @@
             .navleft{font-family: 'Druk Wide Bold'; color: #2a2c35; font-size: 1.8rem; font-weight: bold; border: 3px solid #40d622;}
 
             .navright{display: flex; gap: 20px; font-family: 'Druk Wide Bold'; border: 3px solid #2234d6;}
-            
-            footer a{font-family: 'Bebas Neue'; color: #fff; text-decoration: none; font-size: 1.7rem;}
-            footer{width: 100%;}
+
             .contact{font-size: 3rem; margin-top: 10px; margin-bottom: 10px; font-family: 'Druk Wide Bold'; font-weight: bold;}
+
             .flex1{width: 90%; max-width: 500px; margin: 20px auto; padding: 20px; border: solid #5f1830 3.5px; border-radius: 5px; margin: 50px auto; margin-top: 2px;}
+
             textarea{width: 100%; padding: 10px; box-sizing: border-box;}
+
             .btn{background-color: #2a2c35; color: #fff; padding: 10px; border: solid 3px #2a2c35; width: 100%; border-radius: 5px; cursor: pointer;}
+
             label, p{font-family: 'Druk Wide Bold';}
+
             .flex2{display: flex; justify-content: center; gap: 15px; margin: 20px; margin-bottom: 40px;}
+
             .link img{width: 30px; height: auto; }
+
             label{font-size: 1.2rem; line-height: 3;}
+
+            footer{background-color: #2a2c35; color: white; padding: 20px; font-size: 20px; font-family: 'League Spartan';}
+
+            .footer-content{display: flex; flex-direction: column; justify-content: center; align-items: center; }
+            
+            .footer-content p{margin: 10px;}
+
+            footer a{text-decoration: underline; color: white; font-weight: bold;}
 
             @media screen and (max-width: 768px) {
                 .flex1 {width: 90%; padding: 15px;}
@@ -72,7 +80,11 @@
                 <a class="link" href="mailto:asmacleo@syr.edu"><img src="media/mail.svg" alt="Email Icon"></a>
             </div>
         </main>
-        </body>
-        <footer><a href="../media/resume.pdf" target="_blank">Click to download my Resume</a></footer>
+        <footer>
+            <div class="footer-content">
+                <p>&copy; 2025 by Syracuse University Debate Club</p>
+                <p>Follow us on <a href="https://www.linkedin.com/company/debate-club-at-syracuse-university/">LinkedIn</a> | <a href="https://www.instagram.com/debateclubsu/">Instagram</a></p>
+            </div>
+        </footer>
     </body>
 </html>
