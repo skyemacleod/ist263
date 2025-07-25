@@ -1,8 +1,9 @@
-body{background-color: white; font-family: Verdana, sans-serif; color: #000000}
+body{background-color: white;}
 h1 {color: #000000;}
 nav{background-color: white;}
-nav a{color: #7e3166;}
-nav a:hover{background-color: #bcbcbc;}
+nav a{color: #2a2c35;text-decoration: none;}
+nav a:hover{ transform: scale(1.1);/*background-color: #bcbcbc;*/}
 nav{padding: 10px;} nav{margin-bottom: 30px;}
 @media only screen and (max-width: 600px) {nav a {max-width: 100%; display: block; padding: 10px;} span{display: none;}}
+
 
