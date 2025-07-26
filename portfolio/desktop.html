@@ -23,6 +23,7 @@
         
         .topbar{
             background-color: #c3c3c3;
+            opacity: 0.9;
             padding: 5px;
             display: flex;
             justify-content: space-between; /* Space out the content (apple icon and date/time) */
@@ -31,6 +32,7 @@
         .apple{
             width: 15px;
             height: auto;
+            padding-left: 10px;
         }
         #date-time {
             font-family: 'Roboto', sans-serif;
@@ -51,15 +53,16 @@
         .sticky{
             position: absolute;
             left: 140px;
-            top: 60px;
+            top: 100px;
             width: 180px;
             height: 180px;
-            background-color: #f3d31e;
+            background-color: #e3c723;
             border-radius: 5px;
         }
 
         .folders {
             position: absolute; /* Absolute positioning to place it on the left side */
+            top: 270px;
             display: flex;
             flex-direction: column; /* Stack the folders vertically */
             gap: 15px; /* Space between folder icons */
@@ -68,9 +71,27 @@
         }
 
         .folder {
-            width: 50px; /* Set the width of the folder icon */
+            width: 60px; /* Set the width of the folder icon */
             height: auto; /* Let the height adjust automatically */
             cursor: grab; /* Optional: add a cursor pointer for interactivity */
+        }
+        .folder-item {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            font-family: 'Roboto', sans-serif;
+            font-size: 12px;
+            color: white; /* or black, depending on your background */
+            text-align: center;
+        }
+        .folder-label {
+            margin-top: 4px;
+            font-family: -apple-system, BlinkMacSystemFont, "San Francisco", "Helvetica Neue", Helvetica, Arial, sans-serif;
+            font-weight: 700; /* semi-bold, closest to macOS folder label */
+            font-size: 12px;
+            color: white;
+            text-align: center;
+            text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5); 
         }
         .menu{
             background-color: #ececece9;
@@ -95,6 +116,62 @@
             border-radius: 6px;
             cursor: grab;
         }
+        /* ------------------------------------------------------------------- */
+        .app-window {
+            display: none;
+            position: fixed;
+            top: 70px;
+            left: 200px;
+            width: 800px;
+            max-height: 70vh;
+            background-color: white;
+            border: 1px solid #888;
+            border-radius: 10px;
+            z-index: 999;
+            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2);
+            overflow: hidden;
+            flex-direction: column;
+            font-family: -apple-system, BlinkMacSystemFont, "San Francisco", sans-serif;
+        }
+
+        .window-header {
+            background-color: #dcdcdc;
+            padding: 8px 12px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            font-weight: bold;
+            border-bottom: 1px solid #ccc;
+        }
+
+        .window-header button {
+            background: none;
+            border: none;
+            font-size: 16px;
+            cursor: pointer;
+        }
+
+        .window-content {
+            padding: 20px;
+            overflow-y: auto;
+        }
+
+        .photo {
+            width: 100%;
+            margin-bottom: 10px;
+        }
+        .photo-grid {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr); /* 3 columns */
+            gap: 10px;
+        }
+
+        .photo-grid img {
+            width: 100%;
+            height: auto;
+            object-fit: cover;
+        }
+
     </style>
 </head>
 <body>
@@ -102,12 +179,28 @@
         <img class="apple" src="media/icons/apple.svg.png">
         <div id="date-time" class="date-time"></div>
     </div>
+    
     <div class="folders">
-        <img class="folder" src="media/icons/folder.png" alt="Folder 1">
-        <img class="folder" src="media/icons/folder.png" alt="Folder 2">
-        <img class="folder" src="media/icons/folder.png" alt="Folder 3">
-        <img class="folder" src="media/icons/folder.png" alt="Folder 4">
-        <img class="folder" src="media/icons/folder.png" alt="Folder 5">
+        <div class="folder-item">
+            <img class="folder" src="media/icons/folder.png" alt="Folder 1">
+            <span class="folder-label">Portfolio</span>
+        </div>
+        <div class="folder-item">
+            <img class="folder" src="media/icons/folder.png" alt="Folder 2">
+            <span class="folder-label">Notes</span>
+        </div>
+        <div class="folder-item">
+            <img class="folder" src="media/icons/folder.png" alt="Folder 3">
+            <span class="folder-label">Design</span>
+        </div>
+        <div class="folder-item">
+            <img class="folder" src="media/icons/folder.png" alt="Folder 4">
+            <span class="folder-label">School</span>
+        </div>
+        <div class="folder-item">
+            <img class="folder" src="media/icons/folder.png" alt="Folder 5">
+            <span class="folder-label">Archive</span>
+        </div>
     </div>
     <div class="sticky">
 
@@ -117,7 +210,7 @@
         <img class="app" src="media/icons/launch.png">
         <img class="app" src="media/icons/contacts.png">
         <img class="app" src="media/icons/safari.svg.png">
-        <img class="app" src="media/icons/photos.webp">
+        <img class="app" src="media/icons/photos.webp" onclick="openWindow('photos-window')">
         <img class="app" src="media/icons/photobooth.webp">
         <img class="app" src="media/icons/chrome.png">
         <img class="app" src="media/icons/notes.svg.png">
@@ -135,6 +228,21 @@
 
         <img class="app" src="media/icons/trash.ico">
     </div>
+    <div id="photos-window" class="app-window">
+        <div class="window-header">
+            <span>Photos</span>
+            <button onclick="closeWindow('photos-window')">✕</button>
+        </div>
+        <div class="window-content">
+            <div class="photo-grid">
+                <img src="media/me1.JPG" alt="Me 1">
+                <img src="media/me2.jpeg" alt="Me 2">
+                <img src="media/me3.jpg" alt="Me 3">
+                <img src="media/me4.jpeg" alt="Me 4">
+                <img src="media/me5.jpeg" alt="Me 5">
+            </div>
+        </div>
+    </div>
 
     <script>
         function updateDateTime() {
@@ -143,12 +251,15 @@
             const dateTimeString = now.toLocaleString('en-US', options);
             document.getElementById("date-time").textContent = dateTimeString;
         }
-    
-        // Update date and time every minute
         setInterval(updateDateTime, 60000);
-    
-        // Initial update on page load
         updateDateTime();
+
+        function openWindow(id) {
+            document.getElementById(id).style.display = 'flex';
+        }
+        function closeWindow(id) {
+            document.getElementById(id).style.display = 'none';
+        }
     </script>
 </body>
 </html>
