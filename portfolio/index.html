@@ -5,6 +5,7 @@
     <link rel="icon" type="image/x-icon" href="media/icons/favicon.ico" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Skye MacLeod</title>
+    <link rel="stylesheet" href="themes.css">
     <link rel="stylesheet" href="styles.css">
     <!-- Importing Google Fonts for similar typography -->
     <link rel='stylesheet' href='https://fonts.googleapis.com/css?family=Bebas Neue'>
@@ -18,7 +19,6 @@
             flex-direction: column;
             padding: 10px;
             margin: 0px;
-            background-color: #f5f5f5;
             gap: 10px;
         }
         nav{
@@ -112,72 +112,7 @@
             z-index: 9999;
         }
 
-        :root {
-        --bg-color: #f5f5f5;
-        --text-color: #000000;
-        --accent-color: #000000;
-        }
-
-        body {
-        background-color: var(--bg-color);
-        color: var(--text-color);
-        }
-
-        a {
-        color: var(--accent-color);
-        }
-
-        .theme-original {
-            --bg-color: #f5f5f5;
-            --text-color: #000000;
-            --accent-color: #000000;
-            }
-
-        .theme-blue-white {
-            --bg-color: #e6f0ff;
-            --text-color: #003366;
-            --accent-color: #003366;
-            }
-        .theme-purple-green {
-            --bg-color: #d767d2;
-            --text-color: #43d36c;
-            --accent-color: #43d36c;
-            }
-        .theme-orange-blue {
-            --bg-color: #ff9035;
-            --text-color: #0055ff;
-            --accent-color: #0055ff;
-            }
-        .theme-yellow-pink {
-            --bg-color: #9d294a;
-            --text-color: #ece68a;
-            --accent-color: #ece68a;
-            }
-        .theme-red-blue {
-            --bg-color: #0055ff;
-            --text-color: #f21d1d;
-            --accent-color: #f21d1d;
-            }
-        .theme-pink-black {
-            --bg-color: #feadff;
-            --text-color: #000;
-            --accent-color: #000;
-            }
-        .theme-black-yellow {
-            --bg-color: #000000;
-            --text-color: #fff422;
-            --accent-color: #fff422;
-            }
-        .theme-red-white {
-            --bg-color: #b1d8ff;
-            --text-color: #d80d0d;
-            --accent-color: #d80d0d;
-            }
-        .theme-red-green {
-            --bg-color: #d90d0d;
-            --text-color: #41d380;
-            --accent-color: #41d380;
-            }
+        
 
         .theme-buttons{display: flex; flex-direction: row; justify-content: center; align-items: center; gap: 20px; flex-wrap: wrap;}
         .theme{width: 70px; height: 70px; border-radius: 25%; cursor: grab; border: 2px solid black; justify-content: center; align-items: center;}
@@ -221,7 +156,7 @@
         
     </style>
 </head>
-<script>
+<script src="theme.js">
     function checkDeviceSize() {
         const width = window.innerWidth;
         if (width < 768) {
@@ -240,18 +175,6 @@
     // Run the check whenever the window is resized
     window.onresize = checkDeviceSize;
 
-    function applyTheme(themeName) {
-            document.body.className = themeName;
-            localStorage.setItem('theme', themeName);
-        }
-
-        // Load saved theme on page load
-        window.onload = () => {
-            const savedTheme = localStorage.getItem('theme');
-            if (savedTheme) {
-                document.body.className = savedTheme;
-            }
-        };
     
 </script>
 <body>
