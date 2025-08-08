@@ -1,0 +1,44 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body {
+    font-family: 'Times New Roman', Times, serif;
+}
+.container {
+    position: relative;
+    width: 100vw;
+    height: 100vh;
+    padding: 2em;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 2em;
+    overflow: hidden;
+    background-color: blue;
+    color: white;
+}
+.anime-text {
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 1.25;
+    text-align: justify;
+}
+.anime-head {
+    font-size: 10vw;
+    font-weight: 400;
+}
+.word {
+    position: relative;
+    margin-right: 0.25em;
+    margin-bottom: 0.25em;
+    display: inline-block;
+    will-change: transform;
+}
+.letter {
+    position: relative;
+    display: inline-block;
+    will-change: transform;
+}
