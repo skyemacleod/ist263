@@ -17,34 +17,15 @@
         .navbar{position: sticky; display: flex; top: 0; justify-content: space-between; align-items: center; padding: 20px; margin: 0px; font-weight: bold; z-index: 1; margin-bottom: 10px; border-bottom: #2a2c35 solid 2px; font-family: 'Cal Sans';} 
         .navleft{color: #fff; font-size: 1.8rem; font-weight: bold;}
         .navright{display: flex; gap: 20px; color: white;}
-        .sec, .third{
-            display: flex;
-            padding: 30px;
-            text-align: center;
-            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 
+        .flex2{display: grid; grid-template-columns: repeat(auto-fill, minmax(300px, 1fr)); margin: 30px; text-align: center;}
+        .flex2 img {
+            width: 60px;
+            height: 60px;
         }
-        .mission {
-            flex: 35%;
-            border-right: #2a2c35 solid 2px;
-            font-size: 20px;
-            align-items: center;
-        }
-        .we {
-            flex: 65%;
-            padding: 0 20px;
-
-        }
-        .hi {
-            flex: 65%;
-            padding: 0 20px;
-        }
-        .our{
-            flex: 35%;
-            border-left: #2a2c35 solid 2px;
-            font-size: 20px;
-            
-        }
+        .title{font-weight: bold; font-size: 1.6rem;  color: #000; font-family: 'Cal Sans';}
+        .text {color: #000;}
+        .exp, .edu, .ski, .inv{padding: 20px;}
 
         .logo{width: 100px; height: auto;}
 
@@ -64,22 +45,31 @@
             <a href="join.html">Join</a>
         </div>
     </nav>
-    <section class="sec">
-        <div class="our">
-            <h1> Our Mission</h1>
-        </div>
-        <div class="we">
-            <p>Through lively debates covering a range of topics, the club aims to foster an environment that promotes intellectual curiosity, empathy, and open-mindedness. Members will benefit from skill development in critical analysis, research, and public speaking, while also enjoying networking opportunities and the chance to represent the university in intercollegiate debates and more. The club will host guest speakers, interactive sessions, and thorough community engagement.</p>
-        </div>
+    <section class="first">
+        <p>About DCSU</p>
     </section>
-    <section class="third">
-        <div class="we">
-            <p>Establish a legacy at SU. We aim to be a hub of intellectual exchange where members develop their public speaking skills, engage in rigorous debate on pressing societal issues, and hone their abilities to construct compelling arguments backed by evidence and reason. We envision a club that empowers individuals to become confident communicators, capable of articulating their ideas persuasively while respecting differing viewpoints. Our goal is to not only excel in local and national debate competitions but also to contribute positively to the broader SU community.<br>Together, we strive to establish the SU Debate Club as a cornerstone of intellectual growth, ethical discourse, and academic excellence within our university.</p>
+    <div class="flex2">
+        <div class="exp">
+            <img src="media/we.png" alt="We Icon">
+            <p class="title">Who we are</p>
+            <p class="text">Established in the fall of 2023, the Syracuse University Debate Club is a student-run organization. We welcome anyone interested in competitive debate. Our team is committed to being a community of equal access, free of discrimination, prejudice, or bias..</p>
         </div>
-        <div class="our">
-            <h1> Our Vision</h1>
+        <div class="edu">
+            <img src="media/mission.png" alt="We Icon">
+            <p class="title"> Our Mission</p>
+            <p class="text">Through lively debates covering a range of topics, the club aims to foster an environment that promotes intellectual curiosity, empathy, and open-mindedness. Members will benefit from skill development in critical analysis, research, and public speaking, while also enjoying networking opportunities and the chance to represent the university in intercollegiate debates and more. The club will host guest speakers, interactive sessions, and thorough community engagement.</p>
         </div>
-    </section>
+        <div class="ski">
+            <img src="media/vision.png" alt="We Icon">
+            <p class="title">Our Vision</p>
+            <p class="text">Establish a legacy at SU. We aim to be a hub of intellectual exchange where members develop their public speaking skills, engage in rigorous debate on pressing societal issues, and hone their abilities to construct compelling arguments backed by evidence and reason. We envision a club that empowers individuals to become confident communicators, capable of articulating their ideas persuasively while respecting differing viewpoints. Our goal is to not only excel in local and national debate competitions but also to contribute positively to the broader SU community.<br>Together, we strive to establish the SU Debate Club as a cornerstone of intellectual growth, ethical discourse, and academic excellence within our university.</p>
+        </div>
+        <div class="inv">
+            <img src="media/comm.png" alt="We Icon">
+            <p class="title">Our Community</p>
+            <p class="text">Here at DCSU we value diversity of opinions, free speech and analytical skills. Emphasis on developing well-researched, logical arguments and rebuttals. DCSU encourages Respectful Discourse by fostering an environment where members engage in respectful and constructive dialogue. We provide a diverse and Inclusive community, and embrace diverse perspectives, backgrounds, and ideas. We encourage participation from individuals with varying opinions and experiences. DCSU encourages community engagement and involvement within the university and the broader community through debates, discussions, and events.</p>
+        </div>
+    </div>
     
     <footer>
         <div class="footer-content">
