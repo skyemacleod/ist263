@@ -1,0 +1,13 @@
+{
+	"folders": [
+		{
+			"path": ".."
+		},
+		{
+			"path": "../../../../GitHub/dcsu"
+		}
+	],
+	"settings": {
+		"liveServer.settings.multiRootWorkspaceName": "ist263"
+	}
+}

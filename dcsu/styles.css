@@ -7,3 +7,9 @@ nav{padding: 10px;} nav{margin-bottom: 30px;}
 @media only screen and (max-width: 600px) {nav a {max-width: 100%; display: block; padding: 10px;} span{display: none;}}
 
 
+@font-face {
+    font-family: 'Druk Wide Bold';
+    src: url('../media/DrukWideBold.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
