@@ -13,25 +13,24 @@
     <link rel="stylesheet" href="styles.css">
     <style>
         body{display: flex; justify-content: space-around; flex-direction: column; margin: 0; padding: 0; 
-            background-color: #2a2c35;
         }
 
         .navbar a{
-            color: white;
+            color: #2a2c35;
         }
         
-        .navbar{position: sticky; display: flex; top: 0; justify-content: space-between; align-items: center; padding: 20px; margin: 0px; font-weight: bold; z-index: 1; margin-bottom: 10px; background-color: #24252d;} 
+        .navbar{position: sticky; display: flex; top: 0; justify-content: space-between; align-items: center; padding: 20px; margin: 0px; font-weight: bold; z-index: 1; margin-bottom: 10px; border-bottom: #2a2c35 solid 2px;} 
 
-        .navleft{font-family: 'Druk Wide Bold'; color: white; font-size: 1.8rem; font-weight: bold; border: 3px  #40d622;}
+        .navleft{font-family: 'Druk Wide Bold'; font-size: 1.8rem; font-weight: bold; border: 3px  #40d622;}
 
-        .navright{display: flex; gap: 20px; font-family: 'Druk Wide Bold'; border: 3px  #2234d6; color: white;}
+        .navright{display: flex; gap: 20px; font-family: 'Druk Wide Bold'; border: 3px  #2234d6;}
 
         .main{
             border: 4px  #ddff00; 
             margin-top: 60px;
         }
 
-        .hp{border: 4px  #ff00d0;  text-align: center; color: #fff; font-family: 'Oswald'; }
+        .hp{border: 4px  #ff00d0;  text-align: center; color: #2a2c35; font-family: 'Oswald'; }
         .name{font-size: 100px; margin: 0; margin-top: 20px;}
         .mini{
             font-size: 30px;
@@ -51,11 +50,17 @@
             margin-top: 30px;
             margin-bottom: 0;
         }
+        .third{background-color: #2a2c35;}
         .flex2{display: grid; grid-template-columns: repeat(auto-fill, minmax(300px, 1fr)); margin: 30px; border: #ff00d0  2px;}
         .num{font-weight: bold; font-size: 2rem;  color: #ff5f01; font-family: 'Cal Sans'; margin: 0; padding-top: 0px;}
         .title{font-weight: bold; font-size: 1.6rem;  color: #fff; font-family: 'Cal Sans';}
         .text {color: white;}
         .exp, .edu, .ski, .inv{padding: 20px;}
+        .four {
+            background-color: #e6e6e6;
+            padding: 20px;
+            font-family: 'Oswald';
+        }
 
         footer{background-color: #2a2c35; color: white; padding: 20px; font-size: 20px; font-family: 'League Spartan';}
         .footer-content{display: flex; flex-direction: column; justify-content: center; align-items: center; }
@@ -85,7 +90,7 @@
     </section>
     <section class="second">
         <div class="container mx-auto">
-            <h3 class="text-3xl font-bold text-center text-gray-800 mb-8">Upcoming Events</h3>
+            <h3>Upcoming Events</h3>
         </div>
     </section>
     <section class="third">
@@ -127,7 +132,11 @@
             </div>
         </div>
     </section>
-    
+    <section class="four">
+        <div>
+            <h3>If you are interested in joining the DCSU and would like to learn more, please email <br>Evelyn Polly (President) at ekpolly@syr.edu <br>or<br>Haley Greene (Vice President) at hrgreene@syr.edu</h3>
+        </div>
+    </section>
     
     <footer>
         <div class="footer-content">
