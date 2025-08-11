@@ -47,23 +47,20 @@
             height: 300px;
             object-fit: cover;
         }
-        .second{background-color: #f6f6f6; display: flex; align-items: center; justify-content: center; flex-direction: row; padding: 20px 10px;}
+        .second{background-color: #f6f6f6; display: flex; flex-direction: row; padding: 20px 10px; border: #40d622 solid 2px;}
         .words{
             width: 30%;
             border: 2px solid #ff00d0;
             display: flex;
             flex-direction: column;
-            align-items: center;      /* centers horizontally */
-            justify-content: center;  /* centers vertically */
             height: 100%;             /* optional: ensure it fills parent height */
-            text-align: center;
             margin: 10px;
             font-size: 40px;
             font-family: 'Cal Sans';
+            align-items: center; justify-content: center;
         }
         .events{
             width: 70%;
-            
         }
         div.scroll-container {
             overflow: auto;
@@ -81,6 +78,13 @@
             margin: 5px;
             border-radius: 10px;
             background-color: #fff;
+        }
+        .scroll-item h2, .scroll-item h4 {
+            margin: 0;
+            padding: 0;
+            text-align: center;
+            justify-content: center;
+            font-family: 'Cal Sans';
         }
         .tit{
             color: white;
