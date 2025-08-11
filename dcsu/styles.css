@@ -13,3 +13,9 @@ nav{padding: 10px;} nav{margin-bottom: 30px;}
     font-weight: normal;
     font-style: normal;
 }
+@font-face {
+    font-family: 'Milker';
+    src: url('../fonts/Milker.otf') format('opentype');
+    font-weight: normal;
+    font-style: normal;
+}
