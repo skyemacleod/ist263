@@ -9,7 +9,7 @@ nav{padding: 10px;} nav{margin-bottom: 30px;}
 
 @font-face {
     font-family: 'Druk Wide Bold';
-    src: url('../media/DrukWideBold.woff') format('woff');
+    src: url('media/DrukWideBold.woff') format('woff');
     font-weight: normal;
     font-style: normal;
 }

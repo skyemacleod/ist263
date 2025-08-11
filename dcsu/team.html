@@ -16,22 +16,62 @@
         .navleft{font-family: 'Druk Wide Bold'; color: #2a2c35; font-size: 1.8rem; font-weight: bold; }
 
         .navright{display: flex; gap: 20px; font-family: 'Druk Wide Bold'; }
+        .header-top {
+            background-color: #fff; /* Orange color from the image */
+            color: #000000; /* White text */
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 10px 20px;
+            text-align: center;
+            font-family: 'Druk Wide Bold';
+            height: 200px; 
+        }
 
-        .grid-container{display: grid; grid-template-columns: repeat(auto-fill, minmax(300px, 1fr)); gap: 20px; margin: 10px; padding: 20px; border: 4px solid #264bf1; justify-content: space-around; }
+        .section {
+            flex: 1;
+            border-right: 2px solid #000; /* Vertical lines between sections */
+        }
+        .section:last-child {
+            border-right: none; /* Remove border from the last section */
+        }
+        
+        .center {
+            font-size: 1.5em; 
+            font-weight: bold;
+        }
+        .left, .right {
+            font-size: 1.2em; 
+        }
+
+        .grid-container{display: grid; grid-template-columns: repeat(auto-fill, minmax(300px, 1fr)); gap: 20px; margin: 0px; padding: 20px; justify-content: space-around; }
 
         .grid-item{border-radius: 10px; padding: 20px; align-items: center; justify-content: space-around; background-color: #2a2c35; color: white;}
+        .name {
+            font-family: 'Druk Wide Bold'; letter-spacing: 1.1;
+        }
 
-        .grid-item img{width: 200px; height: auto;}
+        .grid-item img{width: 290px; height: auto; cursor: pointer; border-radius: 10px;}
+
+        .grid-item.expanded .desc {
+            display: block;
+        }
+
+        .desc {
+            display: none;
+            margin-top: 10px;
+            font-size: 0.9em;
+            color: #ccc;
+            overflow: hidden;
+        }
 
         .logo{width: 100px; height: auto;}
-
         footer{background-color: #2a2c35; color: white; padding: 20px; font-size: 20px; font-family: 'League Spartan';}
-
         .footer-content{display: flex; flex-direction: column; justify-content: center; align-items: center; }
-
         .footer-content p{margin: 10px;}
-
         footer a{text-decoration: underline; color: white; font-weight: bold;}
+
+
     </style>
 </head>
 <body>
@@ -40,67 +80,69 @@
         <div class="navright"> 
             <a href="about.html">About</a> 
             <a href="team.html">Exec</a>
-            <a href="join.html">Contact</a>
+            <a href="join.html">Join</a>
         </div>
     </nav>
-    <div class="main">
-        <p class="text">Meet Our Executive Board</p>
-    </div>
+    <header class="header-top">
+        <div class="section left">DCSU<br>Executive Board</div>
+        <div class="section center">MEET OUR<br>TEAM</div>
+        <div class="section right">Syracuse University<br>2025 - 2026</div>
+    </header>
     <div class="grid-container">
         <div class="grid-item">
             <img src="https://images.unsplash.com/photo-1494790108377-be9c29b29330?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80" alt="President">
             <h3 class="name">Evelyn Polly</h3>
             <p class="title">President</p>
-            <p class="grade">Senior</p>
-            <p class="text-gray-600 mt-2">Jane is a senior majoring in Political Science. She leads the club with a passion for fostering inclusive debates and mentoring new members.</p>
+            <div class="desc">Jane is a senior majoring in Political Science. She leads the club with a passion for fostering inclusive debates and mentoring new members.</div>
         </div>
         <div class="grid-item">
-            <img src="media/haley.jpg" alt="President">
+            <img src="https://images.unsplash.com/photo-1494790108377-be9c29b29330?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80" alt="President">
             <h3 class="name">Haley Greene</h3>
             <p class="title">Vice President & Secretary</p>
-            <p class="text-gray-600 mt-2">Jane is a senior majoring in Political Science. She leads the club with a passion for fostering inclusive debates and mentoring new members.</p>
+            <div class="desc">Haley is an Advertising and Communications and Rhetorical studies major. She was born and raised in Los Angeles California. Her enthusiasm for rhetoric and argumentation, combined with her leadership skills, laid the groundwork for helping to establish the debate team. Haley is known for her exceptional communication skills and ability to connect with diverse audiences. Her passion for effective dialogue and creating a platform for inclusive discussions propelled the idea and establishment of DCSU. Haley's focus on promoting diversity of thought and ensuring that everyone's voice was heard became integral to the team's foundation.
+            </div>
         </div>
         <div class="grid-item">
             <img src="https://images.unsplash.com/photo-1494790108377-be9c29b29330?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80" alt="President">
             <h3 class="name">Colin Harkins</h3>
             <p class="title">Communications Director & PR Chair</p>
-            <p class="text-gray-600 mt-2">Jane is a senior majoring in Political Science. She leads the club with a passion for fostering inclusive debates and mentoring new members.</p>
+            <div class="desc">Jane is a senior majoring in Political Science. She leads the club with a passion for fostering inclusive debates and mentoring new members.</div>
         </div>
         <div class="grid-item">
-            <img src="media/mack.heic" alt="President">
+            <img src="https://images.unsplash.com/photo-1494790108377-be9c29b29330?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80" alt="President">
             <h3 class="name">Mack Bowen</h3>
             <p class="title">Treasurer</p>
-            <p class="text-gray-600 mt-2">Jane is a senior majoring in Political Science. She leads the club with a passion for fostering inclusive debates and mentoring new members.</p>
+            <div class="desc">Jane is a senior majoring in Political Science. She leads the club with a passion for fostering inclusive debates and mentoring new members.</div>
         </div>
         <div class="grid-item">
             <img src="media/cem.PNG" alt="President">
             <h3 class="name">Cem Aral</h3>
             <p class="title">Founder</p>
-            <p class="text-gray-600 mt-2">Jane is a senior majoring in Political Science. She leads the club with a passion for fostering inclusive debates and mentoring new members.</p>
+            <div class="desc">Jane is a senior majoring in Political Science. She leads the club with a passion for fostering inclusive debates and mentoring new members.</div>
         </div>
         <div class="grid-item">
             <img src="media/mckenna.jpeg" alt="President">
             <h3 class="name">McKenna Flannagan</h3>
             <p class="title">Debate Coordinator</p>
-            <p class="text-gray-600 mt-2">Jane is a senior majoring in Political Science. She leads the club with a passion for fostering inclusive debates and mentoring new members.</p>
+            <div class="desc">Jane is a senior majoring in Political Science. She leads the club with a passion for fostering inclusive debates and mentoring new members.</div>
         </div>
         <div class="grid-item">
             <img src="https://images.unsplash.com/photo-1494790108377-be9c29b29330?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80" alt="President">
             <h3 class="name">Alana Savage</h3>
             <p class="title">Events Chair & Tournament Coordinator</p>
-            <p class="text-gray-600 mt-2">Jane is a senior majoring in Political Science. She leads the club with a passion for fostering inclusive debates and mentoring new members.</p>
+            <div class="desc">Jane is a senior majoring in Political Science. She leads the club with a passion for fostering inclusive debates and mentoring new members.</div>
         </div>
         <div class="grid-item">
             <img src="https://images.unsplash.com/photo-1494790108377-be9c29b29330?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80" alt="President">
             <h3 class="name">Skye MacLeod</h3>
             <p class="title">Web Designer</p>
-            <p class="text-gray-600 mt-2">Jane is a senior majoring in Political Science. She leads the club with a passion for fostering inclusive debates and mentoring new members.</p>
+            <div class="desc">Jane is a senior majoring in Political Science. She leads the club with a passion for fostering inclusive debates and mentoring new members.</div>
         </div>
         <div class="grid-item">
             <img src="https://images.unsplash.com/photo-1494790108377-be9c29b29330?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80" alt="President">
             <h3 class="name">Josh Hunt</h3>
             <p class="title">Faculty Advisor</p>
-            <p class="text-gray-600 mt-2">Jane is a senior majoring in Political Science. She leads the club with a passion for fostering inclusive debates and mentoring new members.</p>
+            <div class="desc">Jane is a senior majoring in Political Science. She leads the club with a passion for fostering inclusive debates and mentoring new members.</div>
         </div>
     </div>
     
@@ -112,5 +154,17 @@
                 <p>Follow us on <a href="https://www.linkedin.com/company/debate-club-at-syracuse-university/">LinkedIn</a> | <a href="https://www.instagram.com/debateclubsu/">Instagram</a></p><br>
             </div>
         </footer>
+
+    <script>
+        document.querySelectorAll('.grid-item').forEach(item => {
+            item.addEventListener('click', () => {
+                document.querySelectorAll('.grid-item').forEach(i => {
+                    if (i !== item) i.classList.remove('expanded');
+                });
+                item.classList.toggle('expanded');
+            });
+        });
+    </script>
+    
 </body>
 </html>
