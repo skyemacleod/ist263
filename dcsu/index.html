@@ -47,7 +47,41 @@
             height: 300px;
             object-fit: cover;
         }
-        .second{background-color: #e6e6e6; justify-content: center; align-items: center;}
+        .second{background-color: #f6f6f6; display: flex; align-items: center; justify-content: center; flex-direction: row; padding: 20px 10px;}
+        .words{
+            width: 30%;
+            border: 2px solid #ff00d0;
+            display: flex;
+            flex-direction: column;
+            align-items: center;      /* centers horizontally */
+            justify-content: center;  /* centers vertically */
+            height: 100%;             /* optional: ensure it fills parent height */
+            text-align: center;
+            margin: 10px;
+            font-size: 40px;
+            font-family: 'Cal Sans';
+        }
+        .events{
+            width: 70%;
+            
+        }
+        div.scroll-container {
+            overflow: auto;
+            white-space: nowrap;
+            padding: 10px;
+            border: 3px solid black;
+            border-radius: 10px;
+            margin: 10px;
+        }
+        div.scroll-item { 
+            display: inline-block;
+            border: 2px solid #40d622;
+            height: 350px;
+            width: 250px;
+            margin: 5px;
+            border-radius: 10px;
+            background-color: #fff;
+        }
         .tit{
             color: white;
             font-size: 50px;
@@ -106,8 +140,18 @@
     </section>
     
     <section class="second">
-        <div class="container mx-auto">
+        <div class="words">
             <h3>Upcoming Events</h3>
+        </div>
+        <div class="events">
+            <div  class="scroll-container">
+                <div class="scroll-item"></div>
+                <div class="scroll-item"></div>
+                <div class="scroll-item"></div>
+                <div class="scroll-item"></div>
+                <div class="scroll-item"></div>
+                <div class="scroll-item"></div>
+            </div>
         </div>
     </section>
     <section class="third">
