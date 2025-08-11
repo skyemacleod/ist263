@@ -12,34 +12,41 @@
     <title>Syracuse Univeristy Debate Club</title>
     <link rel="stylesheet" href="styles.css">
     <style>
-        body{display: flex; justify-content: space-around; flex-direction: column; margin: 0; padding: 0; 
-        }
+        body{display: flex; justify-content: space-around; flex-direction: column; margin: 0; padding: 0; }
 
-        .navbar a{
-            color: #2a2c35;
-        }
+        .navbar a{color: #2a2c35;}
         
-        .navbar{position: sticky; display: flex; top: 0; justify-content: space-between; align-items: center; padding: 20px; margin: 0px; font-weight: bold; z-index: 1; margin-bottom: 10px; border-bottom: #2a2c35 solid 2px;} 
+        .navbar{position: sticky; display: flex; top: 0; justify-content: space-between; align-items: center; padding: 20px; margin: 0px; font-weight: bold; z-index: 1; margin-bottom: 10px; border-bottom: #2a2c35 solid 2px;font-family: 'Cal Sans';} 
 
-        .navleft{font-family: 'Druk Wide Bold'; font-size: 1.8rem; font-weight: bold; border: 3px  #40d622;}
+        .navleft{font-family: 'Cal Sans'; font-size: 1.8rem; font-weight: bold; border: 3px  #40d622;}
 
-        .navright{display: flex; gap: 20px; font-family: 'Druk Wide Bold'; border: 3px  #2234d6;}
+        .navright{display: flex; gap: 20px;  border: 3px  #2234d6;}
 
         .main{
             border: 4px  #ddff00; 
             margin-top: 60px;
         }
 
-        .hp{border: 4px  #ff00d0;  text-align: center; color: #2a2c35; font-family: 'Oswald'; }
-        .name{font-size: 100px; margin: 0; margin-top: 20px;}
+        .hp{border: 4px  #ff00d0;  text-align: center; color: #2a2c35; font-family: 'Cal Sans'; margin-top: 10px;}
+        .name{font-size: 90px; margin: 0; margin-top: 20px;}
         .mini{
-            font-size: 30px;
-            margin-bottom: 120px;
+            font-size: 28px;
+            margin-bottom: 145px;
         }
-        .syr{color: orange;}
-
         .logo{width: 180px; height: auto;}
-
+        .images {
+            display: flex;
+            justify-content: center; /* optional: centers them horizontally */
+            align-items: center;     /* optional: aligns them vertically */
+            gap: 0;               /* optional: spacing between images */
+            padding: 0;           /* optional: spacing around the container */
+            flex-wrap: wrap;
+        }
+        .debimg {
+            width: 50%;
+            height: 300px;
+            object-fit: cover;
+        }
         .second{background-color: #e6e6e6; justify-content: center; align-items: center;}
         .tit{
             color: white;
@@ -58,9 +65,13 @@
         .exp, .edu, .ski, .inv{padding: 20px;}
         .four {
             background-color: #e6e6e6;
-            padding: 10px;
-            font-family: 'Oswald';
+            padding-bottom: 20px;
+            font-family: 'Cal Sans';
             text-align: center;
+        }
+        .head {
+            font-size: 40px;
+            padding: 0;
         }
 
         footer{background-color: #2a2c35; color: white; padding: 20px; font-size: 20px; font-family: 'League Spartan';}
@@ -89,6 +100,11 @@
             <p class="mini">Elevating dialogues and honing perspectives through lively debates covering a range of topics.</p>
         </div>
     </section>
+    <section class="images">
+        <img class="debimg" src="media/debate.jpg" alt="Debate Image 1">
+        <img class="debimg" src="media/debate2.jpg" alt="Debate Image 2">
+    </section>
+    
     <section class="second">
         <div class="container mx-auto">
             <h3>Upcoming Events</h3>
@@ -135,7 +151,7 @@
     </section>
     <section class="four">
         <div>
-            <h1>Contact Us</h4>
+            <h1 class="head">Contact Us</h4>
             <h3>If you are interested in joining the DCSU and would like to learn more, please email: <br>Evelyn Polly (President) at <a href="mailto:ekpolly@syr.edu">ekpolly@syr.edu </a><br>or<br>Haley Greene (Vice President) at <a href="mailto:hrgreene@syr.edu">hrgreene@syr.edu</a></h3>
         </div>
     </section>
