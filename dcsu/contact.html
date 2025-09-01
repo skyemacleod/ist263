@@ -17,14 +17,56 @@
             .navbar{position: sticky; display: flex; top: 0; justify-content: space-between; align-items: center; padding: 20px; margin: 0px; font-weight: bold; z-index: 1; margin-bottom: 10px; border-bottom: #2a2c35 solid 2px; font-family: 'Cal Sans'; } 
             .navleft{color: #2a2c35; font-size: 1.8rem; font-weight: bold; }
             .navright{display: flex; gap: 20px; }
-            .flex1{padding: 20px;}
+            .flex1{
+                font-family: 'Druk Wide Bold';
+                font-size: 80px;
+                text-align: center;
+                padding-top: 0;
+                color: #2a2c35;
+                border:  2px blue;
+            }
+            .flex2{
+                display: flex;
+                flex-direction: row;
+                gap: 20px;
+                justify-content: center;
+                padding-top: 10px;
+                padding-bottom: 30px;
+            }
+            .box{
+                display: flex;
+                flex-direction: column;
+                background-color: #2a2c35;
+                width: 350px;
+                height: 400px;
+                border-radius: 10px;
+                box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.2), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
+                padding: 20px;
+                color: #fff;
+                font-family: 'Cal Sans';
+                letter-spacing: 1.6px;
+                text-align: center;
+                align-items: center;
+                font-size: 17px;
+            }
+            .box img{
+                width: 180px;
+                height: auto;
+                padding-top: 15px;
+            }
+            .box a{
+                color: #fff;
+            }
+            .box p{
+                font-size: 20px;
+            }
 
             .location{
                 display: flex;
                 flex-direction: row;
                 align-items: center;
                 justify-content: center;
-                background-color: #e6e6e6;
+                background-color: #f6f6f6;
                 padding: 20px;
             }
             .loc{
@@ -70,6 +112,16 @@
                 <p class="contact">Contact Us</p>
                 <div class="line"></div>
             </div>
+            <div class="flex2">
+                <div class="box">
+                    <h2>Click here to fill out an application:</h2>
+                    <a href="https://docs.google.com/forms/d/1l82L9520yCZ-2oT5LeE0clazLiuWC1qZeTkdOM5cyx4/edit"><img src="media/appli.png" alt="Application"></a>
+                </div>
+                <div class="box">
+                    <h2>Get in Touch</h2>
+                    <p>Please feel free to reach out to our Vice President Haley Greene <a href="mailto:hrgreene@syr.edu">hrgreene@syr.edu</a> for any questions, concerns, or requests for accommodations!</p>
+                </div>
+            </div>
             <div class="location">
                 <div class="add">
                     <img class="loc" src="media/loc.png">
@@ -96,3 +148,4 @@
         </footer>
     </body>
 </html>
+
