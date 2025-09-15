@@ -1,0 +1,16 @@
+
+nav{background-color: white;}
+nav a{color: #2a2c35;text-decoration: none;}
+
+@font-face {
+    font-family: 'Interphase';
+    src: url('../fonts/interphase.ttf') format('opentype');
+    font-weight: normal;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'Europa';
+    src: url('../fonts/europa.otf') format('opentype');
+    font-weight: normal;
+    font-style: normal;
+}

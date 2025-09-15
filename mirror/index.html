@@ -8,32 +8,194 @@
     <link rel='stylesheet' href='https://fonts.googleapis.com/css?family=Bebas Neue'>
     <link rel='stylesheet' href='https://fonts.googleapis.com/css?family=Oswald'>
     <link rel='stylesheet' href='https://fonts.googleapis.com/css?family=Cal Sans'>
+    <link rel='stylesheet' href='https://fonts.googleapis.com/css?family=Roboto'>
+
 
     <title>Mirror</title>
     <link rel="stylesheet" href="styles.css">
     <style>
-        .body{
-            background-color: #eff5fb;
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f0f6ff;
+            color: #1a202c;
         }
+
+        nav {
+            position: sticky; 
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            z-index: 1;
+            margin: 0 auto;
+            background-color: #ffffff;
+            padding: 20px;
+            border: solid 0px pink;
+        }
+
+        .logo {
+            display: flex;
+            align-items: center;
+            padding-left: 15px;
+        }
+
+        .logo-img {
+            width: 30px;
+            margin-right: 10px;
+        }
+
+        .nav-links {
+            list-style: none;
+            display: flex;
+            margin: 0;
+            padding: 10px;
+            margin-right: 20px;
+            border: solid 0px green;
+        }
+
+        .nav-links li {
+            margin-left: 15px;
+        }
+
+        .nav-links a {
+            text-decoration: none;
+            color: #1a202c;
+            font-size: 14px;
+        }
+
+        .nav-links .join-btn {
+            background-color: #175cfa;
+            color: white;
+            padding: 10px 15px;
+            border-radius: 10px;
+        }
+        
         .main{
-            font-size: 80px;
-            height: 100vh;
-            width: 100vw;
+            display: flex;
+            flex-direction: row;
+            justify-content: flex-start;
+            align-items: flex-start;
+            padding: 40px;
+            margin: 20px 13% 0 13%;
         }
+
+        .slogan {
+            color: #175cfa;
+            border: solid 1.5px #bfd8fe;
+            border-radius: 20px;
+            font-size: 14px;
+            width: fit-content;
+            padding: 5px 15px;
+        }
+
+        .hero h1 {
+            font-size: 48px;
+        }
+
+        .hero .p {
+            font-size: 20px;
+            color: #4b5563;
+        }
+
+        .hero .join-btn {
+            background-color: #175cfa;
+            color: white;
+            font-weight: 600;
+            padding: 15px;
+            border: none;
+            border-radius: 15px;
+            cursor: pointer;
+            font-size: 16px;
+        }
+
+        .how-it-works {
+            margin-top: 10px;
+            margin-left: 40px;
+            color: #175cfa;
+            text-decoration: none;
+            padding: 10px;
+            border-radius: 10px;
+        }
+
+        .tags {
+            display: flex;
+            gap: 12px; /* space between tags */
+            margin-top: 20px; /* space from the button/link above */
+            flex-wrap: wrap; /* allows wrapping on smaller screens */
+        }
+
+        .tag {
+            display: inline-flex;
+            align-items: center;
+            gap: 6px; /* space between dot and text */
+            background-color: #e6f0ff; /* optional tag background */
+            padding: 6px 12px;
+            border-radius: 20px;
+            font-size: 14px;
+            color: #1a202c;
+        }
+
+        .greencircle {
+            width: 8px;
+            height: 8px;
+            background-color: green;
+            border-radius: 50%;
+            display: inline-block;
+            flex-shrink: 0;
+        }
+        
     </style>
 </head>
 <body>
-    <nav class="navbar">
-        <div class="navleft"><a href="index.html">Mirror</a></div>
-        <div class="navright"> 
-            <a href="#link-here">About</a> 
-            <a href="team.html">Exec</a>
-            <a href="contact.html">Contact</a>
+    <nav>
+        <div class="logo">
+            <img src="logo.png" alt="Mirror Logo" class="logo-img">
+            <span>Mirror</span>
         </div>
+        <ul class="nav-links">
+            <li><a href="#why">Why Mirror</a></li>
+            <li><a href="#approach">The Approach</a></li>
+            <li><a href="#experience">The Experience</a></li>
+            <li><a href="#treatment">Types of Treatment</a></li>
+            <li><a href="#who-we-treat">Who We Treat</a></li>
+            <li><a href="#resources">Resources</a></li>
+            <li><a href="#company">Company</a></li>
+            <li><a href="#about">About</a></li>
+            <li><a href="#learn">Learn</a></li>
+            <li><a href="#contact">Contact</a></li>
+            <li><a href="#join" class="join-btn">Join Waitlist</a></li>
+        </ul>
     </nav>
-    <section class="main">
-        <h1>Mirror</h1>
-    </section>
-    <h2 id="link-here">This is where I want to link</h2>
+    <div class="main">
+        <div class="hero">
+            <p class="slogan">Every reflection tells a story of strength</p>
+            <h1>A free, peer-led recovery space for eating disorders</h1>
+            <p class="p">Mirror connects you to identity-inclusive support circles, crisis tools, and clinician-informed resources—no one has to choose between $250K treatment and silence.</p>
+            <button class="join-btn">Join the waitlist</button>
+            <a href="#how-it-works" class="how-it-works">How it works →</a>
+            <div class="tags">
+                <span class="tag"><span class="greencircle"></span>HIPAA-minded</span>
+                <span class="tag"><span class="greencircle"></span>Identity-inclusive</span>
+                <span class="tag"><span class="greencircle"></span>Always free</span>
+            </div>
+        </div>
+        <div class="sidebar">
+            <div class="card">
+                <h3>Anonymous Peer Circle - Live</h3>
+                <ul>
+                    <li>LGBTQ+ Recovery at 6:00 PM</li>
+                    <li>BIPOC Healing Space at 7:00 PM</li>
+                    <li>Athletes in Recovery at 8:30 PM</li>
+                </ul>
+                <button class="preview-btn">Preview</button>
+            </div>
+            <div class="card">
+                <h3>Crisis Tools</h3>
+                <p>Breathing, body-neutral affirmations, and instant human support—anytime.</p>
+            </div>
+        </div>
+    </div>
+    
 </body>
 </html>
