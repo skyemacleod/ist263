@@ -261,23 +261,28 @@
             width: 30%;
             display: flex;
             flex-direction: column;
-            align-items: flex-start;
+            align-items: stretch;
             justify-content: space-evenly;
             border: solid 1px #e8e8e8;
             border-radius: 10px;
             box-shadow: 1px 1px 8px rgba(0, 0, 0, 0.1);
+            box-sizing: border-box;
+            padding: 5px 0 5px 0;
         }
 
         .menu-item {
             border: none;
+            box-sizing: border-box;
             background-color: #fff;
             margin: 5px;
-            border-radius: 20px;
+            border-radius: 10px;
             cursor: pointer;
             font-size: 15px;
             color: #1a202c;
             font-weight: bold;
-            padding-left: 20px;
+            padding: 10px 20px;
+            text-align: left;
+            display: block;
         }
 
         .menu-item.active {
@@ -292,6 +297,7 @@
             border-radius: 10px;
             box-shadow: 1px 1px 8px rgba(0, 0, 0, 0.1);
             margin-left: 30px;
+            width: 70%;
         }
 
         .content h2 {
@@ -380,7 +386,9 @@
     <div class="label">
         <h3 class="title" id="why">THE NEED</h3>
         <h1>Why Mirror</h1>
-        <p>Eating disorders affect millions, yet most never receive treatment due to stigma, cost, or access. Mirror bridges the gap with a free, identity-inclusive, peer-led support platform—so no one has to choose between debt and silence.</p>
+        <p>Eating disorders affect 30 million Americans, yet up to 80% never receive care due to stigma, cost, or lack of access. Traditional treatment can cost as much as $250,000, leaving most people without help. Mirror exists to change this reality.<br><br>
+        We are building the first free, peer-led, clinically informed digital platform designed for eating disorder recovery. With Mirror, no one has to choose between silence and debt recovery is accessible, safe, and identity-inclusive.
+            </p>
     </div>
     <div class="label">
         <h3 class="title" id="approach">PHILOSOPHY</h3>
@@ -413,12 +421,12 @@
         <h1>The Experience</h1>
         <div class="exp-container">
             <div class="menu">
-                <button class="menu-item">For Families</button>
-                <button class="menu-item">For Adolescents</button>
-                <button class="menu-item">For Adults</button>
-                <button class="menu-item">For BIPOC</button>
-                <button class="menu-item">For College Students</button>
-                <button class="menu-item">For Alumni</button>
+                <button class="menu-item" data-title="For Families" data-desc="Guides, conversation prompts, and live peer circles to help you support a loved one with compassion, not control.">For Families</button>
+                <button class="menu-item" data-title="For Adolescents" data-desc="Confidential spaces and tools tailored to teens navigating recovery in a judgment-free zone.">For Adolescents</button>
+                <button class="menu-item" data-title="For Adults" data-desc="Support circles and clinician-informed resources for adults at any stage of recovery.">For Adults</button>
+                <button class="menu-item" data-title="For BIPOC" data-desc="Culturally-informed support spaces created by and for BIPOC community members.">For BIPOC</button>
+                <button class="menu-item" data-title="For College Students" data-desc="Resources and peer spaces designed for the unique challenges of campus life and recovery.">For College Students</button>
+                <button class="menu-item" data-title="For Alumni" data-desc="Stay connected and supported post-recovery with ongoing peer circles and tools.">For Alumni</button>
             </div>
             <div class="content">
                 <h2>For Families</h2>
@@ -438,5 +446,23 @@
         <p>Eating disorders affect millions, yet most never receive treatment due to stigma, cost, or access. Mirror bridges the gap with a free, identity-inclusive, peer-led support platform—so no one has to choose between debt and silence.</p>
     </div>
     
+
+
+    <script>
+        document.querySelectorAll('.menu-item').forEach(button => {
+            button.addEventListener('click', () => {
+                // Update h2 and p
+                const title = button.getAttribute('data-title');
+                const description = button.getAttribute('data-desc');
+    
+                document.querySelector('.content h2').textContent = title;
+                document.querySelector('.content p').textContent = description;
+    
+                // Toggle active class
+                document.querySelectorAll('.menu-item').forEach(btn => btn.classList.remove('active'));
+                button.classList.add('active');
+            });
+        });
+    </script>
 </body>
 </html>
