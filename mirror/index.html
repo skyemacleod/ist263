@@ -21,16 +21,16 @@
             color: #1a202c;
         }
 
-        nav {
-            position: sticky; 
+        .navbar {
+            position: sticky;
+            top: 0; 
             display: flex;
             justify-content: space-between;
             align-items: center;
             z-index: 1;
             margin: 0 auto;
-            background-color: #ffffff;
+            background-color: rgba(255, 255, 255, 0.75);
             padding: 20px;
-            border: solid 0px pink;
         }
 
         .logo {
@@ -81,7 +81,7 @@
             justify-content: flex-start;
             align-items: flex-start;
             padding: 40px;
-            margin: 20px 13% 0 13%;
+            margin: 0 13% 0 13%;
         }
 
         .slogan {
@@ -324,7 +324,7 @@
     </style>
 </head>
 <body>
-    <nav>
+    <div class="navbar">
         <div class="logo">
             <img src="logo.png" alt="Mirror Logo" class="logo-img">
             <span>Mirror</span>
@@ -342,7 +342,7 @@
             <li><a href="#contact">Contact</a></li>
             <li><a href="#join" class="join-btn">Join Waitlist</a></li>
         </ul>
-    </nav>
+    </div>
     <div class="whole">
         <div class="main">
             <div class="hero">
