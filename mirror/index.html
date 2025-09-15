@@ -205,8 +205,13 @@
         }
 
         .label{
-            margin: 80px 13% 0 13%;
-            
+            margin: 120px 13% 0 13%;
+        }
+
+        .label p{
+            font-size: 18px;
+            color: #4b5563;
+            line-height: 1.5;
         }
 
         .labelrow {
@@ -244,6 +249,76 @@
             border-radius: 10px;
             box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
             text-align: left;
+            font-size: 16px;
+        }
+
+        .exp-container{
+            display: flex;
+            margin: 20px 0;
+        }
+
+        .menu {
+            width: 30%;
+            display: flex;
+            flex-direction: column;
+            align-items: flex-start;
+            justify-content: space-evenly;
+            border: solid 1px #e8e8e8;
+            border-radius: 10px;
+            box-shadow: 1px 1px 8px rgba(0, 0, 0, 0.1);
+        }
+
+        .menu-item {
+            border: none;
+            background-color: #fff;
+            margin: 5px;
+            border-radius: 20px;
+            cursor: pointer;
+            font-size: 15px;
+            color: #1a202c;
+            font-weight: bold;
+            padding-left: 20px;
+        }
+
+        .menu-item.active {
+            background-color: #175cfa;
+            color: white;
+        }
+
+        .content {
+            padding: 20px;
+            text-align: left;
+            border: solid 1px #e8e8e8;
+            border-radius: 10px;
+            box-shadow: 1px 1px 8px rgba(0, 0, 0, 0.1);
+            margin-left: 30px;
+        }
+
+        .content h2 {
+            margin-top: 0;
+            font-size: 20px;
+        }
+
+        .content p {
+            font-size: 14px;
+            color: #4b5563;
+        }
+
+        .sub-content {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+            flex-wrap: wrap;
+            gap: 10px;
+            margin-top: 20px;
+        }
+
+        .sub-card {
+            background-color: #bfd8fe;
+            padding: 20px;
+            border-radius: 10px;
+            font-size: 14px;
+            color: #175cfa;
+            flex: 1 1 calc(50% - 5px);
         }
         
     </style>
@@ -305,7 +380,7 @@
     <div class="label">
         <h3 class="title" id="why">THE NEED</h3>
         <h1>Why Mirror</h1>
-        <p>Eating disorders affect millions, yet most never receive treatment due to stigma, cost, or access. Mirror bridges the gap with a free, identity‑inclusive, peer‑led support platform—so no one has to choose between debt and silence.</p>
+        <p>Eating disorders affect millions, yet most never receive treatment due to stigma, cost, or access. Mirror bridges the gap with a free, identity-inclusive, peer-led support platform—so no one has to choose between debt and silence.</p>
     </div>
     <div class="label">
         <h3 class="title" id="approach">PHILOSOPHY</h3>
@@ -313,7 +388,7 @@
             <h1>The Mirror Approach</h1>
             <a class="see-exp" href="...">See the experiences &rarr;</a>
         </div>
-        <p>Recovery isn’t one‑size‑fits‑all. We combine lived experience with clinician‑informed protocols to create spaces that are safe, inclusive, and accessible.</p>
+        <p>Recovery isn't one-size-fits-all. We combine lived experience with clinician-informed protocols to create spaces that are safe, inclusive, and accessible.</p>
         <div class="cards-container">
             <div class="cardy">
                 <h3>Peer Connection</h3>
@@ -336,7 +411,31 @@
     <div class="label">
         <h3 class="title" id="why">WHAT IT FEELS LIKE</h3>
         <h1>The Experience</h1>
-        <p>Eating disorders affect millions, yet most never receive treatment due to stigma, cost, or access. Mirror bridges the gap with a free, identity‑inclusive, peer‑led support platform—so no one has to choose between debt and silence.</p>
+        <div class="exp-container">
+            <div class="menu">
+                <button class="menu-item">For Families</button>
+                <button class="menu-item">For Adolescents</button>
+                <button class="menu-item">For Adults</button>
+                <button class="menu-item">For BIPOC</button>
+                <button class="menu-item">For College Students</button>
+                <button class="menu-item">For Alumni</button>
+            </div>
+            <div class="content">
+                <h2>For Families</h2>
+                <p>Guides, conversation prompts, and live peer circles to help you support a loved one with compassion, not control.</p>
+                <div class="sub-content">
+                    <div class="sub-card">Weekly live peer circle</div>
+                    <div class="sub-card">Resource starter pack</div>
+                    <div class="sub-card">Crisis toolkit access</div>
+                    <div class="sub-card">Anonymous Q&A</div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="label">
+        <h3 class="title" id="why">THE NEED</h3>
+        <h1>Why Mirror</h1>
+        <p>Eating disorders affect millions, yet most never receive treatment due to stigma, cost, or access. Mirror bridges the gap with a free, identity-inclusive, peer-led support platform—so no one has to choose between debt and silence.</p>
     </div>
     
 </body>
