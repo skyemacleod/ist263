@@ -149,7 +149,6 @@ document.addEventListener("mouseup", () => {
 
 let topZ = 1;
 
-
 /*------------------------- open window*/
 function openWindow(id) {
     document.getElementById(id).style.display = 'flex';
