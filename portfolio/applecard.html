@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>My 2000s Mac Page</title>
+  <style>
+    body {
+        margin: 0;
+        height: 100vh;
+        background: linear-gradient(to bottom, #7ec0ee, #4682b4); /* Classic Mac OS X sky-ish desktop */
+        font-family: "Lucida Grande", "Helvetica Neue", Helvetica, Arial, sans-serif; /* Very 2000s Mac font */
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        color: #000;
+        image-rendering: pixelated; /* Optional: if your photo is low-res retro */
+        }
+
+        .window {
+        width: 480px;
+        background: rgba(240, 240, 255, 0.92); /* Semi-translucent white like Aqua */
+        border-radius: 10px;
+        overflow: hidden;
+        box-shadow: 
+            0 20px 40px rgba(0,0,0,0.5),    /* Big soft drop shadow */
+            inset 0 1px 0 rgba(255,255,255,0.6); /* Subtle inner highlight */
+        backdrop-filter: blur(4px);         /* Glassy feel — skip if you want full old-school compatibility */
+        }
+
+        .title-bar {
+        height: 28px;
+        background: linear-gradient(to bottom, #e0e8ff, #a0b8ff); /* Aqua title bar gradient */
+        border-bottom: 1px solid #8090c0;
+        display: flex;
+        align-items: center;
+        padding: 0 8px;
+        position: relative;
+        }
+
+        .traffic-lights {
+        display: flex;
+        gap: 8px;
+        }
+
+        .traffic-lights span {
+        width: 12px;
+        height: 12px;
+        border-radius: 50%;
+        border: 1px solid #0003;
+        }
+
+        .close     { background: #ff5f57; }
+        .minimize  { background: #febc2e; }
+        .zoom      { background: #28c940; }
+
+        .title {
+        flex: 1;
+        text-align: center;
+        font-size: 13px;
+        font-weight: bold;
+        color: #000;
+        text-shadow: 0 1px 0 #fff8;
+        margin-left: -80px; /* Center it despite lights on left */
+        }
+
+        .window-content {
+        padding: 16px;
+        background: #fff; /* Clean white content area */
+        min-height: 240px;
+        }
+
+        .header {
+        text-align: center;
+        margin-bottom: 20px;
+        }
+
+        h1 {
+        margin: 0;
+        font-size: 32px;
+        color: #0066cc; /* Classic Aqua blue links/accents */
+        }
+
+        .quote {
+        font-style: italic;
+        color: #666;
+        margin: 4px 0;
+        }
+
+        .profile-layout {
+        display: flex;
+        gap: 24px;
+        align-items: flex-start;
+        }
+
+        .avatar {
+        width: 160px;
+        height: 200px;
+        object-fit: cover;
+        border: 2px solid #888;
+        border-radius: 6px;
+        box-shadow: 0 4px 12px rgba(0,0,0,0.3);
+        }
+
+        .profile-info {
+        flex: 1;
+        font-size: 15px;
+        line-height: 1.5;
+        }
+
+        strong {
+        color: #0066cc;
+        }
+  </style>
+</head>
+<body>
+  <div class="window">
+    <div class="title-bar">
+      <div class="traffic-lights">
+        <span class="close"></span>
+        <span class="minimize"></span>
+        <span class="zoom"></span>
+      </div>
+      <div class="title">Untitled – Notes</div>
+    </div>
+
+    <div class="window-content">
+      <!-- Your profile stuff -->
+      <div class="header">
+        <h1>Skye</h1>
+        <p class="quote">"Life is a mixtape"</p>
+      </div>
+
+      <div class="profile-layout">
+        <img src="YOUR_PHOTO_HERE.jpg" alt="me" class="avatar" />
+
+        <div class="profile-info">
+          <strong>Interests:</strong><br>
+          Making mixtapes<br>Bowling<br>Making Playlists<br><br>
+
+          <strong>Dislikes:</strong><br>
+          Waking up late<br>Unnecessary Dramas<br><br>
+
+          <strong>Mood:</strong> Ready to dance 💃
+        </div>
+      </div>
+    </div>
+  </div>
+</body>
+</html>

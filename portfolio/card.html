@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>My Retro Desktop Page</title>
+  <link rel="stylesheet" href="https://unpkg.com/98.css" />
+  <style>
+    body {
+      background: #ffffff;          
+      font-family: 'MS Sans Serif', Geneva, sans-serif;
+      margin: 0;
+      height: 100vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      image-rendering: pixelated;   /* keep things crispy */
+    }
+
+    .container {
+      position: relative;
+      width: 90%;
+      max-width: 520px;
+    }
+
+    /* Optional: fake a tiny drop shadow / elevation like old windows */
+    .window {
+      box-shadow: 3px 3px 3px #0008;
+    }
+
+    img.avatar {
+      image-rendering: pixelated;   /* important for that blocky jpg look */
+      border: 2px solid #000;
+    }
+
+    .profile-layout {
+        display: flex;              /* magic starts here */
+        flex-direction: row;        /* left-to-right */
+        align-items: flex-start;    /* align tops, so image doesn't stretch weird */
+        gap: 24px;                  /* space between image and text */
+        margin: 0 8px;              /* a bit of breathing room inside the window */
+    }
+
+        .avatar {
+        image-rendering: pixelated; /* keep that crunchy retro look */
+        border: 2px solid #000;     /* optional black border like old pics */
+        flex-shrink: 0;             /* don't let the image shrink */
+    }
+
+        .profile-info {
+        flex: 1;                    /* let text take remaining space */
+    }
+
+        /* Optional: make it stack vertically on small screens (mobile) */
+        @media (max-width: 500px) {
+            .profile-layout {
+                flex-direction: column;
+                align-items: center;
+                text-align: center;
+        }
+        
+        .avatar {
+            margin-bottom: 16px;
+        }
+    }
+
+  </style>
+</head>
+<body>
+
+  <div class="container">
+
+    <!-- The Notepad-style window -->
+    <div class="window" style="width: 100%;">
+      <div class="title-bar">
+        <div class="title-bar-text">Untitled - Notepad</div>
+        <div class="title-bar-controls">
+          <button aria-label="Minimize"></button>
+          <button aria-label="Maximize"></button>
+          <button aria-label="Close"></button>
+        </div>
+      </div>
+
+      <div class="window-body">
+        <!-- Keep the header centered -->
+        <div style="text-align: center; margin-bottom: 20px;">
+          <h1 style="font-size: 2.2rem; margin: 8px 0; color: #000;">Jyuu</h1>
+          <p style="font-style: italic; margin: 4px 0;">"Life is a mixtape"</p>
+        </div>
+      
+        <!-- Side-by-side: image left, text right -->
+        <div class="profile-layout">
+          <img src="YOUR_PHOTO_HERE.jpg" alt="me" class="avatar" width="180" height="240" />
+      
+          <div class="profile-info">
+            <div style="font-size: 1.1rem; line-height: 1.5; margin-bottom: 16px;">
+              <strong>Interests:</strong><br>
+              Making mixtapes<br>
+              Bowling<br>
+              Making Playlists
+            </div>
+      
+            <div style="font-size: 1.1rem; line-height: 1.5; margin-bottom: 16px;">
+              <strong>Dislikes:</strong><br>
+              Waking up late<br>
+              Unnecessary Dramas
+            </div>
+      
+            <div style="font-size: 1.1rem; line-height: 1.5;">
+              <strong>Mood:</strong> Ready to dance 💃
+            </div>
+          </div>
+        </div>
+    </div>
+
+  </div>
+
+</body>
+</html>

@@ -34,6 +34,16 @@
             gap: 0.5%;
         }
 
+        .side-text {
+            position: fixed;
+            right: 10px;              /* distance from left edge */
+            top: 70%;
+            transform: translateY(50%) rotate(90deg);
+            transform-origin: right top;
+            color: #0525d9;
+            font-size: 14px;
+        }
+
         #desktop {
             position: relative;
             width: 100%;
@@ -45,15 +55,13 @@
             width: 300px;
             background: rgba(255,255,255,1);
             box-shadow: 0 10px 30px rgba(0,0,0,0.2);
-            padding: 10px;
             border-radius: 0px;
             border: 1px solid #8e8e8e;
             cursor: grab;
         }
 
-        .title-bar {
-            font-weight: 600;
-            user-select: none;
+        .window .social {
+            padding: 10px;
         }
 
         #notes-window{
@@ -126,6 +134,36 @@
             display: block;
         }
 
+        .folders {
+            position: absolute; /* Absolute positioning to place it on the left side */
+            top: 70px;
+            display: flex;
+            flex-direction: column; /* Stack the folders vertically */
+            gap: 15px; /* Space between folder icons */
+            overflow-y: auto; /* Allows scrolling if there are too many folders */
+            left: 30px;
+        }
+        .folder {
+            width: 60px;
+            display: block;
+            cursor: pointer;
+        }
+
+        .folder-item {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 2px;
+        }
+
+        .folder-label {
+            line-height: 1;
+            font-weight: 700;
+            font-size: 12px;
+            color: white;
+            text-shadow: 1px 1px 2px rgba(0,0,0,0.5);
+        }
+
         .menu{
             background-color: rgba(242, 242, 242, 0.5);
             padding: 10px;
@@ -150,6 +188,83 @@
             cursor: grab;
         }
 
+
+
+        .main-window {
+            width: 400px;
+            border-radius: 1px;
+            overflow: hidden;
+            box-shadow: 0 20px 50px rgba(0,0,0,0.4);
+            border: 1px solid #a0a0d0;
+            backdrop-filter: blur(8px);
+            font-family: "Lucida Grande", system-ui, sans-serif;
+            padding: none;
+        }
+
+        .main-window .title-bar {
+            height: 32px;
+            background: linear-gradient(to bottom, #f9f9f9, #dadada);
+            border-bottom: 1px solid #8090c8;
+            display: flex;
+            align-items: center;
+            padding: 0 ;
+            user-select: none;
+            cursor: grab;
+        }
+
+        .main-window .title {
+            flex: 1;
+            text-align: center;
+            font-weight: bold;
+            font-size: 13px;
+            color: #000;
+            margin-left: -50px;
+            text-shadow: 0 1px 0 #fff;
+        }
+
+        .main-window .window-content {
+            padding: 20px;
+            background: #fff;
+            min-height: 260px;
+        }
+
+        .main-window .content {
+            color: #000;
+            margin: 6px;
+            display: flex;
+            justify-content: center;
+            font-size: 16px;
+        }
+
+        .profile-layout {
+            display: flex;
+            gap: 20px;
+            align-items: flex-start;
+        }
+
+        .main-window .avatar {
+            width: 160px;
+            height: 200px;
+            object-fit: cover;
+            border-radius: 8px;
+            border: 3px solid #fff;
+            box-shadow: 0 6px 16px rgba(0,0,0,0.3);
+            margin: 10px;
+        }
+
+        .main-window .profile-info {
+            flex: 1;
+            font-size: 14px;
+            line-height: 1.3;
+            padding-top: 6px;
+        }
+
+        .main-window strong {
+            color: #0066cc;
+            font-size: 16px;
+        }
+
+
     </style>
 </head>
 <body>
@@ -158,31 +273,64 @@
         <a href="studio.html">Studio</a>
         <a href="desktop.html">Desktop</a>
     </nav>
-
+    <p class="side-text">blending the power of data — with the art of design</p>
+    
     <div id="desktop">
-        <div class="window" id="main" style="top: 150px; left: 600px;">
+        
+        <div class="window main-window" id="main" style="top: 150px; left: 600px;">
             <button class="close-btn" onclick="this.parentElement.style.display='none'">✕</button>
-            <div class="title-bar">Hi</div>
-            <div class="content">I'm Skye MacLeod</div>
+            <div class="title-bar">
+                <div class="title">About Me – Notes</div>
+            </div>
+
+            <div class="profile-layout">
+                <img src="media/me4.jpeg" alt="me" class="avatar"> 
+                <div class="profile-info">
+                    <div class="content">Skye MacLeod</div>
+                    <strong>Interests:</strong><br>
+                    Making mixtapes<br>
+                    Bowling<br>
+                    Making Playlists<br><br>
+    
+                    <strong>Dislikes:</strong><br>
+                    Waking up late<br>
+                    Unnecessary Dramas<br><br>
+                </div>
+            </div>
         </div>
-        <div class="window" id="box1" style="top: 30px; left: 50px;">
+        <div class="window socials" id="box1" style="top: 30px; left: 100px;">
             <a href="https://www.instagram.com/archdukeskye/">Insta</a>
             <div class="content">Hello world</div>
         </div>
-        <div class="window" id="notes-window" style="top:100px; left:140px; width: 200px; height: 200px; display:none;">
+        <div class="window" id="notes-window" style="top:100px; left:200px; width: 200px; height: 200px; display:none;">
             <button class="close-btn" onclick="closeWindow('notes-window')">✕</button>
             <textarea placeholder="Start your todo list..." style="width:100%; height:100%; border:none; resize:none;"></textarea>
         </div>
         <div class="image-window" id="box" style="top: 350px; left: 1100px;">
             <img src="media/me3.jpg">
         </div>
-        <div class="png" id="box" style="top: 300px; left: 100px;">
+        <div class="png" id="box" style="top: 400px; left: 100px;">
             <img src="media/icons/comp.png">
         </div>
-        <div class="fav" style="top: 0px; left: 30px;">
+        <div class="fav" style="top: 5px; left: 1350px;">
             <a href="index.html">
                 <img src="media/icons/favicon.ico">
             </a>
+        </div>
+    </div>
+
+    <div class="folders">
+        <div class="folder-item">
+            <img class="folder" src="media/icons/folder2.png" alt="Folder 1">
+            <span class="folder-label">Portfolio</span>
+        </div>
+        <div class="folder-item">
+            <img class="folder" src="media/icons/folder2.png" alt="Folder 3">
+            <span class="folder-label">Design</span>
+        </div>
+        <div class="folder-item">
+            <img class="folder" src="media/icons/folder2.png" alt="Folder 4">
+            <span class="folder-label">School</span>
         </div>
     </div>
 
