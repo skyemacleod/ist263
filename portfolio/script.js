@@ -124,7 +124,7 @@ document.addEventListener("mousedown", e => {
   // Exclude buttons/inputs so you don't accidentally drag them
   if (e.target.closest("button, input, textarea, a")) return;
 
-  const windowEl = e.target.closest(".window, .image-window");
+  const windowEl = e.target.closest(".window, .image-window, .png");
   if (!windowEl) return;
 
   activeWindow = windowEl;

@@ -30,7 +30,7 @@
             display: flex;
             justify-content: center;
             align-items: center;
-            padding: 1%;
+            padding: 0.8%;
             gap: 0.5%;
         }
 
@@ -50,7 +50,6 @@
             border: 1px solid #8e8e8e;
             cursor: grab;
         }
-
 
         .title-bar {
             font-weight: 600;
@@ -73,13 +72,14 @@
             top: 5px;
             right: 5px;
             width: 25px;
-            height: 25px;
-            color: rgb(0, 0, 0);
-            border: none;
-            border-radius: 50%;
+            height: 20px;
+            background: #fff;
+            color: #3f3f3f;
+            border: 1px solid #3f3f3f;
             font-weight: bold;
             cursor: pointer;
             z-index: 10;
+            padding: none;
         }
 
         .image-window {
@@ -88,11 +88,34 @@
             height: auto;
             cursor: grab; /* shows it can be dragged */
             user-select: none;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.2);
+
         }
 
-        .png img{
-            height: 200px;
+        .fav {
+            position: absolute;
+            cursor: grab; 
+            user-select: none;
+        }
+        .fav img {
+            height: 40px;
             width: auto;
+            pointer-events: none; /* allows mouse events to reach parent */
+            user-select: none;    /* prevents accidental text/image selection */
+            display: block;
+        }
+
+        .png {
+            position: absolute;
+            cursor: grab; 
+            user-select: none;
+        }
+        .png img{
+            height: 150px;
+            width: auto;
+            pointer-events: none; /* allows mouse events to reach parent */
+            user-select: none;    /* prevents accidental text/image selection */
+            display: block;
         }
 
         .image-window img {
@@ -138,22 +161,28 @@
 
     <div id="desktop">
         <div class="window" id="main" style="top: 150px; left: 600px;">
-            <div class="title-bar">My Window</div>
-            <div class="content">Hello world</div>
+            <button class="close-btn" onclick="this.parentElement.style.display='none'">✕</button>
+            <div class="title-bar">Hi</div>
+            <div class="content">I'm Skye MacLeod</div>
         </div>
-        <div class="window" id="box1" style="top: 10px; left: 50px;">
-            <div class="title-bar">Something</div>
+        <div class="window" id="box1" style="top: 30px; left: 50px;">
+            <a href="https://www.instagram.com/archdukeskye/">Insta</a>
             <div class="content">Hello world</div>
         </div>
         <div class="window" id="notes-window" style="top:100px; left:140px; width: 200px; height: 200px; display:none;">
             <button class="close-btn" onclick="closeWindow('notes-window')">✕</button>
             <textarea placeholder="Start your todo list..." style="width:100%; height:100%; border:none; resize:none;"></textarea>
         </div>
-        <div class="image-window" id="box" style="top: 20px; left: 1100px;">
+        <div class="image-window" id="box" style="top: 350px; left: 1100px;">
             <img src="media/me3.jpg">
         </div>
-        <div class="png" id="box" style="top: 1000px; left: 100px;">
+        <div class="png" id="box" style="top: 300px; left: 100px;">
             <img src="media/icons/comp.png">
+        </div>
+        <div class="fav" style="top: 0px; left: 30px;">
+            <a href="index.html">
+                <img src="media/icons/favicon.ico">
+            </a>
         </div>
     </div>
 
