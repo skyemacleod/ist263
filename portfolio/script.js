@@ -114,3 +114,46 @@ document.addEventListener("DOMContentLoaded", () => {
     animateTextElements(".anime-text", "words");
     animateTextElements(".anime-head", "letters");
 });
+
+/*-------- dragging*/
+let activeWindow = null;
+let offsetX = 0;
+let offsetY = 0;
+
+document.addEventListener("mousedown", e => {
+  // Exclude buttons/inputs so you don't accidentally drag them
+  if (e.target.closest("button, input, textarea, a")) return;
+
+  const windowEl = e.target.closest(".window, .image-window");
+  if (!windowEl) return;
+
+  activeWindow = windowEl;
+
+  offsetX = e.clientX - activeWindow.offsetLeft;
+  offsetY = e.clientY - activeWindow.offsetTop;
+
+  // Bring window to front
+  windowEl.style.zIndex = ++topZ;
+});
+
+document.addEventListener("mousemove", e => {
+  if (!activeWindow) return;
+
+  activeWindow.style.left = e.clientX - offsetX + "px";
+  activeWindow.style.top = e.clientY - offsetY + "px";
+});
+
+document.addEventListener("mouseup", () => {
+  activeWindow = null;
+});
+
+let topZ = 1;
+
+
+/*------------------------- open window*/
+function openWindow(id) {
+    document.getElementById(id).style.display = 'flex';
+}
+function closeWindow(id) {
+    document.getElementById(id).style.display = 'none';
+}

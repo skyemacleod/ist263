@@ -1,6 +1,9 @@
 nav a{text-decoration: none;}
 a{text-decoration: none;}
 nav a:hover{ transform: scale(1.1);/*background-color: #bcbcbc;*/}
+
+
+
 @font-face {
     font-family: 'Druk Wide Bold';
     src: url('media/DrukWideBold.woff') format('woff');
@@ -16,6 +19,7 @@ nav a:hover{ transform: scale(1.1);/*background-color: #bcbcbc;*/}
     url("https://db.onlinewebfonts.com/t/6e3bdf768c0dc5b08f0198a7243fbe21.ttf")format("truetype"),
     url("https://db.onlinewebfonts.com/t/6e3bdf768c0dc5b08f0198a7243fbe21.svg#Acier BAT Text Solid")format("svg");
 }
+
 
 
 /*
