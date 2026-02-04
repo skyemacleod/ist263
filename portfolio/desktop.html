@@ -6,113 +6,166 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Skye MacLeod</title>
     <link rel="stylesheet" href="styles.css">
-    <!-- Importing Google Fonts for similar typography -->
-    <link rel='stylesheet' href='https://fonts.googleapis.com/css?family=Bebas Neue'>
-    <link rel='stylesheet' href='https://fonts.googleapis.com/css?family=League Spartan'>
-    <link rel='stylesheet' href='https://fonts.googleapis.com/css?family=Roboto'>
 
     <style>
-        body{
-            background-image: url(media/board.png);
+        html, body {
+            width: 100%;
+            height: 100%;
+            margin: 0;
+            padding: 0;
+            overflow: hidden;
+        }
+        body {
             display: flex;
             flex-direction: column;
-            height: 100vh;
-            margin: 0;
             position: relative;
+            font-family: system-ui, sans-serif;
+            background: linear-gradient(
+                to top,
+                #8e8e8e,
+                #ffffff
+            );  
         }
-        
-        .topbar{
-            background-color: #c3c3c3;
-            opacity: 0.9;
-            padding: 4px;
+        .nav {
             display: flex;
-            justify-content: space-between; /* Space out the content (apple icon and date/time) */
+            justify-content: center;
             align-items: center;
+            padding: 0.8%;
+            gap: 0.5%;
         }
-        .topbar-left {
-            display: flex;
-            align-items: center;
-            gap: 15px;
-        }
-        .apple{
-            width: 14px;
-            height: auto;
-            padding-left:15px;
-        }
-        .chrome {
-            margin: 0;
-            font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
-            font-weight: 700;
-            font-size: 15px;
-            color: white;
-        }
-        .drops {
-            color: #fff;
-            margin: 0;
-            font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
-            font-size: 14.5px;
-        }
-        #date-time {
-            font-family: 'Roboto', sans-serif;
+
+        .side-text {
+            position: fixed;
+            right: 10px;              /* distance from left edge */
+            top: 70%;
+            transform: translateY(50%) rotate(90deg);
+            transform-origin: right top;
+            color: #0525d9;
             font-size: 14px;
-            color: #ffffff;
-            margin-right: 10px; /* Optional: add some margin to space from the edge */
         }
-        .folders {
-            position: absolute; /* Use absolute positioning to place it on the left */
-            left: 10px; /* 10px from the left of the screen */
-            top: 30%; /* Start in the middle of the screen */
-            transform: translateY(-50%); /* Center the folders vertically */
-            display: flex;
-            flex-direction: column; /* Stack the folders vertically */
-            gap: 15px; /* Space between folder icons */
+
+        #desktop {
+            position: relative;
+            width: 100%;
+            height: 100%;
         }
-        .sticky{
+
+        .window {
             position: absolute;
+            width: 300px;
+            background: rgba(255,255,255,1);
+            box-shadow: 0 10px 30px rgba(0,0,0,0.2);
+            border-radius: 0px;
+            border: 1px solid #8e8e8e;
+            cursor: grab;
+        }
+
+        .social-window {
+            width: 200px;
+        }
+
+        #notes-window{
+            position: absolute;
+            display: none;
             left: 140px;
             top: 100px;
             width: 180px;
             height: 180px;
-            background-color: #e3c723;
-            border-radius: 5px;
-            border: 4px solid #e3c723;
+            border-radius: 2px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.2);
+        }
+
+        .close-btn {
+            position: absolute;
+            top: 5px;
+            right: 5px;
+            width: 25px;
+            height: 20px;
+            background: #fff;
+            color: #3f3f3f;
+            border: 1px solid #3f3f3f;
+            font-weight: bold;
+            cursor: pointer;
+            z-index: 10;
+            padding: none;
+        }
+
+        .image-window {
+            position: absolute;
+            width: 250px;
+            height: auto;
+            cursor: grab; /* shows it can be dragged */
+            user-select: none;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.2);
+
+        }
+
+        .fav {
+            position: absolute;
+            cursor: grab; 
+            user-select: none;
+        }
+        .fav img {
+            height: 40px;
+            width: auto;
+            pointer-events: none; /* allows mouse events to reach parent */
+            user-select: none;    /* prevents accidental text/image selection */
+            display: block;
+        }
+
+        .png {
+            position: absolute;
+            cursor: grab; 
+            user-select: none;
+        }
+        .png img{
+            height: 150px;
+            width: auto;
+            pointer-events: none; /* allows mouse events to reach parent */
+            user-select: none;    /* prevents accidental text/image selection */
+            display: block;
+        }
+
+        .image-window img {
+            width: 250px;
+            height: auto;
+            pointer-events: none; /* allows mouse events to reach parent */
+            user-select: none;    /* prevents accidental text/image selection */
+            display: block;
         }
 
         .folders {
             position: absolute; /* Absolute positioning to place it on the left side */
-            top: 270px;
+            top: 70px;
             display: flex;
             flex-direction: column; /* Stack the folders vertically */
             gap: 15px; /* Space between folder icons */
             overflow-y: auto; /* Allows scrolling if there are too many folders */
-            padding-left: 20px;
+            left: 30px;
+        }
+        .folder {
+            width: 60px;
+            display: block;
+            cursor: pointer;
         }
 
-        .folder {
-            width: 60px; /* Set the width of the folder icon */
-            height: auto; /* Let the height adjust automatically */
-            cursor: grab; /* Optional: add a cursor pointer for interactivity */
-        }
         .folder-item {
             display: flex;
             flex-direction: column;
             align-items: center;
-            font-family: 'Roboto', sans-serif;
-            font-size: 12px;
-            color: white; /* or black, depending on your background */
-            text-align: center;
+            gap: 2px;
         }
+
         .folder-label {
-            margin-top: 4px;
-            font-family: -apple-system, BlinkMacSystemFont, "San Francisco", "Helvetica Neue", Helvetica, Arial, sans-serif;
-            font-weight: 700; /* semi-bold, closest to macOS folder label */
+            line-height: 1;
+            font-weight: 700;
             font-size: 12px;
             color: white;
-            text-align: center;
-            text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5); 
+            text-shadow: 1px 1px 2px rgba(0,0,0,0.5);
         }
+
         .menu{
-            background-color: #ececece9;
+            background-color: rgba(242, 242, 242, 0.5);
             padding: 10px;
             border-radius: 10px;
             margin: 10px;
@@ -134,377 +187,182 @@
             border-radius: 6px;
             cursor: grab;
         }
-        /* ------------------------------------------------------------------- */
-        .app-window {
-            display: none;
-            position: fixed;
-            top: 70px;
-            left: 200px;
-            width: 800px;
-            max-height: 70vh;
-            background-color: white;
-            border: 1px solid #888;
-            border-radius: 10px;
-            z-index: 999;
-            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2);
+
+        .main-window {
+            width: 400px;
+            border-radius: 1px;
             overflow: hidden;
-            flex-direction: column;
-            font-family: -apple-system, BlinkMacSystemFont, "San Francisco", sans-serif;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.2);
+            border: 1px solid #a0a0d0;
+            backdrop-filter: blur(8px);
+            font-family: "Lucida Grande", system-ui, sans-serif;
+            padding: none;
         }
 
-        .window-header {
-            background-color: #ffffff;
-            padding: 8px 12px;
+        .title-bar {
+            height: 32px;
+            background: linear-gradient(to bottom, #f9f9f9, #dadada);
+            border-bottom: 1px solid #8090c8;
             display: flex;
-            justify-content: space-between;
             align-items: center;
+            padding: 0 ;
+            user-select: none;
+            cursor: grab;
+            font-family: "Lucida Grande", system-ui, sans-serif;
+        }
+
+        .title {
+            flex: 1;
+            text-align: center;
             font-weight: bold;
-            border-bottom: 1px solid #ccc;
+            font-size: 13px;
+            color: #000;
+            text-shadow: 0 1px 0 #fff;
         }
 
-        .window-header button {
-            background: none;
-            border: none;
-            font-size: 16px;
-            cursor: pointer;
-        }
-
-        .window-content {
+        .main-window .window-content {
             padding: 20px;
-            overflow-y: auto;
+            background: #fff;
+            min-height: 260px;
         }
 
-        .photo {
-            width: 100%;
-            margin-bottom: 10px;
-        }
-        .photo-grid {
-            display: grid;
-            grid-template-columns: repeat(4, 1fr); /* 3 columns */
-            gap: 10px;
-            align-items: center;
-        }
-
-        .photo-grid img {
-            width: 100%;
-            height: auto;
-            object-fit: cover;
-        }
-
-        #passwordOverlay {
-        position: fixed;
-        top: 0;
-        left: 0;
-        width: 100%;
-        height: 100%;
-        background-color: #959595;
-        color: black;
-        display: flex;
-        flex-direction: column;
-        z-index: 9999;
-        }
-        .top{
+        .main-window .content {
+            color: #000;
+            margin: 6px;
             display: flex;
-            border: 2px  blue;
-            justify-content: end;
-            margin: 3px 15px;
-        }
-        #date-time2 {
-            font-family: 'Roboto', sans-serif;
-            font-size: 14px;
-            color: #000; 
-            border: 2px  palevioletred;
-        }
-        .wifi{
-            height: 15px;
-            width: auto;
-            margin: 0 10px;
-        }
-        .sec{
-            display: flex;
-            flex-direction: row;
-            align-items: center;
             justify-content: center;
-            
-            padding: 200px 0 200px 0;
-        }
-        .main{
-            display: flex;
-            flex-direction: column;
-            justify-content: center;
-            align-items: center;
-            border: 2px  greenyellow;
-            padding: 10px;
-            cursor: pointer;
-        }
-        .skye{
-            font-family: 'Druk Wide Bold';
-            font-size: 100px;
-            background-image: url(media/board.png);
-            -webkit-text-fill-color: transparent;
-            -webkit-background-clip: text;
-        }
-        .pfp{
-            width: 100px;
-            height: 100px;
-            object-fit: cover;
-            border-radius: 200px;
-        }
-        .name{
-            font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
-            color: #fff;
-            text-shadow: 1px 1px 1px #888;
-        }
-
-        #passwordOverlay input {
-        padding: 5px;
-        margin-top: 0;
-        font-size: 12px;
-        border-radius: 20px;
-        border: none;
-        }
-
-        #mainContent {
-        display: none;
-        }
-        .password-wrapper {
-            display: flex;
-            align-items: center;
-            gap: 8px;
-            margin-top: 8px;
-        }
-
-        .arrow-button {
-            background-color: transparent;
-            color: white;
             font-size: 16px;
-            border: 1px solid black;
-            border-radius: 50%;
-            width: 30px;
-            height: 30px;
-            cursor: pointer;
-            transition: background-color 0.2s ease;
         }
 
-        .arrow-button:hover {
-            background-color: #333;
+        .profile-layout {
+            display: flex;
+            gap: 20px;
+            align-items: flex-start;
         }
+
+        .main-window .avatar {
+            width: 160px;
+            height: 200px;
+            object-fit: cover;
+            border-radius: 8px;
+            border: 3px solid #fff;
+            box-shadow: 0 6px 16px rgba(0,0,0,0.3);
+            margin: 10px;
+        }
+
+        .main-window .profile-info {
+            flex: 1;
+            font-size: 14px;
+            line-height: 1.3;
+            padding-top: 6px;
+        }
+
+        .main-window strong {
+            color: #0525d9;
+            font-size: 16px;
+        }
+
 
     </style>
 </head>
 <body>
-    <div id="passwordOverlay">
-        <div class="top">
-            <img class="wifi" src="media/wifi.png">
-            <div id="date-time2" class="date-time"></div>
-        </div>
-        <div class="sec">
-            <div class="main">
-                <img class="pfp" src="media/smpfp.jpeg">
-                <p class="name">Skye MacLeod</p>
-                <div class="password-wrapper">
-                    <input type="password" id="passwordInput" class="passwordInput" placeholder="Password..." />
-                    <button class="arrow-button" onclick="checkPassword(document.getElementById('passwordInput'))">→</button>
-                </div>
-                <p id="errorMessage" style="color:red;"></p>
-            </div>
-        </div>
+    <nav class="nav"> 
+        <a href="wip.html">skyemacleodfortfolio</a>
         
-      </div>
-    <div id="mainContent">
-        <div class="topbar">
-            <div class="topbar-left">
-                <img class="apple" src="media/icons/apple.svg.png">
-                <p class="chrome">Chrome</p>
-                <p class="drops">File</p>
-                <p class="drops">Edit</p>
-                <p class="drops">View</p>
-            </div>
-            <div id="date-time" class="date-time"></div>
-        </div>
+    </nav>
+    <p class="side-text">blending the power of data — with the art of design</p>
+    
+    <div id="desktop">
         
-        <div class="folders">
-            <div class="folder-item">
-                <img class="folder" src="media/icons/folder.png" alt="Folder 1">
-                <span class="folder-label">Portfolio</span>
+        <div class="window main-window" id="main" style="top: 150px; left: 600px;">
+            <button class="close-btn" onclick="this.parentElement.style.display='none'">✕</button>
+            <div class="title-bar">
+                <div class="title">About Me</div>
             </div>
-            <div class="folder-item">
-                <img class="folder" src="media/icons/folder.png" alt="Folder 2">
-                <span class="folder-label">Notes</span>
-            </div>
-            <div class="folder-item">
-                <img class="folder" src="media/icons/folder.png" alt="Folder 3">
-                <span class="folder-label">Design</span>
-            </div>
-            <div class="folder-item">
-                <img class="folder" src="media/icons/folder.png" alt="Folder 4">
-                <span class="folder-label">School</span>
-            </div>
-            <div class="folder-item">
-                <img class="folder" src="media/icons/folder.png" alt="Folder 5">
-                <span class="folder-label">Archive</span>
-            </div>
-        </div>
-        <textarea class="sticky" name="message" rows="4" cols="40" placeholder="start yur todo list..."></textarea>
+
+            <div class="profile-layout">
+                <img src="media/me4.jpeg" alt="me" class="avatar"> 
+                <div class="profile-info">
+                    <div class="content">Skye MacLeod</div>
+                    <strong>Interests:</strong><br>
+                    ...<br>
+                    Laughing<br>
+                    ...<br><br>
     
-        </div>
-        <div class="menu">
-            <img class="app" src="media/icons/finder.png">
-            <img class="app" src="media/icons/launch.png">
-            <img class="app" src="media/icons/contacts.png">
-            <img class="app" src="media/icons/safari.svg.png">
-            <img class="app" src="media/icons/photos.webp" onclick="openWindow('photos-window')">
-            <img class="app" src="media/icons/photobooth.webp">
-            <img class="app" src="media/icons/chrome.png">
-            <img class="app" src="media/icons/notes.svg.png">
-            <img class="app" src="media/icons/imessage.svg.png">
-            <img class="app" src="media/icons/fmf.webp">
-            <img class="app" src="media/icons/faetime.svg.png">
-            <img class="app3" src="media/icons/flare.png">
-            <img class="app" src="media/icons/settings.png">
-            <img class="app" src="media/icons/appstore.svg.png">
-            <img class="app" src="media/icons/amusic.svg.png">
-            <img class="app" src="media/icons/roblox.webp">
-            <img class="app" src="media/icons/vscode.webp">
-            <img class="app" src="media/icons/github.webp"> 
-            <img class="app" src="media/icons/python.png"> 
-    
-            <img class="app" src="media/icons/trash.ico">
-        </div>
-        <div id="photos-window" class="app-window">
-            <div class="window-header">
-                <span>Photos</span>
-                <button onclick="closeWindow('photos-window')">✕</button>
-            </div>
-            <div class="window-content">
-                <div class="photo-grid">
-                    <img src="media/photosapp/larb.jpeg" alt="Me 4">
-                    <img src="media/photosapp/boypre.jpeg" alt="Me 5">
-                    <img src="media/photosapp/ems1.JPG" alt="Emilys 21st">
-                    <img src="media/photosapp/hot.JPG" alt="Me 2">
-                    <img src="media/photosapp/menem.JPG" alt="Me 4">
-                    <img src="media/photosapp/idgaf.JPG" alt="Me 4">
-                    <img src="media/photosapp/big.JPG" alt="Me 3">
-                    <img src="media/photosapp/mims.jpeg" alt="Me 4">
-                    <img src="media/photosapp/selfie.JPG" alt="Me 3">
-                    <img src="media/photosapp/patio.jpeg" alt="Me 4">
-                    <img src="media/photosapp/la.jpeg" alt="Me 3">
-                    <img src="media/photosapp/hotme.jpeg" alt="Me 2">
-                    <img src="media/photosapp/wall.jpeg" alt="Me 3">
-                    <img src="media/photosapp/lemon.jpeg" alt="Me 3">
-                    <img src="media/photosapp/chuz.jpeg" alt="Me 4">
-                    <img src="media/photosapp/chuzdj.jpeg" alt="Me 5">
-                    <img src="media/photosapp/blub.jpeg" alt="Me 2">
-                    <img src="media/photosapp/fam.JPG" alt="Me 3">
-                    <img src="media/photosapp/pep.jpeg" alt="Me 5">
-                    <img src="media/photosapp/flip.jpeg" alt="Me 3">
-                    <img src="media/photosapp/wiff.jpeg" alt="Me 3">
-                    <img src="media/photosapp/lay.JPG" alt="Me 2">
-                    <img src="media/photosapp/zeebz.JPG" alt="Me 3">
-                    <img src="media/photosapp/lacks.jpeg" alt="Me 3">
-                    <img src="media/photosapp/lukehug.jpeg" alt="Me 3">
-                    <img src="media/photosapp/dance.jpeg" alt="Me 4">
-                    <img src="media/photosapp/garden.jpeg" alt="Me 4">
-                    <img src="media/photosapp/pat.jpeg" alt="Me 4">
-                    <img src="media/photosapp/nyc.jpeg" alt="Me 2">
-                    <img src="media/photosapp/nyc2.jpeg" alt="Me 3">
-                    <img src="media/photosapp/nyc3.jpeg" alt="Me 4">
-                    <img src="media/photosapp/ben.jpeg" alt="Me 4">
-                    <img src="media/photosapp/rt1.jpeg" alt="Me 4">
-                    <img src="media/photosapp/steamer.jpeg" alt="Me 2">
-                    <img src="media/photosapp/mattbed.jpeg" alt="Me 3">
-                    <img src="media/photosapp/manicmatt.jpeg" alt="Me 4">
-                    <img src="media/photosapp/mattcaleb.jpeg" alt="Me 3">
-                    <img src="media/photosapp/bouy.jpeg" alt="Me 4">
-                    <img src="media/photosapp/tess.jpeg" alt="Me 4">
-                    <img src="media/photosapp/remi.jpeg" alt="Me 4">
-                    <img src="media/photosapp/jj.jpeg" alt="Me 2">
-                    <img src="media/photosapp/laxcheers.jpeg" alt="Me 3">
-                    <img src="media/photosapp/miajump.jpeg" alt="Me 4">
-                    <img src="media/photosapp/nycmay1.jpeg" alt="Me 3">
-                    <img src="media/photosapp/nycmay2.jpeg" alt="Me 4">
-                    <img src="media/photosapp/nycmay3.jpeg" alt="Me 4">
-                    <img src="media/photosapp/nycmay4.jpeg" alt="Me 4">
-                    <img src="media/photosapp/nycmay5.jpeg" alt="Me 2">
-                    <img src="media/photosapp/syrfilm.JPG" alt="Me 3">
-                    <img src="media/photosapp/flowers.jpeg" alt="Me 3">
-                    <img src="media/photosapp/heids.jpeg" alt="Me 4">
-                    <img src="media/photosapp/guitarhobo.jpeg" alt="Me 4">
-                    <img src="media/photosapp/harrys.jpeg" alt="Me 4">
-                    <img src="media/photosapp/wheely.jpeg" alt="Me 2">
-                    <img src="media/photosapp/lovecave.jpeg" alt="Me 3">
-                    <img src="media/photosapp/gabkb.jpeg" alt="Me 4">
-                    <img src="media/photosapp/megab.jpeg" alt="Me 3">
-                    <img src="media/photosapp/peyt.jpeg" alt="Me 4">
-                    <img src="media/photosapp/megab2.jpeg" alt="Me 4">
-                    <img src="media/photosapp/hobochy.jpeg" alt="Me 4">
-                    <img src="media/photosapp/john.jpeg" alt="Me 2">
-                    <img src="media/photosapp/felipe.jpeg" alt="Me 3">
-                    <img src="media/photosapp/byetube.jpeg" alt="Me 4">
-                    <img src="media/photosapp/towergill.jpeg" alt="Me 4">
-                    <img src="media/photosapp/supernova.jpeg" alt="Me 4">
-                    <img src="media/photosapp/supernova2.jpeg" alt="Me 2">
-                    <img src="media/photosapp/hyde.jpeg" alt="Me 3">
-                    <img src="media/photosapp/towerhill2.jpeg" alt="Me 4">
-                    <img src="media/photosapp/londonmarathon.jpeg" alt="Me 3">
-                    <img src="media/photosapp/claire.jpeg" alt="Me 4">
-                    <img src="media/photosapp/champ.JPG" alt="Me 4">
-                    <img src="media/photosapp/horse.jpeg" alt="Me 4">
-                    <img src="media/photosapp/mizejump.jpeg" alt="Me 2">
-                    <img src="media/photosapp/chycrawl.jpeg" alt="Me 3">
-                    <img src="media/photosapp/mallorcamesit.jpeg" alt="Me 2">
-                    <img src="media/photosapp/malldock.jpeg" alt="Me 3">
-                    <img src="media/me1.JPG" alt="Me 1">
-                    
+                    <strong>Dislikes:</strong><br>
+                    ...<br>
+                    ...<br><br>
                 </div>
             </div>
+        </div>
+
+        <div class="window social-window" id="social-window" style="top: 35px; left: 130px;">
+            <button class="close-btn" onclick="closeWindow('social-window')">✕</button>
+            <div class="title-bar">
+                <div class="title">Contact Me</div>
+            </div>
+            <a href="https://www.instagram.com/archdukeskye/" style="padding: 20px 0px 0px 5px;">Insta</a><br>
+            <a href="https://www.linkedin.com/in/skyemacleod/" style="padding: 0px 0px 0px 5px;">LinkedIn</a><br>
+            <a href="mailto:asmacleo@syr.edu" style="padding: 0px 0px 0px 5px;">Email</a>
+        </div>
+
+        <div class="window" id="notes-window" style="top:100px; left:200px; width: 200px; height: 200px; display:none;">
+            <button class="close-btn" onclick="closeWindow('notes-window')">✕</button>
+            <textarea placeholder="Start your todo list..." style="width:100%; height:100%; border:none; resize:none;"></textarea>
+        </div>
+
+        <div class="image-window" id="box" style="top: 350px; left: 1100px;">
+            <img src="media/me3.jpg">
+        </div>
+
+        <div class="png" id="box" style="top: 400px; left: 100px;">
+            <img src="media/icons/comp.png">
+        </div>
+        <div class="fav" style="top: 5px; left: 1350px;">
+            <a href="index.html">
+                <img src="media/icons/favicon.ico">
+            </a>
         </div>
     </div>
 
-    <script>
-        function updateDateTime() {
-            const now = new Date();
-            const options = { weekday: 'short', month: 'short', day: 'numeric', hour: '2-digit', minute: '2-digit'};
-            const dateTimeString = now.toLocaleString('en-US', options);
-            document.getElementById("date-time").textContent = dateTimeString;
-        }
-        setInterval(updateDateTime, 60000);
-        updateDateTime();
+    <div class="folders">
+        <div class="folder-item" id="portfolio-folder">
+            <img class="folder" src="media/icons/folder2.png" alt="Folder 1">
+            <span class="folder-label">Portfolio</span>
+        </div>
+        <div class="folder-item" id="">
+            <img class="folder" src="media/icons/folder2.png" alt="Folder 3">
+            <span class="folder-label">Design</span>
+        </div>
+        <div class="folder-item">
+            <img class="folder" src="media/icons/folder2.png" alt="Folder 4">
+            <span class="folder-label">School</span>
+        </div>
+    </div>
 
-        function updateDateTime() {
-            const now = new Date();
-            const options = {  hour: '2-digit', minute: '2-digit'};
-            const dateTimeString = now.toLocaleString('en-US', options);
-            document.getElementById("date-time2").textContent = dateTimeString;
-        }
-        setInterval(updateDateTime, 60000);
-        updateDateTime();
+    <div class="menu">
+        <img class="app" src="media/icons/finder.png">
+        <img class="app" src="media/icons/launch.png">
+        <img class="app" src="media/icons/contacts.png">
+        <img class="app" src="media/icons/safari.svg.png">
+        <img class="app" src="media/icons/photos.webp" onclick="openWindow('photos-window')">
+        <img class="app" src="media/icons/photobooth.webp">
+        <img class="app" src="media/icons/chrome.png">
+        <img class="app" src="media/icons/notes.svg.png" onclick="openWindow('notes-window')">
+        <img class="app" src="media/icons/imessage.svg.png">
+        <img class="app" src="media/icons/fmf.webp">
+        <img class="app" src="media/icons/faetime.svg.png">
+        <img class="app3" src="media/icons/flare.png">
+        <img class="app" src="media/icons/settings.png">
+        <img class="app" src="media/icons/appstore.svg.png">
+        <img class="app" src="media/icons/amusic.svg.png">
+        <img class="app" src="media/icons/roblox.webp">
+        <img class="app" src="media/icons/vscode.webp">
+        <img class="app" src="media/icons/github.webp"> 
+        <img class="app" src="media/icons/python.png"> 
+        <img class="app" src="media/icons/trash.ico">
+    </div>
 
-        function openWindow(id) {
-            document.getElementById(id).style.display = 'flex';
-        }
-        function closeWindow(id) {
-            document.getElementById(id).style.display = 'none';
-        }
-
-        function checkPassword(inputField) {
-            const inputValue = inputField.value.trim();
-            const errorMessage = inputField.closest('.main').querySelector('.errorMessage');
-
-            if (inputValue !== "") {
-                document.getElementById('passwordOverlay').style.display = 'none';
-                document.getElementById('mainContent').style.display = 'block';
-            } else {
-                errorMessage.textContent = "Please enter a password.";
-            }
-        }
-        document.querySelectorAll('.passwordInput').forEach(input => {
-            input.addEventListener('keydown', function(event) {
-                if (event.key === "Enter") {
-                    checkPassword(input);
-                }
-            });
-        });
-    </script>
+    <script src="script.js"></script>
 </body>
 </html>
