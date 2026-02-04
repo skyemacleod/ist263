@@ -2,7 +2,20 @@ nav a{text-decoration: none;}
 a{text-decoration: none;}
 nav a:hover{ transform: scale(1.1);/*background-color: #bcbcbc;*/}
 
-
+@media (max-width: 430px) {
+    html, body {
+        overflow-x: hidden;
+        overflow-y: auto;
+      }
+    #desktop {
+        min-height: 100vh;
+        transform: scale(0.65);
+        transform-origin: top left;
+        width: calc(100% / 0.65);
+        height: calc(100% / 0.65);
+    }
+  
+}
 
 @font-face {
     font-family: 'Druk Wide Bold';
