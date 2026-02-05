@@ -94,6 +94,14 @@
             z-index: 10;
             padding: none;
         }
+        .pdf-window a {
+            position: absolute;
+            color: #3f3f3f;
+            margin: 3px;
+            padding: 4px;
+            text-decoration: none;
+            font-size: 12px;
+        }
 
         .image-window {
             position: absolute;
@@ -488,17 +496,7 @@
     </div>
     <div class="window pdf-window" id="resume-window" style="display: none; top: 100px; left: 220px; height: 500px; width: 450px;">
         <button class="close-btn" onclick="closeWindow('resume-window')">✕</button>
-        <a href="media/resume.pdf" download
-           style="
-             position: absolute;
-             
-             color: white;
-             border: none;
-             padding: 5px 10px;
-             border-radius: 4px;
-             text-decoration: none;
-             font-size: 12px;
-           ">
+        <a href="media/resume.pdf" download>
             ⬇
         </a>
         <div class="title-bar">
