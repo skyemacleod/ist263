@@ -342,7 +342,35 @@
             max-width: 80px;
             word-wrap: break-word;
         }
+        .pdf-window {
+            display: none;
+            top: 120px;
+            left: 220px;
+            height: 400px;
+            width: 400px;
+            display: flex;
+            flex-direction: column;
+        }
+        .fav {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            text-align: center; 
+            cursor: pointer;
+            user-select: none; 
+        }
 
+        .fav img {
+            width: 40px; 
+            height: auto;
+            margin-bottom: 7px;
+            display: block;
+            user-select: none;
+        }
+        .resume-icon img{
+            box-shadow: 0 6px 16px rgba(0,0,0,0.3);
+
+        }
 
     </style>
 </head>
@@ -431,6 +459,12 @@
         <div class="png" id="comp" style="top: 400px; left: 100px;">
             <img src="media/icons/comp.png">
         </div>
+
+        <div class="fav resume-icon" style="top: 520px; left: 50px;" onclick="openWindow('resume-window')">
+            <img src="media/icons/resume.png" alt="Resume" title="Skye MacLeod - Resume">
+            <span class="folder-label">Resume.pdf</span>
+        </div>
+
         <div class="fav" style="top: 30px; left: 1300px;">
             <a href="index.html">
                 <img src="media/icons/favicon.ico">
@@ -452,8 +486,31 @@
             <span class="folder-label">School</span>
         </div>
     </div>
-
-<div class="menu">
+    <div class="window pdf-window" id="resume-window" style="display: none; top: 100px; left: 220px; height: 500px; width: 450px;">
+        <button class="close-btn" onclick="closeWindow('resume-window')">✕</button>
+        <a href="media/resume.pdf" download
+           style="
+             position: absolute;
+             transform: translateY(-50%);
+             background-color: #4CAF50;
+             color: white;
+             border: none;
+             padding: 5px 10px;
+             border-radius: 4px;
+             text-decoration: none;
+             font-size: 12px;
+           ">
+            ⬇
+        </a>
+        <div class="title-bar">
+            <div class="title">Resume.pdf — Preview</div>
+        </div>
+        
+        <div class="window-content" style="flex: 1; padding: 0; background: #f5f5f5; overflow: auto;">
+            <img style="max-width: 100%; height: auto;" src="media/icons/resume.png">
+        </div>
+    </div>
+    <div class="menu">
         <img class="app" src="media/icons/finder.png">
         <img class="app" src="media/icons/launch.png">
         <img class="app" src="media/icons/contacts.png">
