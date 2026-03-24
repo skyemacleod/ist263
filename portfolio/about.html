@@ -7,7 +7,8 @@
     <title>Skye MacLeod</title>
     <link rel="stylesheet" href="themes.css">
     <link rel="stylesheet" href="styles.css">
-    <!-- Importing Google Fonts for similar typography -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous"/>
+
     <link rel='stylesheet' href='https://fonts.googleapis.com/css?family=Bebas Neue'>
     <link rel='stylesheet' href='https://fonts.googleapis.com/css?family=League Spartan'>
     <link rel='stylesheet' href='https://fonts.googleapis.com/css?family=Roboto'>
@@ -77,6 +78,62 @@
             font-weight: normal;
             font-style: normal;
         }
+        /*.............................................................*/
+        .about-section {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 40px;
+            padding: 40px 20px 20px;
+        }
+
+        .about-col-label {
+            font-size: 1rem;
+            font-weight: 700;
+            letter-spacing: 0.15em;
+            text-transform: uppercase;
+            margin-bottom: 24px;
+            opacity: 0.9;
+        }
+
+        .about-col h2 {
+            font-family: 'Druk Wide Bold';
+            font-size: 2.5rem;
+            font-weight: 800;
+            line-height: 1;
+            text-transform: uppercase;
+            margin-bottom: 20px;
+        }
+
+        .about-col p {
+            font-size: 0.82rem;
+            line-height: 1.6;
+            margin-bottom: 0;
+        }
+
+        .career-entry {
+            margin-bottom: 28px;
+        }
+
+        .career-entry .year {
+            font-style: italic;
+            font-size: 0.82rem;
+            margin-bottom: 4px;
+            opacity: 0.85;
+        }
+
+        .career-entry .role {
+            font-size: 0.82rem;
+            line-height: 1.5;
+        }
+        footer{
+            width: 100%;
+            height: 60px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-family: 'Times New Roman', Times, serif;
+            font-size: 18px;
+        }
     </style>
 </head>
 
@@ -91,14 +148,79 @@
             <a href="desktop.html">Desktop</a>
         </div>
     </nav>
-    <div class="neo">003 coding trial </div>
-    <div class="top">
-        <p class="just">I'm a Senior at Syracuse University studying Information Management & Technology and Marketing. I'm born and raised on the coast of New Hampshire with my twin brother and older sister. I want to move to the city once I graduate but I also don't wanna wish away time, becuase as fun as I know postgrad will be, there's nothing like the life at college, living with your best friends a walks distance from anything or anyone you could ever desire. I've always had an incline towards creation, beginning with MovieStar evolving to YouTube videos, now maturing into coding html and css.</p>
+    <div class="about-section">
+
+        <div class="about-col">
+          <div class="about-col-label">About</div>
+          <h2>Skye<br>MacLeod</h2>
+          <img src="media/headshot.jpeg" alt="Skye MacLeod"
+               style="width: 100%; max-width: 250px; margin-top: 10px;">
+        </div>
+      
+        <div class="about-col">
+          <div class="about-col-label">Bio</div>
+          <p>
+            I'm a Senior at Syracuse University studying Information Management & Technology in the iSchool with a minor in Marketing.
+            <br>
+            <br>
+            From a young age I've loved creating content, initially beginning with YouTube videos. As I've grown up my creations have evolved to more technically sophisticated projects, like websites, platforms that not only tell stories but also collect, organize, and analyze data. 
+            <br>
+            <br>
+            With my background in Technology, Marketing, and Communications, I'm interested in the way data can shape how we connect with consumers, particularly in the retail, fashion, and entertainment industries.  I'm fascinated by how data insights can shape user experiences, optimize marketing strategies, and inspire design decisions, bringing together creativity and analytics. 
+            <br>
+            <br>
+            This website is a reflection of that intersection: a project blending the art of design with the power of data, all while continuing to fuel my passion for creating engaging digital experiences.
+            <br>
+            <br>
+            If you want to check out my resume <a href="progress.html">click here</a>. 
+        </p>
+        </div>
+      
+        <div class="about-col">
+          <div class="about-col-label">Experience</div>
+      
+          <div class="career-entry">
+            <div class="year">2025-2026</div>
+            <div class="role">Web Developer<br>at DCSU, Syracuse</div>
+          </div>
+      
+          <div class="career-entry">
+            <div class="year">2023</div>
+            <div class="role">Sales &amp; Marketing Intern<br>at GREEK HOUSE, Remote</div>
+          </div>
+      
+          <div class="career-entry">
+            <div class="year">2022</div>
+            <div class="role">Creative Freelancer<br>New Hampshire</div>
+          </div>
+        </div>
+      
+        <!-- Column 4: Education -->
+        <div class="about-col">
+          <div class="about-col-label">Education</div>
+      
+          <div class="career-entry">
+            <div class="year">2022–2026</div>
+            <div class="role">
+              Information Management &amp; Technology<br>
+              + Marketing<br>
+              Syracuse University<br>
+              SYRACUSE, NY
+            </div>
+          </div>
+      
+          <div class="career-entry">
+            <div class="year">2018–2022</div>
+            <div class="role">
+              High School<br>
+              Portsmouth High School<br>
+              PORTSMOUTH, NEW HAMPSHIRE
+            </div>
+          </div>
+        </div>
     </div>
 
-    <div  class="scroll-container">
-        <img src="media/" alt="photo">
-        
-    </div>
-    <div class="line"></div>
+    <footer>
+        <p>Skye MacLeod &copy; 2025</p>
+    </footer>
 </body>
